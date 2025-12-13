@@ -17,7 +17,7 @@ cd anya-core
 
 ## Usage
 
-Please refer to the source code for usage examples.
+This project is in the early stages of development. Please check back later for usage examples.
 
 ## Contributing
 
