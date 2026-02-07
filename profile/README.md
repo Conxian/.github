@@ -26,27 +26,37 @@ Our mission is to bridge the gap between traditional finance and the decentraliz
 #### 💎 Production Ready
 *High-performance solutions ready for enterprise integration.*
 
-| Name | Description | Tech | Links |
-| :--- | :--- | :--- | :--- |
-| **Anya-core** | Enterprise Bitcoin Infrastructure Platform with Layer2 Protocol Integration. | ![Rust](https://img.shields.io/badge/Rust-orange?style=flat-square&logo=rust) | [Repo](https://github.com/Conxian/Anya-core) • [Docs](#) |
-| **Conxian** | A Multi-Dimensional, Stacks-Native Automated Monetary Platform. | ![Clarity](https://img.shields.io/badge/Clarity-blue?style=flat-square) | [Repo](https://github.com/Conxian/Conxian) • [Docs](#) |
+| Name | Description | Tech | License | Links |
+| :--- | :--- | :--- | :--- | :--- |
+| **Anya-core** | Enterprise Bitcoin Infrastructure Platform with Layer2 Protocol Integration. | ![Rust](https://img.shields.io/badge/Rust-orange?style=flat-square&logo=rust) | - | [Repo](https://github.com/Conxian/Anya-core) • [Docs](#) |
+| **Conxian** | A Multi-Dimensional, Stacks-Native Automated Monetary Platform. | ![Clarity](https://img.shields.io/badge/Clarity-blue?style=flat-square) | ![GPLv3](https://img.shields.io/badge/License-GPLv3-blue?style=flat-square) | [Repo](https://github.com/Conxian/Conxian) • [Docs](#) |
 
 #### 🧪 Research & Development
 *Ongoing innovations in the decentralized space.*
 
-| Name | Description | Tech | Links |
-| :--- | :--- | :--- | :--- |
-| **conxius-wallet** | Secure and decentralized wallet for the Conxian ecosystem. | ![TS](https://img.shields.io/badge/TypeScript-blue?style=flat-square&logo=typescript) | [Repo](https://github.com/Conxian/conxius-wallet) |
-| **Conxian_UI** | User interface components and library for Conxian applications. | ![TS](https://img.shields.io/badge/TypeScript-blue?style=flat-square&logo=typescript) | [Repo](https://github.com/Conxian/Conxian_UI) |
-| **anya-mobile** | Multi-layer Bitcoin wallet providing a comprehensive platform for the Bitcoin ecosystem. | ![JS](https://img.shields.io/badge/JavaScript-yellow?style=flat-square&logo=javascript) | [Repo](https://github.com/Conxian/anya-mobile) |
-| **OPSource** | High-performance Rust implementation for core operations. | ![Rust](https://img.shields.io/badge/Rust-orange?style=flat-square&logo=rust) | [Repo](https://github.com/Conxian/OPSource) |
+| Name | Description | Tech | License | Links |
+| :--- | :--- | :--- | :--- | :--- |
+| **conxius-wallet** | Secure and decentralized wallet for the Conxian ecosystem. | ![TS](https://img.shields.io/badge/TypeScript-blue?style=flat-square&logo=typescript) | ![BSL 1.1](https://img.shields.io/badge/License-BSL%201.1-red?style=flat-square) | [Repo](https://github.com/Conxian/conxius-wallet) |
+| **Conxian_UI** | User interface components and library for Conxian applications. | ![TS](https://img.shields.io/badge/TypeScript-blue?style=flat-square&logo=typescript) | - | [Repo](https://github.com/Conxian/Conxian_UI) |
+| **anya-mobile** | Multi-layer Bitcoin wallet providing a comprehensive platform for the Bitcoin ecosystem. | ![JS](https://img.shields.io/badge/JavaScript-yellow?style=flat-square&logo=javascript) | ![GPLv3](https://img.shields.io/badge/License-GPLv3-blue?style=flat-square) | [Repo](https://github.com/Conxian/anya-mobile) |
+| **OPSource** | High-performance Rust implementation for core operations. | ![Rust](https://img.shields.io/badge/Rust-orange?style=flat-square&logo=rust) | ![BSL 1.1](https://img.shields.io/badge/License-BSL%201.1-red?style=flat-square) | [Repo](https://github.com/Conxian/OPSource) |
 
 #### 🛠️ Tools & Utilities
 *Enabling the next generation of developers.*
 
-| Name | Description | Tech | Links |
-| :--- | :--- | :--- | :--- |
-| **stacksorbit** | Professional GUI deployment tool for Stacks blockchain smart contracts. | ![Python](https://img.shields.io/badge/Python-blue?style=flat-square&logo=python) | [Repo](https://github.com/Conxian/stacksorbit) |
+| Name | Description | Tech | License | Links |
+| :--- | :--- | :--- | :--- | :--- |
+| **stacksorbit** | Professional GUI deployment tool for Stacks blockchain smart contracts. | ![Python](https://img.shields.io/badge/Python-blue?style=flat-square&logo=python) | ![MIT](https://img.shields.io/badge/License-MIT-green?style=flat-square) | [Repo](https://github.com/Conxian/stacksorbit) |
+
+---
+
+### ⚖️ Licensing Strategy
+
+We employ a strategic licensing model to protect our core innovations while fostering ecosystem growth and public utility:
+
+*   **Business Source License (BSL 1.1):** Applied to core engines (**OPSource**) and sovereign applications (**Conxius Wallet**) to protect revenue and prevent unauthorized commercial forks while maintaining code transparency for security audits.
+*   **GPL v3 (Copyleft):** Used for protocols (**Conxian Protocol**) and data standards (**Anya Mobile**) to ensure that all improvements remain open-source and contribute to the collective strength of the decentralized network.
+*   **MIT License:** Utilized for developer tools (**Stacksorbit**) to provide the most permissive access and encourage widespread community adoption.
 
 ---
 
