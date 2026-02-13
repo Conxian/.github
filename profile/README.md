@@ -6,13 +6,13 @@
 
 ---
 
-### 🌐 [VISIT THE LAB: www.conxian-labs.com](http://www.conxian-labs.com)
-*The official headquarters for Conxian research, legal privacy policy, and product roadmap.*
+### 🌐 [ENTER THE LAB: www.conxian-labs.com](http://www.conxian-labs.com)
+*Official Research Headquarters & Legal Privacy Policy*
 
 ---
 
 ### 🛡️ Mission
-**Conxian Labs** is an innovative research and development organization dedicated to bridging the gap between traditional finance and the decentralized future. We focus on building high-performance infrastructure, Layer 2 protocols, and automated monetary platforms that empower developers and users alike.
+**Conxian Labs** is an innovative research and development organization dedicated to bridging the gap between traditional finance and the decentralized future. We focus on building high-performance infrastructure, Layer 2 protocols, and automated monetary platforms.
 
 **Code is Law. Logic is Sovereign.**
 
@@ -31,56 +31,29 @@
 
 ### 🚀 Project Showcase
 
-#### 💎 Core Infrastructure (Flagship)
+#### 💎 Core Infrastructure
 *High-performance solutions ready for enterprise and sovereign integration.*
 
-| Name | Description | Tech | License | Links |
-| :--- | :--- | :--- | :--- | :--- |
-| **[Conxius Wallet](https://github.com/Conxian/conxius-wallet)** | 🟢 **Active** The flagship Android-first, offline-first Sovereign Bitcoin wallet. | ![TS](https://img.shields.io/badge/TypeScript-blue?style=flat-square&logo=typescript) | ![BSL 1.1](https://img.shields.io/badge/License-BSL%201.1-red?style=flat-square) | [View Repo](https://github.com/Conxian/conxius-wallet) |
-| **[Anya-core](https://github.com/Conxian/Anya-core)** | Enterprise Bitcoin Infrastructure Platform with Layer 2 Integration. | ![Rust](https://img.shields.io/badge/Rust-orange?style=flat-square&logo=rust) | - | [View Repo](https://github.com/Conxian/Anya-core) |
+| Name | Description | Tech | License |
+| :--- | :--- | :--- | :--- |
+| **[Conxius Wallet](https://github.com/Conxian/conxius-wallet)** | 🟢 **Active** The flagship Android-first, offline-first Sovereign Bitcoin wallet. | ![TS](https://img.shields.io/badge/TypeScript-blue?style=flat-square&logo=typescript) | ![BSL 1.1](https://img.shields.io/badge/License-BSL%201.1-red?style=flat-square) |
+| **[Anya-core](https://github.com/Conxian/Anya-core)** | Enterprise Bitcoin Infrastructure Platform with Layer 2 Integration. | ![Rust](https://img.shields.io/badge/Rust-orange?style=flat-square&logo=rust) | - |
 
 #### 🧪 Research & Development
 *Ongoing innovations in the decentralized space.*
 
-| Name | Description | Tech | License | Links |
-| :--- | :--- | :--- | :--- | :--- |
-| **[Conxian Protocol](https://github.com/Conxian/Conxian)** | A Multi-Dimensional, Stacks-Native Automated Monetary Platform. | ![Clarity](https://img.shields.io/badge/Clarity-blue?style=flat-square) | ![GPLv3](https://img.shields.io/badge/License-GPLv3-blue?style=flat-square) | [View Repo](https://github.com/Conxian/Conxian) |
-| **[OPSource](https://github.com/Conxian/OPSource)** | High-performance Rust implementation for core operations. | ![Rust](https://img.shields.io/badge/Rust-orange?style=flat-square&logo=rust) | ![BSL 1.1](https://img.shields.io/badge/License-BSL%201.1-red?style=flat-square) | [View Repo](https://github.com/Conxian/OPSource) |
-| **[anya-mobile](https://github.com/Conxian/anya-mobile)** | Multi-layer Bitcoin wallet SDK / Platform. | ![JS](https://img.shields.io/badge/JavaScript-yellow?style=flat-square&logo=javascript) | ![GPLv3](https://img.shields.io/badge/License-GPLv3-blue?style=flat-square) | [View Repo](https://github.com/Conxian/anya-mobile) |
-
-#### 🛠️ Developer Tools
-*Enabling the next generation of builders.*
-
-| Name | Description | Tech | License | Links |
-| :--- | :--- | :--- | :--- | :--- |
-| **[stacksorbit](https://github.com/Conxian/stacksorbit)** | Professional GUI deployment tool for Stacks smart contracts. | ![Python](https://img.shields.io/badge/Python-blue?style=flat-square&logo=python) | ![MIT](https://img.shields.io/badge/License-MIT-green?style=flat-square) | [View Repo](https://github.com/Conxian/stacksorbit) |
-| **[Conxian_UI](https://github.com/Conxian/Conxian_UI)** | Component library for Conxian applications. | ![TS](https://img.shields.io/badge/TypeScript-blue?style=flat-square&logo=typescript) | - | [View Repo](https://github.com/Conxian/Conxian_UI) |
-
----
-
-### ⚖️ Licensing Strategy
-
-We employ a strategic licensing model to protect our core innovations while fostering ecosystem growth:
-
-* **Business Source License (BSL 1.1):** Applied to core engines and sovereign applications (**Conxius Wallet**, **OPSource**) to protect revenue and prevent unauthorized commercial forks.
-* **GPL v3 (Copyleft):** Used for protocols and data standards to ensure improvements remain open-source.
-* **MIT License:** Utilized for developer tools (**StacksOrbit**) to encourage widespread community adoption.
-
----
-
-### 📊 Ecosystem Insights
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Conxian&show_icons=true&theme=radical&count_private=true" alt="Conxian GitHub Stats">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Conxian&layout=compact&theme=radical" alt="Top Languages">
-</p>
+| Name | Description | Tech | License |
+| :--- | :--- | :--- | :--- |
+| **[Conxian Protocol](https://github.com/Conxian/Conxian)** | Multi-Dimensional, Stacks-Native Automated Monetary Platform. | ![Clarity](https://img.shields.io/badge/Clarity-blue?style=flat-square) | ![GPLv3](https://img.shields.io/badge/License-GPLv3-blue?style=flat-square) |
+| **[OPSource](https://github.com/Conxian/OPSource)** | High-performance Rust implementation for core operations. | ![Rust](https://img.shields.io/badge/Rust-orange?style=flat-square&logo=rust) | ![BSL 1.1](https://img.shields.io/badge/License-BSL%201.1-red?style=flat-square) |
+| **[anya-mobile](https://github.com/Conxian/anya-mobile)** | Multi-layer Bitcoin wallet SDK / Platform. | ![JS](https://img.shields.io/badge/JavaScript-yellow?style=flat-square&logo=javascript) | ![GPLv3](https://img.shields.io/badge/License-GPLv3-blue?style=flat-square) |
 
 ---
 
 ### 📬 Contact Protocol
 
-* **Primary Uplink:** [admin@conxian-labs.com](mailto:admin@conxian-labs.com)
-* **Web:** [www.conxian-labs.com](http://www.conxian-labs.com)
+* **Management:** [admin@conxian-labs.com](mailto:admin@conxian-labs.com)
 * **Support:** [support@conxian-labs.com](mailto:support@conxian-labs.com)
+* **General:** [info@conxian-labs.com](mailto:info@conxian-labs.com)
 
 > _"We build the rails, you own the train."_
