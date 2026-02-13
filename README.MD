@@ -1,36 +1,61 @@
-# Conxian Labs 🧪
+# CONXIAN LABS 🧪
 
-Welcome to the central repository for **Conxian Labs**. This repository serves as the administrative hub for our open-source organization, containing organizational standards, documentation, and the [organization profile](profile/README.md).
+### Administrative Hub for the Sovereign Autonomous Business (SAB)
 
-## 🏢 About Conxian Labs
+> **Status:** 🟢 Operational | **Node:** ZA-GP-MID | **Protocol:** Non-Custodial
 
-Conxian Labs is an innovative R&D organization dedicated to the decentralized web and Bitcoin ecosystem. We build high-performance infrastructure and Layer 2 protocols, primarily centered around **Anya-core**.
+Welcome to the central administrative repository for **Conxian Labs**. This repository serves as the organizational backbone, containing global standards, security protocols, and the [Organization Profile](https://www.google.com/search?q=profile/README.md) that governs our public-facing identity.
 
-### 🌟 Our Mission
-To bridge the gap between traditional finance and the decentralized future through mathematical certainty, sovereign applications, and open-source collaboration.
+---
+
+## 🏗️ The Vertical Sovereignty Model
+
+Conxian Labs architect's non-custodial Bitcoin infrastructure. Our ecosystem is divided into three strategic pillars designed to provide end-to-end sovereignty for both individuals and institutions.
+
+### 1. The Vault: [Conxius Wallet](https://github.com/Conxian/conxius-wallet)
+
+* **Role:** Sovereign Access.
+* **Focus:** Android-first, hardware-secured (Secure Enclave) Bitcoin and Lightning node.
+
+### 2. The Engine: [Conxian Finance](https://github.com/Conxian/Conxian)
+
+* **Role:** Automated Settlement.
+* **Focus:** Stacks-native DeFi dApp managing on-chain monetary policy and the "Fiscal Dam" revenue logic.
+
+### 3. The Pipe: [Conxian Gateway](https://github.com/Conxian/OPSource)
+
+* **Role:** Institutional Bridge.
+* **Focus:** Compliance-ready API gateway for B2B/Fintech access to the Bitcoin and Stacks ecosystems.
 
 ---
 
 ## 📂 Repository Structure
 
-- `profile/`: Contains the [GitHub Organization Profile](https://github.com/Conxian) content.
-- `CONTRIBUTING.md`: Guidelines for contributing to our projects.
-- `CODE_OF_CONDUCT.md`: Our community standards.
+* `profile/`: Contains the [GitHub Organization Profile](https://www.google.com/search?q=profile/README.md) content.
+* `workflow-templates/`: Standardized CI/CD actions for Rust and TypeScript projects.
+* `CONTRIBUTING.md`: Guidelines for joining our mission to build the rails for a decentralized economy.
+* `SECURITY.md`: Our protocol for responsible disclosure and security auditing.
 
 ---
 
 ## 🚀 Quick Links
 
-- **[Organization Profile](profile/README.md)**
-- **[Website](https://conxian.com)** (Coming Soon)
-- **[Anya-core](https://github.com/Conxian/Anya-core)** - Enterprise Bitcoin Infrastructure.
+* **[Official Website](http://www.conxian-labs.com)** — Research Headquarters & Operational Dashboard.
+* **[Source Code Registry](https://github.com/Conxian)** — Public repository index.
+* **[StacksOrbit](https://www.google.com/search?q=https://github.com/Conxian/StacksOrbit)** — Professional GUI for Clarity smart contract lifecycle management.
 
 ---
 
 ## 🤝 Contributing
 
-We welcome contributions! Please see our [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to get started.
+We build in the open because logic is sovereign. If you wish to contribute to the Bitcoin Renaissance, please review our [CONTRIBUTING.md](https://www.google.com/search?q=CONTRIBUTING.md). We prioritize contributions that enhance hardware-level security, Clarity smart contract optimization, and cross-layer interoperability.
 
 ## ⚖️ License
 
-All code in this repository is licensed under the [MIT License](LICENSE).
+Administrative documentation and organizational standards in this repository are licensed under the [MIT License](https://www.google.com/search?q=LICENSE). Individual product repositories may carry specific licenses (e.g., BSL 1.1 or GPLv3) to protect the protocol's integrity.
+
+---
+
+**CONXIAN LABS (PTY) LTD // ALL RIGHTS RESERVED // 2026**
+
+> *"Architecting the rails where the user owns the train."*
