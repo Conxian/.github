@@ -30,46 +30,48 @@
 
 ---
 
-### 🚀 The Strategic Triad
+### 🚀 Strategic Pillars
+*The core infrastructure supporting the Bitcoin-backed economy.*
 
-#### 🏛️ Sovereign Access (The Vault)
-*Hardware-level security for the individual. Keys never leave the device.*
-
-| Name | Description | Tech | Status |
+| Pillar | Repository | Description | Status |
 | :--- | :--- | :--- | :--- |
-| **[Conxius Wallet](https://github.com/Conxian/conxius-wallet)** | **The Sovereign Citadel.** Android-first, offline-first vault utilizing **StrongBox/TEE** & native node services. Supports L1, Lightning, Stacks, Liquid, BOB, RSK, and RGB. | ![TS](https://img.shields.io/badge/TypeScript-blue?style=flat-square) | 🟢 Active (149+ Tests Verified) |
-
-#### 💎 Automated Settlement (The Engine)
-*On-chain monetary policy and liquidity protocols anchored to Bitcoin security.*
-
-| Name | Description | Tech | Status |
-| :--- | :--- | :--- | :--- |
-| **[Conxian Finance](https://github.com/Conxian/Conxian)** | **The Protocol.** Stacks-native automated monetary platform featuring **Dual-Council Governance** and **Fiscal Dam V4** immutable revenue logic. | ![Clarity](https://img.shields.io/badge/Clarity-blue?style=flat-square) | 🟢 Production Ready |
-
-#### 🏗️ Institutional Infrastructure (The Pipe)
-*High-performance gateways and developer tooling for the Bitcoin economy.*
-
-| Name | Description | Tech | Status |
-| :--- | :--- | :--- | :--- |
-| **[Conxian Gateway](https://github.com/Conxian/OPSource)** | **Institutional Bridge.** Compliance-ready API gateway for institutional BTC/Stacks access. Pivoted to high-performance Rust core. | ![Rust](https://img.shields.io/badge/Rust-orange?style=flat-square) | 🔄 Pivot |
-| **[StacksOrbit](https://github.com/Conxian/stacksorbit)** | Professional GUI and CLI for Clarity 2/3/4 smart contract deployment and lifecycle management. | ![Python](https://img.shields.io/badge/Python-blue?style=flat-square) | ✅ Stable (v1.2.0) |
+| **Sovereign Access** | **[Conxius Wallet](https://github.com/Conxian/conxius-wallet)** | The Vault. Android-first, hardware-secured (StrongBox/TEE) Bitcoin & Lightning node. | 🟢 Active |
+| **Automated Settlement** | **[Conxian Finance](https://github.com/Conxian/Conxian)** | The Engine. Stacks-native DeFi protocol for automated monetary policy and liquidity. | 🟢 Production |
+| **Unified Backend** | **[Conxian Gateway](https://github.com/Conxian/OPSource)** | The Pipe. High-performance Rust gateway (formerly OPSource) for institutional access. | 🔄 Unified |
+| **Unified Interface** | **[Conxian Interface](https://github.com/Conxian/Conxian_UI)** | The Lens. Comprehensive web interface (Conxian_UI) for protocol interaction and visualization. | 🟢 Active |
 
 ---
 
-### 🎨 User Experience & Interface
-*Consolidated frontends for the Conxian ecosystem.*
+### 🏗️ Unified Infrastructure Strategy
+*Standardizing the rails for the decentralized economy.*
 
-*   **[Conxian UI](https://github.com/Conxian/Conxian_UI)**: The official web interface for Conxian Finance. Featuring the "Earthy Corporate Finance" theme and unified protocol access.
-*   **[Conxian Labs Site](https://github.com/Conxian/conxian-labs-site)**: Official corporate landing page and interactive protocol visualization.
+To ensure maximum efficiency and security, Conxian Labs operates under a unified architectural mandate:
+
+1.  **Unified Backend (Conxian Gateway):** Acting as the single entry point for all client applications, including the Conxius Wallet and Conxian UI. It handles complex protocol logic, compliance, and institutional-grade scaling.
+2.  **Shared Modules (lib-conxian-core):** To prevent work duplication and ensure logic consistency, all core cryptographic and protocol primitives are maintained within `lib-conxian-core`. This Rust-based library is shared across the entire ecosystem.
+3.  **Communication Channel Architecture:** Telemetry and inter-service communication are centralized via **Nostr relays** for decentralized messaging and **Render-based telemetry** for operational transparency.
 
 ---
 
-### 📋 Internal Research & Core Libraries
-*Modular logic and legacy infrastructure powering the ecosystem.*
+### 🤖 Agent Operational Directives
+*Strict protocols for autonomous and human contributors to ensure ecosystem integrity.*
 
-* **`lib-conxian-core`**: High-performance Rust primitives (Taproot, DLC, L2) extracted for use in the Gateway and Wallet.
-* **[Anya-core](https://github.com/Conxian/Anya-core)**: `[ARCHIVED]` Institutional infrastructure predecessor moved to Conxian Gateway.
-* **[anya-mobile](https://github.com/Conxian/anya-mobile)**: `[ARCHIVED]` Sovereign successor moved to Conxius Wallet.
+- **Anti-Duplication:** Before implementing new protocol logic, verify if it exists in `lib-conxian-core`. We mandate the reuse of validated primitives.
+- **Unification Rule:** All client apps must interface through the Conxian Gateway for non-local state operations to maintain a single source of truth.
+- **Tone & Aesthetic:** All communications and interfaces must adhere to the **"Earthy Corporate Finance"** theme—professional, grounded, and strategically precise.
+
+---
+
+### 📋 Global Resource Registry
+*The complete index of active Conxian Labs repositories.*
+
+- **[Conxius Wallet](https://github.com/Conxian/conxius-wallet)**: Sovereign Android Vault.
+- **[Conxian Finance](https://github.com/Conxian/Conxian)**: Settlement & Monetary Policy.
+- **[Conxian Gateway](https://github.com/Conxian/OPSource)**: Unified Backend & Institutional Bridge.
+- **[Conxian Interface](https://github.com/Conxian/Conxian_UI)**: Unified Web UI.
+- **[lib-conxian-core](https://github.com/Conxian/lib-conxian-core)**: Shared Rust Primitives.
+- **[StacksOrbit](https://github.com/Conxian/stacksorbit)**: Professional Smart Contract Tooling.
+- **[Conxian Labs Site](https://github.com/Conxian/conxian-labs-site)**: Research & Institutional Dashboard.
 
 ---
 
