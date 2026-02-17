@@ -1,67 +1,61 @@
-# CONXIAN LABS 🧪
+# CONXIAN LABS: ADMINISTRATIVE REGISTRY 🧪
 
-### Administrative Hub for the Sovereign Autonomous Business (SAB)
+### The Central Nervous System for the Bitcoin-Native Economy
 
-> **Status:** 🟢 Operational | **Node:** ZA-GP-MID | **Protocol:** Non-Custodial
+> **Status:** 🟢 Operational | **Node:** ZA-GP-MID | **Protocol:** Non-Custodial | **Model:** Sovereign Autonomous Business (SAB)
 
-Welcome to the central administrative repository for **Conxian Labs**. This repository serves as the organizational backbone, containing global standards, security protocols, and the [Organization Profile](profile/README.md) that governs our public-facing identity.
+Welcome to the administrative headquarters of **Conxian Labs**. This repository serves as the internal master registry, governing our global standards, security protocols, and the strategic alignment of the ecosystem.
+
+For a comprehensive view of our products, technical specifications, and operational directives, please visit the **[Internal Master Dashboard (profile/README.md)](profile/README.md)**.
 
 ---
 
-## 🏗️ The Vertical Sovereignty Model
+## 🏛️ Ecosystem Architecture: The Vertical Sovereignty Model
 
-Conxian Labs architects non-custodial Bitcoin infrastructure. Our ecosystem is divided into three strategic pillars designed to provide end-to-end sovereignty for both individuals and institutions.
+Conxian Labs architects infrastructure that replaces human discretion with mathematical certainty. Our unified strategy ensures that every component of the ecosystem works in concert to provide end-to-end sovereignty.
 
 ### 1. The Vault: [Conxius Wallet](https://github.com/Conxian/conxius-wallet)
-
-* **Role:** Sovereign Access.
-* **Focus:** Android-first, hardware-secured (**StrongBox/TEE**) Bitcoin and Lightning node.
-* **Status:** 🟢 Active (149+ Tests Verified).
+*   **Role:** Sovereign Access.
+*   **Focus:** Android-first, hardware-secured (**StrongBox/TEE**) Bitcoin and Lightning node services.
+*   **Status:** 🟢 Active.
 
 ### 2. The Engine: [Conxian Finance](https://github.com/Conxian/Conxian)
-
-* **Role:** Automated Settlement.
-* **Focus:** Stacks-native DeFi protocol managing on-chain monetary policy via **Dual-Council Governance** and the **Fiscal Dam V4**.
-* **Status:** 🟢 Production Ready (Feb 2026).
+*   **Role:** Automated Settlement.
+*   **Focus:** Stacks-native DeFi protocol managing on-chain monetary policy via the **Fiscal Dam V4**.
+*   **Status:** 🟢 Production Ready.
 
 ### 3. The Pipe: [Conxian Gateway](https://github.com/Conxian/OPSource)
+*   **Role:** Unified Backend.
+*   **Focus:** High-performance Rust gateway providing a single entry point for all client applications and institutional bridges.
+*   **Status:** 🔄 Unified Infrastructure.
 
-* **Role:** Institutional Bridge.
-* **Focus:** Compliance-ready API gateway for B2B/Fintech access to the Bitcoin and Stacks ecosystems.
-* **Status:** 🔄 Pivot.
+### 4. The Lens: [Conxian Interface](https://github.com/Conxian/Conxian_UI)
+*   **Role:** Unified Interface.
+*   **Focus:** Comprehensive web interface for seamless interaction across all Conxian protocols.
+*   **Status:** 🟢 Active.
 
 ---
 
-## 🎨 User Experience & Interface
+## 🏗️ Unified Infrastructure Strategy
 
-*   **[Conxian UI](https://github.com/Conxian/Conxian_UI)** — Unified web interface for protocol interaction.
-*   **[Conxian Labs Site](http://www.conxian-labs.com)** — Research Headquarters & Operational Dashboard.
-*   **[StacksOrbit](https://github.com/Conxian/stacksorbit)** — Professional GUI/CLI for smart contract lifecycle management.
+To maintain high-performance standards and eliminate redundant development, the ecosystem is built upon:
+*   **Unified Backend:** The Conxian Gateway serves as the centralized logic hub.
+*   **Shared Primitives:** All core protocol logic is extracted into **`lib-conxian-core`**.
+*   **Decentralized Messaging:** Communication is unified via **Nostr** relays and **Render** telemetry.
 
 ---
 
 ## 📂 Repository Structure
 
-* `profile/`: Contains the [GitHub Organization Profile](profile/README.md) content.
-* `CONTRIBUTING.md`: Guidelines for joining our mission to build the rails for a decentralized economy.
-* `SECURITY.md`: Our protocol for responsible disclosure and security auditing.
+*   **`profile/`**: The [Internal Master Dashboard](profile/README.md)—our public-facing identity and detailed product roadmap.
+*   **`REVIEWS.md`**: Comparative benchmarks against industry leaders.
+*   **`CONTRIBUTING.md`**: Protocols for participating in the Bitcoin Renaissance.
 
 ---
 
-## 🚀 Quick Links
+## ⚖️ Governance & Licensing
 
-* **[Official Website](http://www.conxian-labs.com)** — Institutional Headquarters.
-* **[Source Code Registry](https://github.com/orgs/Conxian/repositories?type=source)** — Public repository index.
-
----
-
-## 🤝 Contributing
-
-We build in the open because logic is sovereign. If you wish to contribute to the Bitcoin Renaissance, please review our [CONTRIBUTING.md](CONTRIBUTING.md). We prioritize contributions that enhance hardware-level security, Clarity smart contract optimization, and cross-layer interoperability.
-
-## ⚖️ License
-
-Administrative documentation and organizational standards in this repository are licensed under the [MIT License](LICENSE). Individual product repositories carry specific licenses (e.g., BSL 1.1, GPL v3, or MIT) as detailed in their respective repositories.
+We prioritize logical sovereignty. Administrative standards are licensed under **MIT**. Individual product repositories utilize strategic licenses (**BSL 1.1**, **GPL v3**, or **MIT**) based on their role within the decentralized ecosystem.
 
 ---
 
