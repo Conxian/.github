@@ -48,7 +48,7 @@
 To ensure maximum efficiency and security, Conxian Labs operates under a unified architectural mandate:
 
 1.  **Unified Backend (Conxian Gateway):** Acting as the single entry point for all client applications, including the Conxius Wallet and Conxian UI. It handles complex protocol logic, compliance, and institutional-grade scaling.
-2.  **Shared Modules (lib-conxian-core):** To prevent work duplication and ensure logic consistency, all core cryptographic and protocol primitives are maintained within `lib-conxian-core`. This Rust-based library is shared across the entire ecosystem.
+2.  **Shared Modules (lib-conxian-core):** To prevent work duplication and ensure logic consistency, all core cryptographic and protocol primitives are maintained within `lib-conxian-core`. This library is shared across the entire ecosystem.
 3.  **Communication Channel Architecture:** Telemetry and inter-service communication are centralized via **Nostr relays** for decentralized messaging and **Render-based telemetry** for operational transparency.
 
 ---
@@ -69,8 +69,8 @@ To ensure maximum efficiency and security, Conxian Labs operates under a unified
 - **[Conxian Finance](https://github.com/Conxian/Conxian)**: Settlement & Monetary Policy.
 - **[Conxian Gateway](https://github.com/Conxian/OPSource)**: Unified Backend & Institutional Bridge.
 - **[Conxian Interface](https://github.com/Conxian/Conxian_UI)**: Unified Web UI.
-- **[lib-conxian-core](https://github.com/Conxian/lib-conxian-core)**: Shared Rust Primitives.
-- **[StacksOrbit](https://github.com/Conxian/stacksorbit)**: Professional Smart Contract Tooling.
+- **[lib-conxian-core](https://github.com/Conxian/lib-conxian-core)**: Shared Core Libraries (TypeScript).
+- **[StacksOrbit](https://github.com/Conxian/stacksorbit)**: Professional Smart Contract GUI Tooling.
 - **[Conxian Labs Site](https://github.com/Conxian/conxian-labs-site)**: Research & Institutional Dashboard.
 
 ---
