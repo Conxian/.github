@@ -6,6 +6,8 @@ Conxian Labs maintains the administrative registry and strategic protocols in th
 
 Security fixes are applied on a rolling basis to the default branch (`main`). This repository does not currently publish versioned releases or tags that map to a supported patch line.
 
+If versioned releases or long-lived support branches are introduced in the future, their support status will be documented in this section.
+
 | Channel | Security fixes |
 | ------- | -------------- |
 | `main` (default branch) | Yes |
