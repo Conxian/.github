@@ -11,7 +11,7 @@ If versioned releases or long-lived support branches are introduced in the futur
 | Channel | Security fixes |
 | ------- | -------------- |
 | `main` (default branch) | Yes |
-| Other branches/tags/commits | No |
+| Other branches/tags/commits | Not actively maintained for security |
 
 ## Reporting a Vulnerability
 
