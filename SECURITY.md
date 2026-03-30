@@ -25,7 +25,6 @@ Use one of the following private channels:
 
 1. GitHub private vulnerability reporting (Security Advisories):
    Use the Security tab of the affected repository and choose "Report a vulnerability".
-   For this repository: https://github.com/Conxian/.github/security/advisories/new
 2. Email: **security@conxian-labs.com**
 
 If you cannot use either of the above, email **admin@conxian-labs.com** and clearly mark the message as a security report.
