@@ -32,4 +32,4 @@ Use the GitHub [issue tracker](https://github.com/Conxian/.github/issues) for pu
 **For security vulnerabilities, refer to [SECURITY.md](SECURITY.md).**
 
 ---
-© 2026 Conxian Labs (PTY) Ltd. Licensed under the [MIT License](LICENSE).
+© 2026 Conxian Labs (PTY) Ltd. Licensed under the MIT License; see [LICENSE](LICENSE) for details.
