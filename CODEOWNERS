@@ -1,0 +1,14 @@
+# Conxian Labs Administrative Registry - Governance
+
+# Global owners for administrative standards
+* @Conxian/Admins
+
+# Security-specific governance
+/SECURITY.md @Conxian/Security-Ops
+
+# Financial and Strategic Registries
+/REVIEWS.md @Conxian/Strategy-Team
+/profile/README.md @Conxian/Admins
+
+# Contribution Rules
+/CONTRIBUTING.md @Conxian/Admins
