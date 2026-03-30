@@ -2,12 +2,14 @@
 
 ## Supported Versions
 
-Conxian Labs maintains the administrative registry and strategic protocols. Security updates are applied to the following versions:
+Conxian Labs maintains the administrative registry and strategic protocols on a rolling basis.
 
-| Version | Supported          |
-| ------- | ------------------ |
-| 1.0.x   | :white_check_mark: |
-| < 1.0   | :x:                |
+Security fixes are applied to the default branch (`main`). This repository does not currently publish versioned releases/tags that map to a supported patch line.
+
+| Channel | Security fixes |
+| ------- | -------------- |
+| `main`  | Yes            |
+| Other branches/tags | No guarantee |
 
 ## Reporting a Vulnerability
 
