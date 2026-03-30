@@ -8,8 +8,8 @@ Security fixes are applied to the default branch (`main`). This repository does 
 
 | Channel | Security fixes |
 | ------- | -------------- |
-| `main`  | Yes            |
-| Other branches/tags | No guarantee |
+| `main` (default branch) | Yes |
+| Other branches/tags/commits | No |
 
 ## Reporting a Vulnerability
 
@@ -19,11 +19,13 @@ Conxian Labs takes the security of our infrastructure and protocols seriously. I
 
 ### Preferred Reporting Channel
 
-Please email your report to: **security@conxian-labs.com** (forwarded to the Administrative and Technical teams).
+Use one of the following private channels:
 
-Alternatively, you may use:
-- **admin@conxian-labs.com**
-- **support@conxian-labs.com**
+1. GitHub private vulnerability reporting (Security Advisories):
+   https://github.com/Conxian/.github/security/advisories/new
+2. Email: **security@conxian-labs.com**
+
+If you cannot use either of the above, email **admin@conxian-labs.com** and clearly mark the message as a security report.
 
 ### What to Include
 
