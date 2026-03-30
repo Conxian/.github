@@ -1,51 +1,35 @@
-# Contributing to anya-core
+# Contributing to Conxian Labs Administrative Registry
 
-We love your input! We want to make contributing to this project as easy and transparent as possible, whether it's:
+We prioritize precision, security, and mathematical certainty in every update to this repository. This registry is the "Central Nervous System" for the Bitcoin-native economy.
 
-- Reporting a bug
-- Discussing the current state of the code
-- Submitting a fix
-- Proposing new features
-- Becoming a maintainer
+## Mission
+To participate in the Bitcoin Renaissance, you must adhere to the high-performance infrastructure standards of Conxian Labs.
 
-## We Develop with Github
-We use github to host code, to track issues and feature requests, as well as accept pull requests.
+## Protocol for Contributions
 
-## We Use [Github Flow](https://guides.github.com/introduction/flow/index.html), So All Code Changes Happen Through Pull Requests
-Pull requests are the best way to propose changes to the codebase. We actively welcome your pull requests:
+We use [GitHub Flow](https://guides.github.com/introduction/flow/index.html). All changes must occur through Pull Requests (PRs).
 
-1. Fork the repo and create your branch from `main`.
-2. If you've added code that should be tested, add tests.
-3. If you've changed APIs, update the documentation.
-4. Ensure the test suite passes.
-5. Make sure your code lints.
-6. Issue that pull request!
+### 1. Preparation
+- **Fork the Registry:** Create your branch from `main`.
+- **Align with Strategy:** Ensure changes are consistent with the [Ecosystem Architecture](README.MD).
 
-## Any contributions you make will be under the MIT Software License
-In short, when you submit code changes, your submissions are understood to be under the same [MIT License](http://choosealicense.com/licenses/mit/) that covers the project. Feel free to contact the maintainers if that's a concern.
+### 2. Implementation
+- **Precise Documentation:** Any logic changes must be reflected in the relevant README or profile dashboard.
+- **Tone & Aesthetic:** Follow the "Earthy Corporate Finance" theme: professional, grounded, and precise.
 
-## Report bugs using Github's [issues](https://github.com/anya-organisation/anya-core/issues)
-We use GitHub issues to track public bugs. Report a bug by [opening a new issue](https://github.com/anya-organisation/anya-core/issues/new); it's that easy!
+### 3. Submission
+- **Pull Request:** Link any relevant issues or strategic justifications.
+- **Licensing:** By contributing, you agree that your work will be licensed under the [MIT License](LICENSE) of this repository.
 
-## Write bug reports with detail, background, and sample code
-[This is an example](https://stackoverflow.com/q/12488905/180626) of a good bug report, and we think it's a good model. Here's a summary of what to include:
+## Standards & Style
 
-* A quick summary and/or background
-* Steps to reproduce
-  * Be specific!
-  * Give sample code if you can.
-* What you expected would happen
-* What actually happens
-* Notes (possibly including why you think this might be happening, or stuff you tried that didn't work)
+- **Markdown:** Use structured headings, consistent shields.io badges, and clear status indicators.
+- **Organization:** Use the `profile/` directory for major ecosystem updates.
 
-People *love* thorough bug reports. I'm not even kidding.
+## Report Strategic Issues
+Use the GitHub [issue tracker](https://github.com/Conxian/.github/issues) for public discussions regarding the registry.
 
-## Use a Consistent Coding Style
-* We use [standardjs](https://standardjs.com/) for our Javascript code.
-* We use [PEP 8](https://www.python.org/dev/peps/pep-0008/) for our Python code.
+**For security vulnerabilities, refer to [SECURITY.md](SECURITY.md).**
 
-## License
-By contributing, you agree that your contributions will be licensed under its MIT License.
-
-## References
-This document was adapted from the open-source contribution guidelines for [Facebook's Draft](https://github.com/facebook/draft-js/blob/a9316a723f9e918afde44dea68b5f9f39b7d9b00/CONTRIBUTING.md)
+---
+© 2026 Conxian Labs (PTY) Ltd. Licensed under the MIT License; see [LICENSE](LICENSE) for details.
