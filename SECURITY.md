@@ -2,9 +2,9 @@
 
 ## Supported Versions
 
-Conxian Labs maintains the administrative registry and strategic protocols on a rolling basis.
+Conxian Labs maintains the administrative registry and strategic protocols in this repository.
 
-Security fixes are applied to the default branch (`main`). This repository does not currently publish versioned releases/tags that map to a supported patch line.
+Security fixes are applied on a rolling basis to the default branch (`main`). This repository does not currently publish versioned releases or tags that map to a supported patch line.
 
 | Channel | Security fixes |
 | ------- | -------------- |
