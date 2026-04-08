@@ -8,6 +8,18 @@ Welcome to the administrative headquarters of **Conxian Labs**. This repository 
 
 For a comprehensive view of our products, technical specifications, and operational directives, please visit the **[Internal Master Dashboard (profile/README.md)](profile/README.md)**.
 
+## Purpose
+
+Provide org-wide defaults (community health files, templates, and governance policies) for the Conxian GitHub organization.
+
+## Status
+
+Active. Changes in this repository can affect defaults across Conxian public repositories.
+
+## Ownership
+
+Ownership and review requirements are defined in [`CODEOWNERS`](./CODEOWNERS).
+
 ---
 
 ## 🏛️ Ecosystem Architecture: The Vertical Sovereignty Model
