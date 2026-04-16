@@ -101,10 +101,7 @@ To ensure maximum efficiency and security, Conxian Labs operates under a unified
 
 - **[.github](https://github.com/Conxian/.github)**: Organization profile and community health files.
 
-**Private/internal (not listed on the org page)**
-
-- `conxian-business` (private): internal operations and documents.
-- `.github-private` (private): internal org automation and templates.
+Internal/admin repositories are intentionally private and are not listed here.
 
 **Recommended organization pins (top 6)**
 
@@ -130,8 +127,6 @@ To ensure maximum efficiency and security, Conxian Labs operates under a unified
 | `conxian-labs-site` | Website | Strategic | Public |
 | `stacksorbit` | Tooling | Experimental | Public |
 | `.github` | Org/meta | Internal-facing | Public |
-| `.github-private` | Org/meta | Internal-facing | Private |
-| `conxian-business` | Internal/admin | Internal-facing | Private |
 
 ---
 
