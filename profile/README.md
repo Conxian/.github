@@ -115,6 +115,24 @@ To ensure maximum efficiency and security, Conxian Labs operates under a unified
 5. `conxius-platform`
 6. `lib-conxian-core`
 
+**Portfolio classification (strategic vs experimental vs internal)**
+
+| Repository | Function | Classification | Audience |
+|---|---|---|---|
+| `Conxian` | Protocol | Strategic | Public |
+| `conxian-gateway` | Gateway | Strategic | Public |
+| `conxian-nexus` | Platform services | Strategic | Public |
+| `conxius-wallet` | Wallet | Strategic | Public |
+| `lib-conxian-core` | SDK | Strategic | Public |
+| `lib-conclave-sdk` | SDK | Experimental | Public |
+| `conxius-platform` | Platform tooling | Experimental | Public |
+| `conxian_ui` | Web UI | Experimental | Public |
+| `conxian-labs-site` | Website | Strategic | Public |
+| `stacksorbit` | Tooling | Experimental | Public |
+| `.github` | Org/meta | Internal-facing | Public |
+| `.github-private` | Org/meta | Internal-facing | Private |
+| `conxian-business` | Internal/admin | Internal-facing | Private |
+
 ---
 
 ### 📬 Contact Protocol
