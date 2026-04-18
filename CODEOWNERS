@@ -3,8 +3,12 @@
 # Global owners for administrative standards
 * @Conxian/Admins
 
-# Security-specific governance
-/SECURITY.md @Conxian/Security-Ops
+# Security and governance-sensitive files
+/CODEOWNERS @Conxian/Admins @Conxian/Security-Ops
+/SECURITY.md @Conxian/Admins @Conxian/Security-Ops
+/.github/ISSUE_TEMPLATE/** @Conxian/Admins @Conxian/Security-Ops
+/.github/PULL_REQUEST_TEMPLATE* @Conxian/Admins @Conxian/Security-Ops
+/.github/workflows/** @Conxian/Admins @Conxian/Security-Ops
 
 # Financial and Strategic Registries
 /REVIEWS.md @Conxian/Strategy-Team

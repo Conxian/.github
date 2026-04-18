@@ -19,7 +19,18 @@ We use [GitHub Flow](https://guides.github.com/introduction/flow/index.html). Al
 
 ### 3. Submission
 - **Pull Request:** Link any relevant issues or strategic justifications.
+- **Sensitive files:** If your PR modifies governance/security-sensitive files, complete the PR security checklist and obtain CODEOWNERS review before merge.
 - **Licensing:** By contributing, you agree that your work will be licensed under the [MIT License](LICENSE) of this repository.
+
+## Sensitive File Changes
+
+Changes to the following files require CODEOWNERS review and adherence to the PR security checklist:
+
+- `CODEOWNERS`
+- `SECURITY.md`
+- `.github/ISSUE_TEMPLATE/**`
+- `.github/PULL_REQUEST_TEMPLATE*`
+- `.github/workflows/**`
 
 ## Standards & Style
 
