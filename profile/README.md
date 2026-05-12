@@ -67,66 +67,18 @@ To ensure maximum efficiency and security, Conxian Labs operates under a unified
 ---
 
 ### 📋 Global Resource Registry
-*The complete index of active public Conxian Labs repositories.*
+*Canonical inventory for all Conxian repositories.*
 
-#### Protocol
+The canonical taxonomy and inventory now live in:
 
-- **[Conxian](https://github.com/Conxian/Conxian)**: Smart contracts and protocol core.
+- **[Repository Inventory + Taxonomy](./repository-taxonomy.md)**
+- **[README Purpose + Status Template](./readme-purpose-status-template.md)**
 
-#### Platform services
+Use those documents as the source of truth for:
 
-- **[Conxian Gateway](https://github.com/Conxian/conxian-gateway)**: Unified Rust gateway for protocol and app access.
-- **[Conxian Nexus](https://github.com/Conxian/conxian-nexus)**: API bridge services.
-- **[Conxius Platform](https://github.com/Conxian/conxius-platform)**: Local dev stack for the ecosystem.
-
-#### Wallet
-
-- **[Conxius Wallet](https://github.com/Conxian/conxius-wallet)**: Sovereign Android wallet (offline-first).
-
-#### Web / UI
-
-- **[Conxian UI](https://github.com/Conxian/conxian_ui)**: Protocol web interface.
-- **[Conxian Labs Site](https://github.com/Conxian/conxian-labs-site)**: Public website.
-
-#### SDKs
-
-- **[lib-conxian-core](https://github.com/Conxian/lib-conxian-core)**: Shared crypto/protocol libraries.
-- **[lib-conclave-sdk](https://github.com/Conxian/lib-conclave-sdk)**: Headless enclave + cryptographic state machine SDK.
-
-#### Tooling
-
-- **[StacksOrbit](https://github.com/Conxian/stacksorbit)**: GUI deployment tool for Stacks smart contracts.
-
-#### Org/meta
-
-- **[.github](https://github.com/Conxian/.github)**: Organization profile and community health files.
-
-Internal/admin repositories are intentionally private and are not listed here.
-
-**Recommended organization pins (top 6)**
-
-1. [Conxian](https://github.com/Conxian/Conxian)
-2. [conxius-wallet](https://github.com/Conxian/conxius-wallet)
-3. [conxian-gateway](https://github.com/Conxian/conxian-gateway)
-4. [conxian-nexus](https://github.com/Conxian/conxian-nexus)
-5. [conxius-platform](https://github.com/Conxian/conxius-platform)
-6. [lib-conxian-core](https://github.com/Conxian/lib-conxian-core)
-
-**Portfolio classification (strategic vs experimental vs internal)**
-
-| Repository | Function | Classification | Audience |
-|---|---|---|---|
-| `Conxian` | Protocol | Strategic | Public |
-| `conxian-gateway` | Gateway | Strategic | Public |
-| `conxian-nexus` | Platform services | Strategic | Public |
-| `conxius-wallet` | Wallet | Strategic | Public |
-| `lib-conxian-core` | SDK | Strategic | Public |
-| `lib-conclave-sdk` | SDK | Experimental | Public |
-| `conxius-platform` | Platform tooling | Experimental | Public |
-| `conxian_ui` | Web UI | Experimental | Public |
-| `conxian-labs-site` | Website | Strategic | Public |
-| `stacksorbit` | Tooling | Experimental | Public |
-| `.github` | Org/meta | Internal-facing | Public |
+- repository categorization,
+- public vs internal visibility context, and
+- organization pinned-repository recommendations.
 
 ---
 
