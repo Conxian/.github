@@ -2,6 +2,17 @@ name: Dependency Review
 
 on:
   pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+  workflow_call:
+    inputs:
+      base-ref:
+        description: Base ref/SHA to compare from when pull_request context is unavailable.
+        required: false
+        type: string
+      head-ref:
+        description: Head ref/SHA to compare to when pull_request context is unavailable.
+        required: false
+        type: string
 
 permissions:
   contents: read
@@ -15,5 +26,10 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Dependency Review
         uses: actions/dependency-review-action@v4
+        with:
+          base-ref: ${{ github.event.pull_request.base.sha || inputs.base-ref }}
+          head-ref: ${{ github.event.pull_request.head.sha || inputs.head-ref }}
