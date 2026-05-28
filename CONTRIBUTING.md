@@ -28,9 +28,11 @@ Changes to the following files require CODEOWNERS review and adherence to the PR
 
 - `CODEOWNERS`
 - `SECURITY.md`
+- `SUPPORT.md`
 - `.github/ISSUE_TEMPLATE/**`
 - `.github/PULL_REQUEST_TEMPLATE*`
 - `.github/workflows/**`
+- `.github/release.yml`
 
 ## Standards & Style
 
@@ -39,6 +41,8 @@ Changes to the following files require CODEOWNERS review and adherence to the PR
 
 ## Report Strategic Issues
 Use the GitHub [issue tracker](https://github.com/Conxian/.github/issues) for public discussions regarding the registry.
+
+**For support routing, refer to [SUPPORT.md](SUPPORT.md).**
 
 **For security vulnerabilities, refer to [SECURITY.md](SECURITY.md).**
 
