@@ -1,12 +1,12 @@
-# CONXIAN LABS: ADMINISTRATIVE REGISTRY 🧪
+# Conxian GitHub Organization Governance 🧪
 
-### The Central Nervous System for the Bitcoin-Native Economy
+### Public defaults and documentation guidance for the Conxian ecosystem
 
 > **Status:** 🟢 Operational | **Node:** ZA-GP-MID | **Protocol:** Non-Custodial | **Model:** Sovereign Autonomous Business (SAB)
 
-Welcome to the administrative headquarters of **Conxian Labs**. This repository serves as the internal master registry, governing our global standards, security protocols, and the strategic alignment of the ecosystem.
+Welcome to the public governance repository for **Conxian Labs**. This repository defines shared standards, security defaults, and documentation guidance used across the Conxian GitHub organization.
 
-For a comprehensive view of our products, technical specifications, and operational directives, please visit the **[Internal Master Dashboard (profile/README.md)](profile/README.md)**.
+For the organization profile and public repository map, see **[profile/README.md](profile/README.md)**.
 
 ## Purpose
 
@@ -24,24 +24,24 @@ Ownership and review requirements are defined in [`CODEOWNERS`](./CODEOWNERS).
 
 ## 🏛️ Ecosystem Architecture: The Vertical Sovereignty Model
 
-Conxian Labs architects infrastructure that replaces human discretion with mathematical certainty. Our unified strategy ensures that every component of the ecosystem works in concert to provide end-to-end sovereignty.
+Conxian Labs builds infrastructure for the public Conxian ecosystem. Our strategy is to keep protocol and product surfaces aligned so users can access end-to-end sovereign financial tooling.
 
 ### 1. The Vault: [Conxius Wallet](https://github.com/Conxian/conxius-wallet)
 *   **Role:** Sovereign Access.
 *   **Focus:** Android-first, hardware-secured (**StrongBox/TEE**) Bitcoin and Lightning node services.
 *   **Status:** 🟢 Active.
 
-### 2. The Engine: [Conxian Finance](https://github.com/Conxian/Conxian)
-*   **Role:** Automated Settlement.
-*   **Focus:** Stacks-native DeFi protocol managing on-chain monetary policy via the **Fiscal Dam V4**.
+### 2. The Engine: [Conxian Protocol Core](https://github.com/Conxian/Conxian)
+*   **Role:** Protocol Core.
+*   **Focus:** Canonical public smart-contract and protocol settlement logic for the Conxian ecosystem.
 *   **Status:** 🟢 Production Ready.
 
-### 3. The Pipe: [Conxian Gateway](https://github.com/Conxian/OPSource)
+### 3. The Pipe: [Conxian Gateway](https://github.com/Conxian/conxian-gateway)
 *   **Role:** Unified Backend.
 *   **Focus:** High-performance Rust gateway providing a single entry point for all client applications and institutional bridges.
 *   **Status:** 🔄 Unified Infrastructure.
 
-### 4. The Lens: [Conxian Interface](https://github.com/Conxian/Conxian_UI)
+### 4. The Lens: [Conxian Interface](https://github.com/Conxian/conxian_ui)
 *   **Role:** Unified Interface.
 *   **Focus:** Comprehensive web interface for seamless interaction across all Conxian protocols.
 *   **Status:** 🟢 Active.
@@ -59,7 +59,7 @@ To maintain high-performance standards and eliminate redundant development, the 
 
 ## 📂 Repository Structure
 
-*   **`profile/`**: The [Internal Master Dashboard](profile/README.md)—our public-facing identity and detailed product roadmap.
+*   **`profile/`**: The [organization profile](profile/README.md) and public repository map.
 *   **`REVIEWS.md`**: Comparative benchmarks against industry leaders.
 *   **`CONTRIBUTING.md`**: Protocols for participating in the Bitcoin Renaissance.
 

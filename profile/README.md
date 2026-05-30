@@ -8,6 +8,8 @@ Building open infrastructure for the Conxian Protocol.
 
 Conxian Labs is the operating team behind the Conxian ecosystem. This organization contains public protocol code, user-facing applications, SDKs, and developer tooling for the Conxian Protocol.
 
+Identity boundary: **Conxian** = protocol/public ecosystem. **Conxian Labs** = builder/operator/company.
+
 Company operations, legal work, financial administration, and other sensitive internal workflows are managed separately from the public codebase.
 
 ## Core public surfaces
