@@ -1,16 +1,7 @@
-# README Purpose + Status Template
+# README purpose + status template (moved)
 
-Use this snippet in repository `README.md` files to make scope and lifecycle clear.
+The canonical template is now maintained at the repository root:
 
-```md
-## Purpose
+- [`readme-purpose-status-template.md`](../readme-purpose-status-template.md)
 
-Describe what this repository owns, what it does not own, and the primary audience.
-
-## Status
-
-- **Lifecycle:** Active | Beta | Deprecated | Archived
-- **Stability:** Production | Pre-production | Experimental
-- **Maintainer(s):** @team-or-user
-- **Notes:** Any migration or deprecation timeline (if applicable)
-```
+Please update the root file directly.

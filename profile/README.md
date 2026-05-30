@@ -30,6 +30,7 @@ Public repositories in this organization should clearly state:
 - scope and boundaries
 - governance relation
 - security reporting path
+- contact path
 - license
 
 ## Contact
