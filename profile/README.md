@@ -1,94 +1,42 @@
-# CONXIAN LABS 🧪
+# Conxian Labs
 
-### Architecting the rails where the user owns the train.
+Building open infrastructure for the Conxian Protocol.
 
-> **Status:** 🟢 Operational&nbsp; | &nbsp;**Node:** ZA-GP-MID&nbsp; | &nbsp;**Protocol:** Non-Custodial&nbsp; | &nbsp;**Model:** Sovereign Autonomous Business (SAB)
+> **Status:** Operational · **Model:** Non-custodial · **Governance path:** Labs-led today, progressively decentralized after mainnet
 
----
+## Purpose
 
-### 🌐 [ENTER THE LAB: www.conxian-labs.com](http://www.conxian-labs.com)
-*Official Headquarters for Research, Institutional Gateways & Legal Registry*
+Conxian Labs is the operating team behind the Conxian ecosystem. This organization contains public protocol code, user-facing applications, SDKs, and developer tooling for the Conxian Protocol.
 
----
+Company operations, legal work, financial administration, and other sensitive internal workflows are managed separately from the public codebase.
 
-### 🛡️ Mission
+## Core public surfaces
 
-**Conxian Labs (Pty) Ltd** is an infrastructure firm dedicated to replacing human discretion with mathematical certainty. We build the high-performance, non-custodial tools required for the Bitcoin Renaissance—integrating hardware-grade security with automated on-chain finance.
+| Surface | Repository | Role |
+| --- | --- | --- |
+| Protocol core | [Conxian](https://github.com/Conxian/Conxian) | Canonical smart-contract and protocol logic |
+| Shared protocol libraries | [lib-conxian-core](https://github.com/Conxian/lib-conxian-core) | Reusable primitives and shared ecosystem logic |
+| Wallet | [conxius-wallet](https://github.com/Conxian/conxius-wallet) | Sovereign wallet and reference client |
+| Interface | [conxian_ui](https://github.com/Conxian/conxian_ui) | Public application interface |
+| Gateway | [conxian-gateway](https://github.com/Conxian/conxian-gateway) | Middleware, indexing, and institutional integration surface |
+| Labs site | [conxian-labs-site](https://github.com/Conxian/conxian-labs-site) | Corporate and public information site |
 
-**Code is Law. Logic is Sovereign.**
+## Public repo standards
 
----
+Public repositories in this organization should clearly state:
 
-### 🛠️ The Tech Stack
-<p align="left">
-  <a href="https://bitcoin.org"><img src="https://img.shields.io/badge/Bitcoin-000000?style=for-the-badge&logo=bitcoin&logoColor=white" alt="Bitcoin"></a>
-  <a href="https://stacks.co"><img src="https://img.shields.io/badge/Stacks-5546FF?style=for-the-badge&logo=stacks&logoColor=white" alt="Stacks"></a>
-  <a href="https://rust-lang.org"><img src="https://img.shields.io/badge/Rust-orange?style=for-the-badge&logo=rust&logoColor=white" alt="Rust"></a>
-  <a href="https://typescriptlang.org"><img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"></a>
-  <a href="https://clarity-lang.org"><img src="https://img.shields.io/badge/Clarity_4-Nakamoto_Ready-blue?style=for-the-badge" alt="Clarity 4"></a>
-  <a href="https://developer.android.com/training/articles/keystore"><img src="https://img.shields.io/badge/Security-TEE%2FStrongBox-red?style=for-the-badge" alt="Android TEE"></a>
-</p>
+- purpose
+- current status
+- scope and boundaries
+- governance relation
+- security reporting path
+- license
 
----
+## Contact
 
-### 🚀 Strategic Pillars
-*The core infrastructure supporting the Bitcoin-backed economy.*
+- General: [info@conxian-labs.com](mailto:info@conxian-labs.com)
+- Support: [support@conxian-labs.com](mailto:support@conxian-labs.com)
+- Security: [security@conxian-labs.com](mailto:security@conxian-labs.com)
+- Partnerships and business: [partners@conxian-labs.com](mailto:partners@conxian-labs.com)
 
-| Pillar              | Repository                                                                             | Description                                                                                                    | Status     |
-|---------------------|---------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|------------|
-| **Sovereign Access**   | [Conxius Wallet](https://github.com/Conxian/conxius-wallet)           | The Vault. Android-first, hardware-secured (StrongBox/TEE) Bitcoin & Lightning node.                           | 🟢 Active  |
-| **Automated Settlement** | [Conxian](https://github.com/Conxian/Conxian)                     | The Engine. Stacks-native DeFi protocol for automated monetary policy and liquidity.                           | 🟢 Production |
-| **Unified Backend**     | [Conxian Gateway](https://github.com/Conxian/conxian-gateway)        | The Pipe. High-performance Rust gateway for institutional/stateful API access.                                 | 🟢 Unified |
-| **Unified Interface**   | [Conxian UI](https://github.com/Conxian/conxian_ui)                  | The Lens. Comprehensive web interface (conxian_ui) for protocol interaction and visualization.                 | 🟢 Active  |
-
----
-
-### 🏗️ Unified Infrastructure Strategy
-*Standardizing the rails for the decentralized economy.*
-
-To ensure maximum efficiency and security, Conxian Labs operates under a unified architectural mandate:
-
-1. **Unified Backend (`conxian-gateway`):**  
-   Single entry point for all client apps (Wallet, UI, etc.), handling core protocol logic, compliance, and scaling.
-2. **Shared Modules ([lib-conxian-core](https://github.com/Conxian/lib-conxian-core)):**  
-   All core cryptographic and protocol primitives are maintained jointly for full ecosystem access.
-3. **Communication Channel Architecture:**  
-   Telemetry and inter-service communication leverage Nostr relays for decentralized messaging and Render.com for transparency.
-
----
-
-### 🤖 Agent Operational Directives
-*Strict protocols for autonomous and human contributors to ensure ecosystem integrity.*
-
-- **Anti-Duplication:** All reusable logic must go to `lib-conxian-core`.
-- **Unification Rule:** All clients interact with the unified gateway for protocol state.
-- **Tone & Aesthetic:** All publications and UIs follow the “Earthy Corporate Finance” theme: professional, grounded, precise.
-
----
-
-### 📋 Global Resource Registry
-*Canonical inventory for all Conxian repositories.*
-
-The canonical taxonomy and inventory now live in:
-
-- **[Repository Inventory + Taxonomy](./repository-taxonomy.md)**
-- **[README Purpose + Status Template](./readme-purpose-status-template.md)**
-
-Use those documents as the source of truth for:
-
-- repository categorization,
-- public vs internal visibility context, and
-- organization pinned-repository recommendations.
-
----
-
-### 📬 Contact Protocol
-
-- **Institutional/Admin:** [admin@conxian-labs.com](mailto:admin@conxian-labs.com)
-- **Technical Support:** [support@conxian-labs.com](mailto:support@conxian-labs.com)
-- **Public Inquiry:** [info@conxian-labs.com](mailto:info@conxian-labs.com)
-
-> _"Sovereign Access for People. Institutional Grade Infrastructure for Finance."_
-
----
-**CONXIAN LABS (PTY) LTD // ALL RIGHTS RESERVED // 2026**
+Official website: [conxian-labs.com](https://www.conxian-labs.com)

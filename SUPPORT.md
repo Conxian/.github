@@ -1,15 +1,15 @@
 # Support
 
-This repository defines Conxian's parent-level governance defaults (policy docs, templates, and shared workflows).
+This repository contains organization-wide public defaults for contribution, security, and workflow guidance.
 
 ## Where to get help
 
-- **General support / governance questions:** open a GitHub issue in this repository using a non-security template.
-- **Template or workflow bugs:** open a GitHub issue using the bug report template.
-- **Policy or process change requests:** open a GitHub issue using the governance request template.
+- General questions about public contribution standards: open a GitHub issue in this repository.
+- Template or workflow problems: open a GitHub issue with the relevant details.
+- Requests to improve public repo policy or defaults: open a GitHub issue describing the change.
 
 ## Security vulnerabilities
 
 Do **not** report vulnerabilities in public issues.
 
-Follow the private reporting process in [SECURITY.md](SECURITY.md) (GitHub private advisories or `security@conxian-labs.com`).
+Use GitHub private vulnerability reporting on the affected repository where available, or email [security@conxian-labs.com](mailto:security@conxian-labs.com).
