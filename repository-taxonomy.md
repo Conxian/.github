@@ -2,14 +2,14 @@
 
 This document defines the intended role of public repositories in the Conxian GitHub organization.
 
-For canonical naming of **Conxian** (protocol/public ecosystem) and **Conxian Labs** (builder/operator company), see [profile/README.md#canonical-identity](profile/README.md#canonical-identity).
+Identity boundary used in this taxonomy: **Conxian** = protocol/public ecosystem. **Conxian Labs** = builder/operator/company. For canonical naming, see [profile/README.md#canonical-identity](profile/README.md#canonical-identity).
 
 ## Categories
 
 ### Protocol core
 Canonical smart-contract or protocol logic.
 
-- `Conxian`
+- `Conxian/Conxian`
 
 ### Protocol tooling
 Deployment, coordination, or ecosystem tooling used around protocol development.

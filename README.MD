@@ -1,6 +1,6 @@
-# CONXIAN LABS: ORGANIZATION DEFAULTS & PUBLIC PROFILE 🧪
+# Conxian GitHub Organization Governance 🧪
 
-### The Central Nervous System for the Bitcoin-Native Economy
+### Public defaults and documentation guidance for the Conxian ecosystem
 
 > **Status:** 🟢 Operational | **Node:** ZA-GP-MID | **Protocol:** Non-Custodial | **Model:** Sovereign Autonomous Business (SAB)
 
@@ -26,16 +26,16 @@ Ownership and review requirements are defined in [`CODEOWNERS`](./CODEOWNERS).
 
 ## 🏛️ Ecosystem Architecture: The Vertical Sovereignty Model
 
-Conxian Labs architects infrastructure that replaces human discretion with mathematical certainty. Our unified strategy ensures that every component of the ecosystem works in concert to provide end-to-end sovereignty.
+Conxian Labs builds infrastructure for the public Conxian ecosystem. Our strategy is to keep protocol and product surfaces aligned so users can access end-to-end sovereign financial tooling.
 
 ### 1. The Vault: [Conxius Wallet](https://github.com/Conxian/conxius-wallet)
 *   **Role:** Sovereign Access.
 *   **Focus:** Android-first, hardware-secured (**StrongBox/TEE**) Bitcoin and Lightning node services.
 *   **Status:** 🟢 Active.
 
-### 2. The Engine: [Conxian Finance](https://github.com/Conxian/Conxian)
-*   **Role:** Automated Settlement.
-*   **Focus:** Stacks-native DeFi protocol managing on-chain monetary policy via the **Fiscal Dam V4**.
+### 2. The Engine: [Conxian Protocol Core](https://github.com/Conxian/Conxian)
+*   **Role:** Protocol Core.
+*   **Focus:** Canonical public smart-contract and protocol settlement logic for the Conxian ecosystem.
 *   **Status:** 🟢 Production Ready.
 
 ### 3. The Pipe: [Conxian Gateway](https://github.com/Conxian/conxian-gateway)
