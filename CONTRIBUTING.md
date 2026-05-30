@@ -1,30 +1,23 @@
-# Contributing to Conxian Labs Administrative Registry
+# Contributing to Conxian organization defaults
 
-We prioritize precision, security, and mathematical certainty in every update to this repository. This registry is the "Central Nervous System" for the Bitcoin-native economy.
+This repository contains the community health files, shared policies, templates, and default workflows used across public repositories in the Conxian GitHub organization.
 
-## Mission
-To participate in the Bitcoin Renaissance, you must adhere to the high-performance infrastructure standards of Conxian Labs.
+## Scope
 
-## Protocol for Contributions
+Changes here affect how public repositories present contribution, security, ownership, and issue/PR guidance.
 
-We use [GitHub Flow](https://guides.github.com/introduction/flow/index.html). All changes must occur through Pull Requests (PRs).
+## Contribution flow
 
-### 1. Preparation
-- **Fork the Registry:** Create your branch from `main`.
-- **Align with Strategy:** Ensure changes are consistent with the [Ecosystem Architecture](README.MD).
+We use GitHub Flow.
 
-### 2. Implementation
-- **Precise Documentation:** Any logic changes must be reflected in the relevant README or profile dashboard.
-- **Tone & Aesthetic:** Follow the "Earthy Corporate Finance" theme: professional, grounded, and precise.
+1. Create a branch from `main`.
+2. Make the smallest practical change.
+3. Open a pull request with a clear rationale.
+4. Request review from the relevant owners when touching policy or security-sensitive files.
 
-### 3. Submission
-- **Pull Request:** Link any relevant issues or strategic justifications.
-- **Sensitive files:** If your PR modifies governance/security-sensitive files, complete the PR security checklist and obtain CODEOWNERS review before merge.
-- **Licensing:** By contributing, you agree that your work will be licensed under the [MIT License](LICENSE) of this repository.
+## Changes that require extra care
 
-## Sensitive File Changes
-
-Changes to the following files require CODEOWNERS review and adherence to the PR security checklist:
+The following paths should receive CODEOWNERS review:
 
 - `CODEOWNERS`
 - `SECURITY.md`
@@ -33,18 +26,23 @@ Changes to the following files require CODEOWNERS review and adherence to the PR
 - `.github/PULL_REQUEST_TEMPLATE*`
 - `.github/workflows/**`
 - `.github/release.yml`
+- `profile/**`
 
-## Standards & Style
+## Content standards
 
-- **Markdown:** Use structured headings, consistent shields.io badges, and clear status indicators.
-- **Organization:** Use the `profile/` directory for major ecosystem updates.
+Keep public wording:
 
-## Report Strategic Issues
-Use the GitHub [issue tracker](https://github.com/Conxian/.github/issues) for public discussions regarding the registry.
+- clear
+- accurate
+- security-conscious
+- consistent with `conxian-labs.com` as the canonical public contact domain
 
-**For support routing, refer to [SUPPORT.md](SUPPORT.md).**
+Avoid describing this repository as an internal registry or private operations system.
 
-**For security vulnerabilities, refer to [SECURITY.md](SECURITY.md).**
+## Security
 
----
-© 2026 Conxian Labs (PTY) Ltd. Licensed under the MIT License; see [LICENSE](LICENSE) for details.
+Do not use public issues for vulnerability disclosure. Follow [SECURITY.md](SECURITY.md).
+
+## Support
+
+For public process or template questions, use the issue tracker in this repository. For support routing, use [SUPPORT.md](SUPPORT.md).
