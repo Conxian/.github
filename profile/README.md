@@ -10,6 +10,11 @@ Conxian Labs is the operating team behind the Conxian ecosystem. This organizati
 
 Company operations, legal work, financial administration, and other sensitive internal workflows are managed separately from the public codebase.
 
+### Canonical identity
+
+- **Conxian** = the protocol and public ecosystem (open repositories, applications, SDKs, and public docs).
+- **Conxian Labs** = the builder/operator company stewarding that ecosystem.
+
 ## Core public surfaces
 
 | Surface | Repository | Role |

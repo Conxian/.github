@@ -2,6 +2,8 @@
 
 This document defines the intended role of public repositories in the Conxian GitHub organization.
 
+For canonical naming of **Conxian** (protocol/public ecosystem) and **Conxian Labs** (builder/operator company), see [profile/README.md#canonical-identity](profile/README.md#canonical-identity).
+
 ## Categories
 
 ### Protocol core

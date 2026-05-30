@@ -1,16 +1,18 @@
-# CONXIAN LABS: ADMINISTRATIVE REGISTRY 🧪
+# CONXIAN LABS: ORGANIZATION DEFAULTS & PUBLIC PROFILE 🧪
 
 ### The Central Nervous System for the Bitcoin-Native Economy
 
 > **Status:** 🟢 Operational | **Node:** ZA-GP-MID | **Protocol:** Non-Custodial | **Model:** Sovereign Autonomous Business (SAB)
 
-Welcome to the administrative headquarters of **Conxian Labs**. This repository serves as the internal master registry, governing our global standards, security protocols, and the strategic alignment of the ecosystem.
+Welcome to the public organization-defaults repository for **Conxian Labs**. This repository defines shared community health files, security baselines, and contribution standards for the Conxian GitHub organization.
 
-For a comprehensive view of our products, technical specifications, and operational directives, please visit the **[Internal Master Dashboard (profile/README.md)](profile/README.md)**.
+For the canonical identity mapping and ecosystem overview, see **[profile/README.md](profile/README.md)**.
 
 ## Purpose
 
 Provide org-wide defaults (community health files, templates, and governance policies) for the Conxian GitHub organization.
+
+Canonical identity statement: see [profile/README.md#canonical-identity](profile/README.md#canonical-identity).
 
 ## Status
 
@@ -36,12 +38,12 @@ Conxian Labs architects infrastructure that replaces human discretion with mathe
 *   **Focus:** Stacks-native DeFi protocol managing on-chain monetary policy via the **Fiscal Dam V4**.
 *   **Status:** 🟢 Production Ready.
 
-### 3. The Pipe: [Conxian Gateway](https://github.com/Conxian/OPSource)
+### 3. The Pipe: [Conxian Gateway](https://github.com/Conxian/conxian-gateway)
 *   **Role:** Unified Backend.
 *   **Focus:** High-performance Rust gateway providing a single entry point for all client applications and institutional bridges.
 *   **Status:** 🔄 Unified Infrastructure.
 
-### 4. The Lens: [Conxian Interface](https://github.com/Conxian/Conxian_UI)
+### 4. The Lens: [Conxian Interface](https://github.com/Conxian/conxian_ui)
 *   **Role:** Unified Interface.
 *   **Focus:** Comprehensive web interface for seamless interaction across all Conxian protocols.
 *   **Status:** 🟢 Active.
@@ -59,7 +61,7 @@ To maintain high-performance standards and eliminate redundant development, the 
 
 ## 📂 Repository Structure
 
-*   **`profile/`**: The [Internal Master Dashboard](profile/README.md)—our public-facing identity and detailed product roadmap.
+*   **`profile/`**: The [public organization profile](profile/README.md), including the canonical Conxian/Conxian Labs identity statement.
 *   **`REVIEWS.md`**: Comparative benchmarks against industry leaders.
 *   **`CONTRIBUTING.md`**: Protocols for participating in the Bitcoin Renaissance.
 
