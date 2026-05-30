@@ -2,7 +2,7 @@
 
 This document defines the intended role of public repositories in the Conxian GitHub organization.
 
-Identity boundary used in this taxonomy: **Conxian** = protocol/public ecosystem. **Conxian Labs** = builder/operator/company.
+Identity boundary used in this taxonomy: **Conxian** = protocol/public ecosystem. **Conxian Labs** = builder/operator/company. For canonical naming, see [profile/README.md#canonical-identity](profile/README.md#canonical-identity).
 
 ## Categories
 

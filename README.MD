@@ -4,13 +4,15 @@
 
 > **Status:** 🟢 Operational | **Node:** ZA-GP-MID | **Protocol:** Non-Custodial | **Model:** Sovereign Autonomous Business (SAB)
 
-Welcome to the public governance repository for **Conxian Labs**. This repository defines shared standards, security defaults, and documentation guidance used across the Conxian GitHub organization.
+Welcome to the public organization-defaults repository for **Conxian Labs**. This repository defines shared community health files, security baselines, and contribution standards for the Conxian GitHub organization.
 
-For the organization profile and public repository map, see **[profile/README.md](profile/README.md)**.
+For the canonical identity mapping and ecosystem overview, see **[profile/README.md](profile/README.md)**.
 
 ## Purpose
 
 Provide org-wide defaults (community health files, templates, and governance policies) for the Conxian GitHub organization.
+
+Canonical identity statement: see [profile/README.md#canonical-identity](profile/README.md#canonical-identity).
 
 ## Status
 
@@ -59,7 +61,7 @@ To maintain high-performance standards and eliminate redundant development, the 
 
 ## 📂 Repository Structure
 
-*   **`profile/`**: The [organization profile](profile/README.md) and public repository map.
+*   **`profile/`**: The [public organization profile](profile/README.md), including the canonical Conxian/Conxian Labs identity statement.
 *   **`REVIEWS.md`**: Comparative benchmarks against industry leaders.
 *   **`CONTRIBUTING.md`**: Protocols for participating in the Bitcoin Renaissance.
 
