@@ -1,21 +1,22 @@
-# Conxian Labs
+# Conxian
 
-Building open infrastructure for the Conxian Protocol.
+Public repositories for the Conxian protocol/ecosystem and Conxian Labs-operated surfaces.
 
-> **Status:** Operational · **Model:** Non-custodial · **Governance path:** Labs-led today, progressively decentralized after mainnet
+> **Status:** Operational · **Model:** Non-custodial · **Identity split:** Conxian (protocol/ecosystem/governance-facing) + Conxian Labs (builder/operator/company-facing)
 
 ## Purpose
 
-Conxian Labs is the operating team behind the Conxian ecosystem. This organization contains public protocol code, user-facing applications, SDKs, and developer tooling for the Conxian Protocol.
+This GitHub organization is the public code and documentation surface for the Conxian ecosystem.
 
-Identity boundary: **Conxian** = protocol/public ecosystem. **Conxian Labs** = builder/operator/company.
+- **Conxian** = protocol, ecosystem, and governance-facing assets.
+- **Conxian Labs** = builder/operator/company responsible for shipping and operating public products and infrastructure.
 
-Company operations, legal work, financial administration, and other sensitive internal workflows are managed separately from the public codebase.
+Company operations, legal work, financial administration, and other sensitive internal workflows are managed separately from this public codebase.
 
 ### Canonical identity
 
-- **Conxian** = the protocol and public ecosystem (open repositories, applications, SDKs, and public docs).
-- **Conxian Labs** = the builder/operator company stewarding that ecosystem.
+- **Conxian** = protocol/ecosystem/governance-facing identity.
+- **Conxian Labs** = builder/operator/company-facing identity.
 
 ## Core public surfaces
 
@@ -27,6 +28,19 @@ Company operations, legal work, financial administration, and other sensitive in
 | Interface | [conxian_ui](https://github.com/Conxian/conxian_ui) | Public application interface |
 | Gateway | [conxian-gateway](https://github.com/Conxian/conxian-gateway) | Middleware, indexing, and institutional integration surface |
 | Labs site | [conxian-labs-site](https://github.com/Conxian/conxian-labs-site) | Corporate and public information site |
+
+## Pinned repositories (recommended order)
+
+When org pins are updated, list protocol/ecosystem surfaces first and the Labs company surface last.
+
+| Order | Repository | Rationale |
+| --- | --- | --- |
+| 1 | [Conxian](https://github.com/Conxian/Conxian) | Canonical protocol implementation and governance-facing reference point. |
+| 2 | [lib-conxian-core](https://github.com/Conxian/lib-conxian-core) | Shared protocol primitives reused across ecosystem repositories. |
+| 3 | [conxius-wallet](https://github.com/Conxian/conxius-wallet) | Sovereign wallet reference client for ecosystem participants. |
+| 4 | [conxian_ui](https://github.com/Conxian/conxian_ui) | Primary public interface for users interacting with Conxian services. |
+| 5 | [conxian-gateway](https://github.com/Conxian/conxian-gateway) | Integration surface for external systems and institutional connectivity. |
+| 6 | [conxian-labs-site](https://github.com/Conxian/conxian-labs-site) | Company-facing Conxian Labs information surface. |
 
 ## Public repo standards
 
