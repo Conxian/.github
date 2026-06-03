@@ -61,4 +61,8 @@ Public repositories in this organization should clearly state:
 - Security: [security@conxian-labs.com](mailto:security@conxian-labs.com)
 - Partnerships and business: [partners@conxian-labs.com](mailto:partners@conxian-labs.com)
 
-Official website: [conxian-labs.com](https://www.conxian-labs.com)
+Official website: [conxian-labs.com](https://conxian-labs.com) (Hosted on Render)
+
+## Infrastructure Updates (June 2026)
+- **Hosting:** Transitioned from Namecheap to **Render** for primary web services.
+- **Documentation:** Implemented a unified GitHub Pages strategy under `conxian.github.io`.
