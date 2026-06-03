@@ -35,7 +35,8 @@ Keep public wording:
 - clear
 - accurate
 - security-conscious
-- consistent with `conxian-labs.com` as the canonical public contact domain
+- consistent with `conxian-labs.com` (hosted on Render) as the canonical public contact domain
+- aligned with the Sovereign Documentation Strategy (using GitHub Pages for sub-repo documentation)
 
 Avoid describing this repository as an internal registry or private operations system.
 
