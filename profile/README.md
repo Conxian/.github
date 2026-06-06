@@ -20,27 +20,27 @@ Company operations, legal work, financial administration, and other sensitive in
 
 ## Core public surfaces
 
-| Surface | Repository | Role |
-| --- | --- | --- |
-| Protocol core | [Conxian](https://github.com/Conxian/Conxian) | Canonical smart-contract and protocol logic |
-| Shared protocol libraries | [lib-conxian-core](https://github.com/Conxian/lib-conxian-core) | Reusable primitives and shared ecosystem logic |
-| Wallet | [conxius-wallet](https://github.com/Conxian/conxius-wallet) | Sovereign wallet and reference client |
-| Interface | [conxian_ui](https://github.com/Conxian/conxian_ui) | Public application interface |
-| Gateway | [conxian-gateway](https://github.com/Conxian/conxian-gateway) | Middleware, indexing, and institutional integration surface |
-| Labs site | [conxian-labs-site](https://github.com/Conxian/conxian-labs-site) | Corporate and public information site |
+| Surface                   | Repository                                                        | Role                                                        |
+| ------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------- |
+| Protocol core             | [Conxian](https://github.com/Conxian/Conxian)                     | Canonical smart-contract and protocol logic                 |
+| Shared protocol libraries | [lib-conxian-core](https://github.com/Conxian/lib-conxian-core)   | Reusable primitives and shared ecosystem logic              |
+| Wallet                    | [conxius-wallet](https://github.com/Conxian/conxius-wallet)       | Sovereign wallet and reference client                       |
+| Interface                 | [conxian_ui](https://github.com/Conxian/conxian_ui)               | Public application interface                                |
+| Gateway                   | [conxian-gateway](https://github.com/Conxian/conxian-gateway)     | Middleware, indexing, and institutional integration surface |
+| Labs site                 | [conxian-labs-site](https://github.com/Conxian/conxian-labs-site) | Corporate and public information site                       |
 
 ## Pinned repositories (recommended order)
 
 When org pins are updated, list protocol/ecosystem surfaces first and the Labs company surface last.
 
-| Order | Repository | Rationale |
-| --- | --- | --- |
-| 1 | [Conxian](https://github.com/Conxian/Conxian) | Canonical protocol implementation and governance-facing reference point. |
-| 2 | [lib-conxian-core](https://github.com/Conxian/lib-conxian-core) | Shared protocol primitives reused across ecosystem repositories. |
-| 3 | [conxius-wallet](https://github.com/Conxian/conxius-wallet) | Sovereign wallet reference client for ecosystem participants. |
-| 4 | [conxian_ui](https://github.com/Conxian/conxian_ui) | Primary public interface for users interacting with Conxian services. |
-| 5 | [conxian-gateway](https://github.com/Conxian/conxian-gateway) | Integration surface for external systems and institutional connectivity. |
-| 6 | [conxian-labs-site](https://github.com/Conxian/conxian-labs-site) | Company-facing Conxian Labs information surface. |
+| Order | Repository                                                        | Rationale                                                                |
+| ----- | ----------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| 1     | [Conxian](https://github.com/Conxian/Conxian)                     | Canonical protocol implementation and governance-facing reference point. |
+| 2     | [lib-conxian-core](https://github.com/Conxian/lib-conxian-core)   | Shared protocol primitives reused across ecosystem repositories.         |
+| 3     | [conxius-wallet](https://github.com/Conxian/conxius-wallet)       | Sovereign wallet reference client for ecosystem participants.            |
+| 4     | [conxian_ui](https://github.com/Conxian/conxian_ui)               | Primary public interface for users interacting with Conxian services.    |
+| 5     | [conxian-gateway](https://github.com/Conxian/conxian-gateway)     | Integration surface for external systems and institutional connectivity. |
+| 6     | [conxian-labs-site](https://github.com/Conxian/conxian-labs-site) | Company-facing Conxian Labs information surface.                         |
 
 ## Public repo standards
 
@@ -64,5 +64,6 @@ Public repositories in this organization should clearly state:
 Official website: [conxian-labs.com](https://conxian-labs.com) (Hosted on Render)
 
 ## Infrastructure Updates (June 2026)
+
 - **Hosting:** Transitioned from Namecheap to **Render** for primary web services.
 - **Documentation:** Implemented a unified GitHub Pages strategy under `conxian.github.io`.

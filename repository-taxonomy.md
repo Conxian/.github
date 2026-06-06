@@ -7,22 +7,26 @@ Identity boundary used in this taxonomy: **Conxian** = protocol/public ecosystem
 ## Categories
 
 ### Protocol core
+
 Canonical smart-contract or protocol logic.
 
 - `Conxian/Conxian`
 
 ### Protocol tooling
+
 Deployment, coordination, or ecosystem tooling used around protocol development.
 
 - `conxius-orbit`
 
 ### Shared core libraries
+
 Reusable libraries and shared primitives consumed by multiple Conxian services or applications.
 
 - `lib-conxian-core`
 - `conxius-enclave-sdk`
 
 ### Product and interface surfaces
+
 Public-facing applications, middleware, wallets, and API layers.
 
 - `conxius-wallet`
@@ -31,12 +35,14 @@ Public-facing applications, middleware, wallets, and API layers.
 - `conxian-nexus`
 
 ### Labs and organization surfaces
+
 Public organization defaults and corporate/public information surfaces.
 
 - `.github`
 - `conxian-labs-site`
 
 ### Platform and environment scaffolding
+
 Development and control-plane tooling that may require periodic review to ensure no sensitive operational material is exposed publicly.
 
 - `conxius-platform`

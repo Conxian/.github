@@ -8,9 +8,9 @@ This policy applies to security vulnerabilities in Conxian-managed GitHub reposi
 
 Security fixes are applied on a rolling basis to the default branch (`main`). This repository does not currently publish versioned releases or support branches.
 
-| Channel | Security fixes |
-| ------- | -------------- |
-| `main` (default branch) | Yes |
+| Channel                     | Security fixes                       |
+| --------------------------- | ------------------------------------ |
+| `main` (default branch)     | Yes                                  |
 | Other branches/tags/commits | Not actively maintained for security |
 
 ## Reporting a Vulnerability
@@ -25,6 +25,7 @@ Use one of the following private channels:
 If you cannot use either channel, email **admin@conxian-labs.com** and clearly label the message as a security report.
 
 Include, where possible:
+
 - A clear description of the issue.
 - Steps to reproduce or a proof-of-concept.
 - Potential impact.
@@ -43,12 +44,12 @@ Reports are triaged by impact and exploitability using four internal severity ba
 
 These are target timelines, not guarantees. Complex issues may require staged mitigations.
 
-| Severity | Acknowledgement target | Triage update target | Remediation target |
-| -------- | ---------------------- | -------------------- | ------------------ |
-| Critical | 24 hours | 72 hours | Mitigation ASAP, target <= 7 days |
-| High | 72 hours | 5 business days | Target <= 30 days |
-| Medium | 5 business days | 10 business days | Target <= 90 days |
-| Low | 10 business days | 15 business days | Scheduled as planned hardening work |
+| Severity | Acknowledgement target | Triage update target | Remediation target                  |
+| -------- | ---------------------- | -------------------- | ----------------------------------- |
+| Critical | 24 hours               | 72 hours             | Mitigation ASAP, target <= 7 days   |
+| High     | 72 hours               | 5 business days      | Target <= 30 days                   |
+| Medium   | 5 business days        | 10 business days     | Target <= 90 days                   |
+| Low      | 10 business days       | 15 business days     | Scheduled as planned hardening work |
 
 ## Safe Harbor and Coordinated Disclosure
 
