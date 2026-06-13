@@ -27,6 +27,9 @@ Company operations, legal work, financial administration, and other sensitive in
 | Wallet                    | [conxius-wallet](https://github.com/Conxian/conxius-wallet)       | Sovereign wallet and reference client                       |
 | Interface                 | [conxian_ui](https://github.com/Conxian/conxian_ui)               | Public application interface                                |
 | Gateway                   | [conxian-gateway](https://github.com/Conxian/conxian-gateway)     | Middleware, indexing, and institutional integration surface |
+| Nexus                     | [conxian-nexus](https://github.com/Conxian/conxian-nexus)         | Cross-chain maneuver orchestration and state verification   |
+| Platform scaffolding      | [conxius-platform](https://github.com/Conxian/conxius-platform)   | Declarative NixOS control plane and environment scaffolding |
+| Protocol tooling          | [conxius-orbit](https://github.com/Conxian/conxius-orbit)         | Ecosystem coordination and deployment tooling               |
 | Labs site                 | [conxian-labs-site](https://github.com/Conxian/conxian-labs-site) | Corporate and public information site                       |
 
 ## Pinned repositories (recommended order)
@@ -54,6 +57,11 @@ Public repositories in this organization should clearly state:
 - contact path
 - license
 
+## Organization Stats
+
+[![Conxian Labs GitHub Stats](https://github-readme-stats.vercel.app/api?username=Conxian&show_icons=true&theme=radical)](https://github.com/anuraghazra/github-readme-stats)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Conxian&layout=compact&theme=radical)](https://github.com/anuraghazra/github-readme-stats)
+
 ## Contact
 
 - General: [info@conxian-labs.com](mailto:info@conxian-labs.com)
@@ -67,3 +75,7 @@ Official website: [conxian-labs.com](https://conxian-labs.com) (Hosted on Render
 
 - **Hosting:** Transitioned from Namecheap to **Render** for primary web services.
 - **Documentation:** Implemented a unified GitHub Pages strategy under `conxian.github.io`.
+
+---
+
+**CONXIAN LABS (PTY) LTD // ALL RIGHTS RESERVED // 2026**

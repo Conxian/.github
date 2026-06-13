@@ -10,42 +10,42 @@ Identity boundary used in this taxonomy: **Conxian** = protocol/public ecosystem
 
 Canonical smart-contract or protocol logic.
 
-- `Conxian/Conxian`
+- `Conxian/Conxian`: Canonical smart-contract and protocol logic.
 
 ### Protocol tooling
 
 Deployment, coordination, or ecosystem tooling used around protocol development.
 
-- `conxius-orbit`
+- `conxius-orbit`: Ecosystem coordination and deployment tooling.
 
 ### Shared core libraries
 
 Reusable libraries and shared primitives consumed by multiple Conxian services or applications.
 
-- `lib-conxian-core`
-- `conxius-enclave-sdk`
+- `lib-conxian-core`: Reusable primitives and shared ecosystem logic.
+- `conxius-enclave-sdk`: SDK for hardware-secured execution environments.
 
 ### Product and interface surfaces
 
 Public-facing applications, middleware, wallets, and API layers.
 
-- `conxius-wallet`
-- `conxian_ui`
-- `conxian-gateway`
-- `conxian-nexus`
+- `conxius-wallet`: Sovereign wallet and reference client.
+- `conxian_ui`: Public application interface.
+- `conxian-gateway`: Middleware, indexing, and institutional integration surface.
+- `conxian-nexus`: Cross-chain maneuver orchestration and state verification.
 
 ### Labs and organization surfaces
 
 Public organization defaults and corporate/public information surfaces.
 
-- `.github`
-- `conxian-labs-site`
+- `.github`: Public organization defaults and shared community health files.
+- `conxian-labs-site`: Corporate and public information site.
 
 ### Platform and environment scaffolding
 
 Development and control-plane tooling that may require periodic review to ensure no sensitive operational material is exposed publicly.
 
-- `conxius-platform`
+- `conxius-platform`: Declarative NixOS control plane and environment scaffolding.
 
 ## Public/private rule
 
