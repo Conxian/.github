@@ -78,4 +78,4 @@ Official website: [conxian-labs.com](https://conxian-labs.com) (Hosted on Render
 
 ---
 
-**CONXIAN LABS (PTY) LTD // ALL RIGHTS RESERVED // 2026**
+**CONXIAN LABS (PTY) LTD // ALL RIGHTS RESERVED // 2026** 
