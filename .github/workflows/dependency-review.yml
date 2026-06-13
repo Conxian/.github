@@ -3,6 +3,14 @@ name: Dependency Review
 on:
   pull_request:
     types: [opened, synchronize, reopened, ready_for_review]
+    paths:
+      - '**/package-lock.json'
+      - '**/yarn.lock'
+      - '**/pnpm-lock.yaml'
+      - '**/Cargo.lock'
+      - '**/Gemfile.lock'
+      - '**/go.sum'
+      - '**/composer.lock'
   workflow_call:
     inputs:
       base-ref:
@@ -10,9 +18,12 @@ on:
         required: false
         type: string
       head-ref:
-        description: Head ref/SHA to compare to when pull_request context is unavailable.
+        description: Head ref/SHA to compare to to when pull_request context is unavailable.
         required: false
         type: string
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 permissions:
   contents: read

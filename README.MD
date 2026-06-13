@@ -52,6 +52,12 @@ Conxian Labs builds infrastructure for the public Conxian ecosystem. Our strateg
 - **Focus:** Comprehensive web interface for seamless interaction across all Conxian protocols.
 - **Status:** 🟢 Active.
 
+### 5. The Orchestrator: [Conxian Nexus](https://github.com/Conxian/conxian-nexus)
+
+- **Role:** Maneuver Orchestration.
+- **Focus:** Cross-chain maneuver orchestration and state verification for the Conxian ecosystem.
+- **Status:** 🟢 Active.
+
 ---
 
 ## 🏗️ Unified Infrastructure Strategy
