@@ -24,12 +24,13 @@ Company operations, legal work, financial administration, and other sensitive in
 | --- | --- | --- |
 | Protocol core | [Conxian](https://github.com/Conxian/Conxian) | Canonical protocol and DAO-facing logic |
 | Shared protocol libraries | [lib-conxian-core](https://github.com/Conxian/lib-conxian-core) | Reusable primitives and shared ecosystem logic |
+| Enclave SDK | [conxius-enclave-sdk](https://github.com/Conxian/conxius-enclave-sdk) | SDK for hardware-secured execution environments |
 | Wallet | [conxius-wallet](https://github.com/Conxian/conxius-wallet) | Sovereign wallet and reference client |
 | Interface | [conxian_ui](https://github.com/Conxian/conxian_ui) | Public interaction and application-facing interface |
 | Gateway | [conxian-gateway](https://github.com/Conxian/conxian-gateway) | Middleware and integration surface |
 | Nexus | [conxian-nexus](https://github.com/Conxian/conxian-nexus) | Cross-chain verification and state support |
 | Platform scaffolding | [conxius-platform](https://github.com/Conxian/conxius-platform) | Environment and orchestration scaffolding |
-| Protocol tooling | [conxius-orbit](https://github.com/Conxian/conxius-orbit) | Deployment and operator tooling |
+| Protocol tooling | [conxius-orbit](https://github.com/Conxian/conxius-orbit) | Ecosystem coordination and deployment tooling |
 | Labs site | [conxian-labs-site](https://github.com/Conxian/conxian-labs-site) | Conxian-Labs portfolio and public information site |
 
 ## Pinned repositories (recommended order)
