@@ -34,6 +34,12 @@ Public-facing applications, middleware, wallets, and API layers.
 - `conxian-gateway`: Middleware, indexing, and institutional integration surface.
 - `conxian-nexus`: Cross-chain maneuver orchestration and state verification.
 
+### Operating and readiness metrics
+
+Canonical templates and scorecards for ecosystem governance.
+
+- : Executive and cross-lane readiness scorecards.
+
 ### Labs and organization surfaces
 
 Public organization defaults and corporate/public information surfaces.

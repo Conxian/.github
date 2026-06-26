@@ -73,6 +73,7 @@ To maintain high-performance standards and eliminate redundant development, the 
 ## 📂 Repository Structure
 
 - **`profile/`**: The [public organization profile](profile/README.md), including the canonical Conxian/Conxian Labs identity statement.
+- **`docs/scorecards/`**: [Canonical templates](./docs/scorecards/README.md) for executive and readiness reviews.
 - **`REVIEWS.md`**: Comparative benchmarks against industry leaders.
 - **`CONTRIBUTING.md`**: Protocols for participating in the Bitcoin Renaissance.
 
