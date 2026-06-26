@@ -26,3 +26,7 @@ Welcome to the unified documentation surface for the Conxian ecosystem.
 ---
 
 _Built for vertical sovereignty. Architecting the rails where the user owns the train._
+
+## Research & Hardening
+- **[Hardening Best Practices](./research/hardening-best-practices.md)**: Fail-closed and production-boundary patterns for Gateway and Enclave SDKs.
+- **[Research Source & Gap Map](./research/source-and-gap-map.md)**: Live mapping of research context to codebase gaps.
