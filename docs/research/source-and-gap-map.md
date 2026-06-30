@@ -35,3 +35,4 @@ This document maps existing research to codebase gaps and scores future candidat
 *Mapping maintained by @Jules.*
 *Mapping maintained by @Jules.*
 - [x] **CI/CD Gaps & Alignment:** Documented in `docs/research/cicd-failures-and-gaps.md`.
+- [x] **CI/CD Validation Scripts:** Initialized in `scripts/`. (CON-1322)
