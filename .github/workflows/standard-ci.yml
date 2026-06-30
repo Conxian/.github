@@ -11,14 +11,46 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Install Linting Tools
+        run: |
+          sudo apt-get update && sudo apt-get install -y shellcheck
+          # Install actionlint
+          bash <(curl https://raw.githubusercontent.com/rhysd/actionlint/main/scripts/download-actionlint.bash)
+          sudo mv actionlint /usr/local/bin/
+      - name: Lint Workflows
+        run: actionlint
+      - name: Lint Shell Scripts
+        run: |
+          if [ -d "scripts" ]; then
+            find scripts -name "*.sh" -exec shellcheck {} +
+          fi
       - name: Check Formatting
         run: |
           if [ -f "Cargo.toml" ]; then cargo fmt --check; fi
           if [ -f "package.json" ]; then npm run format:check; fi
 
+  governance-and-security:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Run Governance Verifications
+        run: |
+          for script in scripts/verify_*.py; do
+            echo "Running $script..."
+            python3 "$script"
+          done
+      - name: Run Lightning Coverage Gate
+        run: |
+          if [ -f "scripts/lightning_coverage_gate.sh" ]; then
+            bash scripts/lightning_coverage_gate.sh
+          fi
+
   security:
     runs-on: ubuntu-latest
-    # Only run dependency review if there are supported lockfiles
     if: >
       github.event_name == 'pull_request' &&
       (hashFiles('**/package-lock.json', '**/pnpm-lock.yaml', '**/Cargo.lock') != '')

@@ -7,7 +7,6 @@ on:
     paths:
       - "docs/**"
       - "README.MD"
-      - "docs/SOVEREIGN_PAGES.md"
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
@@ -32,10 +31,15 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v4
+      - name: Prepare Docs
+        run: |
+          if [ ! -d "docs" ]; then
+            mkdir docs
+            echo "<h1>Conxian Organization Defaults</h1><p>Documentation is being prepared.</p>" > docs/index.html
+          fi
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # If we don't have a docs/ folder yet, we can deploy the root or create a placeholder
           path: "./docs"
       - name: Deploy to GitHub Pages
         id: deployment
