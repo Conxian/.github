@@ -7,6 +7,8 @@ on:
     paths:
       - "docs/**"
       - "README.MD"
+      - "repository-taxonomy.md"
+      - "REVIEWS.md"
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
@@ -37,6 +39,10 @@ jobs:
             mkdir docs
             echo "<h1>Conxian Organization Defaults</h1><p>Documentation is being prepared.</p>" > docs/index.html
           fi
+          # Sync root governance files to docs for hosting if they aren't already linked
+          cp README.MD docs/README.md
+          cp repository-taxonomy.md docs/repository-taxonomy.md
+          cp REVIEWS.md docs/REVIEWS.md
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

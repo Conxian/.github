@@ -43,11 +43,18 @@ jobs:
             echo "Running $script..."
             python3 "$script"
           done
+      - name: Generate Coverage Report
+        run: python3 scripts/lightning_coverage_report.py
       - name: Run Lightning Coverage Gate
         run: |
           if [ -f "scripts/lightning_coverage_gate.sh" ]; then
             bash scripts/lightning_coverage_gate.sh
           fi
+      - name: Upload Coverage Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: lightning-coverage-report
+          path: lightning-coverage.json
 
   security:
     runs-on: ubuntu-latest
