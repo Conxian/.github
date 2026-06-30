@@ -1,0 +1,35 @@
+name: Standard CI
+
+on:
+  pull_request:
+    branches: [ main ]
+  push:
+    branches: [ main ]
+
+jobs:
+  lint-and-format:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check Formatting
+        run: |
+          if [ -f "Cargo.toml" ]; then cargo fmt --check; fi
+          if [ -f "package.json" ]; then npm run format:check; fi
+
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Dependency Review
+        uses: actions/dependency-review-action@v4
+        with:
+          fail-on-severity: high
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run Tests
+        run: |
+          if [ -f "Cargo.toml" ]; then cargo test; fi
+          if [ -f "package.json" ]; then npm test; fi
