@@ -9,6 +9,7 @@ on:
       - "README.MD"
       - "repository-taxonomy.md"
       - "REVIEWS.md"
+      - ".github/workflows/deploy-docs.yml"
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
@@ -35,14 +36,20 @@ jobs:
         uses: actions/configure-pages@v4
       - name: Prepare Docs
         run: |
-          if [ ! -d "docs" ]; then
-            mkdir docs
-            echo "<h1>Conxian Organization Defaults</h1><p>Documentation is being prepared.</p>" > docs/index.html
+          # Ensure docs directory exists
+          mkdir -p docs
+
+          # Sync root governance files to docs for hosting
+          # Using -f to overwrite and ensure latest versions are hosted
+          cp -f README.MD docs/README.md
+          cp -f repository-taxonomy.md docs/repository-taxonomy.md
+          cp -f REVIEWS.md docs/REVIEWS.md
+
+          # Verify index file exists, create a basic one if it doesn't
+          if [ ! -f "docs/index.md" ] && [ ! -f "docs/index.html" ]; then
+            echo "# Conxian Organization Defaults" > docs/index.md
+            echo "Documentation is being prepared." >> docs/index.md
           fi
-          # Sync root governance files to docs for hosting if they aren't already linked
-          cp README.MD docs/README.md
-          cp repository-taxonomy.md docs/repository-taxonomy.md
-          cp REVIEWS.md docs/REVIEWS.md
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
