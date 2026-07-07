@@ -1,6 +1,5 @@
 import os
 import sys
-import time
 
 def check_knowledge_kb():
     print("Verifying knowledge retention baselines...")
