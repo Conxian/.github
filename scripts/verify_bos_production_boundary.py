@@ -1,6 +1,5 @@
 import os
 import sys
-import subprocess
 
 def check_production_boundary():
     print("Verifying BOS production boundary consistency...")
