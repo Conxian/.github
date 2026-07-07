@@ -1,38 +1,42 @@
-# Research Source & Gap Map
+# Research Source & Gap Map (2026-07-07 Update)
 
-This document maps existing research to codebase gaps and scores future candidates for execution.
+This document maps theoretical research and organizational standards to the actual implementation status across the Conxian codebase.
 
-## 1. Existing Research Sources
-| Source | Type | Status |
-| :*Mapping maintained by @Jules.* | :--- | :--- |
-| Vertical Sovereignty Model | Doctrine | Canonical |
-| Progressive Sovereignty | Strategy | Canonical |
-| Portfolio Audit Synthesis (2026-06-22) | Evidence | Current |
-| Hardening Best Practices | Implementation | New (2026-06-26) |
-| RGB Fork Analysis | Technical | Critical (2026-06-28) |
-| Citrea Groth16 Production | Evidence | Current (2026-06-28) |
+## 🏛️ Ecosystem Alignment
 
-## 2. Identified Gaps & Research Score
-| Gap | Issue | Complexity | Impact | Score |
-| :*Mapping maintained by @Jules.* | :--- | :---: | :---: | :---: |
-| **RGB Protocol Fork Risk** | CON-1338 | Medium | Critical | **10** |
-| **BitVM3 Transition** | CON-1337 | High | High | **9** |
-| **Groth16 Recursive Proving** | CON-1340 | High | High | **9** |
-| **Babylon Light Client** | CON-1350 | Medium | High | **8** |
-| **DLC CET Construction** | CON-1347 | High | Medium | **7** |
-| **Fail-Closed Auth** | CON-1279 | Medium | High | **9** |
-| **Enclave Production Boundary** | CON-1280 | Medium | High | **9** |
-| **Developer Quickstart** | CON-1301 | Low | High | **8** |
-| **ISO 20022 camt.053/054** | CON-1348 | Medium | Medium | **7** |
+| Research Area | Canonical Source | Gap / Status |
+| --- | --- | --- |
+| **Identity & Naming** | [profile/README.md](../../profile/README.md) | 🟢 Rebranding to *Conxius Orbit* complete. |
+| **Governance** | [repository-taxonomy.md](../../repository-taxonomy.md) | 🟢 Taxonomy defined and synced to docs. |
+| **Security Standards** | [SECURITY.md](../../SECURITY.md) | 🟢 Vulnerability reporting path standardized. |
+| **Documentation Strategy** | [SOVEREIGN_PAGES.md](../SOVEREIGN_PAGES.md) | 🟢 Hub enhanced; decentralized strategy implemented. |
 
-## 3. Knowledge Base Expansion
-- [x] **Operating Scorecard Templates:** Initialized in `docs/scorecards/`.
-- [x] **Hardening Research:** Initialized in `docs/research/hardening-best-practices.md`.
-- [x] **RGB Fork Analysis:** Documented in `docs/research/rgb-protocol-fork-analysis.md`.
-- [ ] **Nexus Holistic Alignment:** Pending (CON-1353).
-- [ ] **BitVM3 Integration Path:** Pending (CON-1337).
+## 🛠️ Technical Implementation Gaps
 
-*Mapping maintained by @Jules.*
-*Mapping maintained by @Jules.*
-- [x] **CI/CD Gaps & Alignment:** Documented in `docs/research/cicd-failures-and-gaps.md`.
-- [x] **CI/CD Validation Scripts:** Initialized in `scripts/`. (CON-1322)
+| Area | Requirement | Current Status |
+| --- | --- | --- |
+| **CI/CD Hardening** | Fail-high gating on dependency reviews. | 🟢 Implemented in `standard-ci.yml`. |
+| **Artifact Safety** | Prevent tracking of build artifacts. | 🟢 `verify_tracked_artifacts.py` active. |
+| **Knowledge Retention** | Verify core memories and context. | 🟢 `verify_knowledge_retention.py` active. |
+| **Script Provisioning** | Implementation of `verify_*` toolset. | 🟡 CON-1322: Toolset expanding. |
+| **Protocol Verification** | Automated Clarity contract auditing. | 🟡 CON-1436: Nexus audit in progress. |
+| **Production Infrastructure** | Unified UI deployment on conxian.org | 🟢 CON-1443: Provisioned on Render. |
+
+## 📉 Critical Smart Contract Gaps (Sprint 2026-07)
+
+| Issue | Severity | Status |
+| --- | --- | --- |
+| **Admin Centralization** | 🔴 CRITICAL | CON-1422: 73+ admin vars controlled by single key. |
+| **No Upgrade Path** | 🔴 CRITICAL | CON-1423: Contracts permanently immutable. |
+| **Tautology Bugs** | 🔴 CRITICAL | CON-1424: Anyone can become owner of core contracts. |
+| **Stub Contracts** | 🟡 HIGH | CON-1434: 33% of contracts are placeholders. |
+
+## 📈 Roadmap for Remediation
+
+1.  **Phase 1: Standardization (Complete):** Unified README and Docs standards deployed organization-wide.
+2.  **Phase 2: Automation (Active):** Deploy standardized CI/CD and security gates across all core protocols.
+3.  **Phase 3: Verification (In Progress):** Remediate critical smart contract vulnerabilities and stub implementations.
+
+---
+
+*Updated by @Jules during Organization Audit v1.2.9.*
