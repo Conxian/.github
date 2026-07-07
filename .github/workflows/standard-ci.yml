@@ -7,11 +7,18 @@ on:
   push:
     branches: [ main ]
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   lint-and-format:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
       - name: Install Linting Tools
         run: |
           sudo apt-get update && sudo apt-get install -y shellcheck
@@ -64,6 +71,10 @@ jobs:
       (hashFiles('**/package-lock.json', '**/pnpm-lock.yaml', '**/Cargo.lock') != '')
     steps:
       - uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
       - name: Dependency Review
         uses: actions/dependency-review-action@v4
         with:
@@ -73,6 +84,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
       - name: Run Tests
         run: |
           if [ -f "Cargo.toml" ]; then cargo test; fi
