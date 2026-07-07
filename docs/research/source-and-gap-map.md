@@ -31,6 +31,16 @@ This document maps theoretical research and organizational standards to the actu
 | **Tautology Bugs** | 🔴 CRITICAL | CON-1424: Anyone can become owner of core contracts. |
 | **Stub Contracts** | 🟡 HIGH | CON-1434: 33% of contracts are placeholders. |
 
+## 🔬 Protocol Research Alignment (2026-07)
+
+| Research Feature | Implementation Status | Action Required |
+| --- | --- | --- |
+| **RGB v0.11.1 Pivot** | 🔴 BLOCKED | Replace `rgb-core` v0.12 with `rgb-lib` v0.11.1 (Tether compatible). |
+| **BitVM3 Readiness** | 🟡 RESEARCH | Update `verify_state_proof` to include Groth16 verifier logic. |
+| **LDK Node v0.4+** | 🟡 RESEARCH | Replace `SimulatedLightningBackend` with real LDK Node implementation. |
+| **DLC Integration** | 🟡 RESEARCH | Implement real CET construction using `rust-dlc`. |
+| **ISO 20022 Treasury** | 🟡 GAP | Implement `camt.053/054` for institutional bank statements. |
+
 ## 📈 Roadmap for Remediation
 
 1.  **Phase 1: Standardization (Complete):** Unified README and Docs standards deployed organization-wide.
