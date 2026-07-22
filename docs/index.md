@@ -41,6 +41,7 @@ Conxian is a sovereign autonomous business (SAB) building zero-custody, zero-raw
 
 - **[Hardening Best Practices](./research/hardening-best-practices.md)**: Fail-closed and production-boundary patterns.
 - **[CI/CD Gaps](./research/cicd-failures-and-gaps.md)**: Current status of automation hardening.
+- **[BitVM3 & Groth16 Readiness](./research/bitvm3-and-groth16-readiness.md)**: Research / Evaluation Only evidence classification and production-readiness gate.
 - **[Research Source & Gap Map](./research/source-and-gap-map.md)**: Live mapping of research context to codebase gaps.
 
 ---

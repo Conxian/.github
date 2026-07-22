@@ -26,7 +26,7 @@ This scorecard tracks the cumulative readiness of a product or service across al
 - [ ] No misleading placeholder/stub behavior (e.g., real FROST/MuSig2/DLC logic).
 - [ ] Performance benchmarks meet production requirements.
 - [ ] SDK/API signatures are stable and machine-readable.
-- [ ] **[NEW]** ZK Proof verification (Groth16/SNARK) verified against mainnet reference (CON-1340).
+- [ ] **[NEW]** ZK proof verification (Groth16/SNARK) verified for the exact source/revision and intended network with CI-backed positive/negative tests, immutable artifacts/provenance, license clarity, and independent security review (CON-1340); an upstream mainnet reference alone is insufficient.
 
 ### 💰 Lane 4: Commercial Claim Safety (Market)
 - [ ] Public claims match implemented reality.
