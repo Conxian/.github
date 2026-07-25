@@ -1,0 +1,114 @@
+name: "ITIL operational work item"
+description: "Track an incident, request, problem, change, risk, control, or improvement."
+title: "[WORK] <concise summary>"
+labels:
+  - "status:triage"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for operational work governed by the [issue-only ITIL5 workflow](https://github.com/Conxian/.github/blob/main/docs/issue-only-itil5-workflow.md).
+
+        **Do not disclose vulnerabilities here.** Use the private process in [SECURITY.md](https://github.com/Conxian/.github/blob/main/SECURITY.md).
+  - type: dropdown
+    id: operational_type
+    attributes:
+      label: Operational work type
+      description: Select one primary type. Triage will apply the matching type label and native issue type.
+      options:
+        - "Incident — type:incident / Bug"
+        - "Service request — type:service-request / Task"
+        - "Problem — type:problem / Bug"
+        - "Change — type:change / Task"
+        - "Risk — type:risk / Task"
+        - "Control — type:control / Task"
+        - "Improvement — type:improvement / Feature"
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: State the current condition or requested outcome concisely.
+      placeholder: What happened, is needed, or should improve?
+    validations:
+      required: true
+  - type: textarea
+    id: affected_scope
+    attributes:
+      label: Affected scope
+      description: Name the owning repository, product, service, control, users, or org-wide surface.
+      placeholder: Repository/surface, environment, users, and boundaries
+    validations:
+      required: true
+  - type: textarea
+    id: impact_outcome
+    attributes:
+      label: Impact or target outcome
+      description: Describe current impact, urgency, or the measurable result sought.
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: Choose response and sequencing priority; severity is recorded separately when applicable.
+      options:
+        - "P0 — immediate response"
+        - "P1 — urgent/high impact"
+        - "P2 — normal planned work"
+        - "P3 — low/deferred"
+    validations:
+      required: true
+  - type: input
+    id: dri
+    attributes:
+      label: DRI
+      description: Name one directly responsible individual. The issue should have exactly one assignee.
+      placeholder: "@github-username"
+    validations:
+      required: true
+  - type: textarea
+    id: closure_evidence
+    attributes:
+      label: Acceptance criteria and closure evidence
+      description: Define done and the PRs, artifacts, validation, operational evidence, or decision that will prove it.
+      placeholder: |
+        - [ ] Acceptance criterion
+        - [ ] Required evidence or validation
+    validations:
+      required: true
+  - type: textarea
+    id: relationships
+    attributes:
+      label: Relationships
+      description: Link parent/sub-issues, dependencies, incidents, problems, changes, PRs, or evidence. Enter "None" when not applicable.
+      placeholder: "Parent: #123; Depends on: owner/repo#456; Related PR: owner/repo#789"
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: |
+        ### Add only the checklist details that apply
+
+        - **Incident:** timing, symptoms/impact, containment, restoration, follow-up problem.
+        - **Service request:** requester/approval, fulfillment, delivery, acceptance.
+        - **Problem:** related incidents, evidence, root cause/known error, prevention.
+        - **Change:** risk, implementation, validation, rollback/recovery, approvals.
+        - **Risk:** cause-event-impact, likelihood/impact, treatment, residual risk, review trigger.
+        - **Control:** objective/owner, evidence, test, gap, remediation/exception.
+        - **Improvement:** current state, measurable target, approach, dependencies, validation.
+  - type: textarea
+    id: type_specific_details
+    attributes:
+      label: Type-specific details
+      description: Provide the applicable details from the checklist above; keep routine work proportionate.
+    validations:
+      required: true
+  - type: checkboxes
+    id: public_security_confirmation
+    attributes:
+      label: Public issue confirmation
+      options:
+        - label: I confirm this public issue contains no vulnerability details or other sensitive data.
+          required: true
