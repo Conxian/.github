@@ -1,8 +1,8 @@
 # Issue-only ITIL-aligned workflow baseline
 
-This document defines a lightweight, reusable operating baseline for work tracked in Conxian GitHub repositories. It uses ITIL-aligned concepts without claiming formal ITIL certification or conformance.
+This document proposes the lightweight, reusable operating baseline requested in [issue #45](https://github.com/Conxian/.github/issues/45) for work tracked in Conxian GitHub repositories. It uses ITIL-aligned concepts without claiming formal ratification, ITIL certification, or conformance.
 
-GitHub issues are the canonical work records. Linear synchronization is for visibility and tracking only: do not maintain a second plan, status narrative, or acceptance checklist in Linear. This baseline does not require GitHub Projects or milestones.
+For public-safe repository and governance work, GitHub issues are the canonical execution records. Restricted strategy, security, legal, financial, and detailed operational material remains canonical in the authorized Linear workspace under Zero Secret Egress (ZSE); GitHub should link to that authority without duplicating restricted context. Do not maintain competing public and private plans, status narratives, or acceptance checklists for the same scope. This issue-only baseline does not require GitHub Projects or milestones; that is a scope choice for this baseline, not a ban on those tools in every Conxian delivery process.
 
 ## Issue types and labels
 
@@ -10,7 +10,7 @@ Every issue using this baseline should have exactly one type label when the labe
 
 | Work type | Label | Use when |
 | --- | --- | --- |
-| Incident | `type: incident` | An unplanned interruption, degradation, or operational failure needs restoration. Public security vulnerabilities must use the private process in [SECURITY.md](../SECURITY.md), not a public issue. |
+| Incident | `type: incident` | An unplanned interruption, degradation, or operational failure needs restoration. Security vulnerabilities, privileged incident details, and response runbooks must use [private security reporting](../SECURITY.md) and authorized Linear/ZSE handling, not a public issue; a sanitized issue may coordinate non-sensitive follow-up. |
 | Service request | `type: service-request` | A user or maintainer requests a standard, bounded service or access outcome. |
 | Problem | `type: problem` | The underlying cause of one or more incidents needs investigation or permanent correction. |
 | Change | `type: change` | A controlled modification to code, infrastructure, configuration, policy, or a shared operating default is proposed. |
@@ -43,6 +43,7 @@ Issue bodies may use this compact checklist:
 ## Type
 ## Scope and affected surface
 ## Impact and priority
+## Owner
 ## Required outcome
 ## Checklist
 - [ ]
@@ -58,7 +59,7 @@ The common structure applies first. Add the following minimum evidence before cl
 
 | Type | Minimum issue evidence | Exit criteria |
 | --- | --- | --- |
-| Incident | Start/detection time, observed impact, affected surface, response timeline, mitigation or workaround, and related incident/problem links. | Service is restored or impact is contained; validation and restoration time are recorded; unresolved cause or prevention work is linked as a problem or improvement. |
+| Incident | Public-safe start/detection time, observed impact, affected surface, response timeline, mitigation or workaround, and related incident/problem links. Keep vulnerability data, privileged timelines, response runbooks, secrets, and sensitive operational detail in the private channels defined above. | Service is restored or impact is contained; public-safe validation and restoration time are recorded; unresolved cause or prevention work is linked as a problem or improvement. |
 | Service request | Requester or beneficiary, requested outcome, authorization/dependency notes where relevant, and acceptance criteria. | The requested outcome is delivered or a reasoned denial/cancellation is recorded; the requester or owner has evidence of validation. |
 | Problem | Related incidents, symptoms and known facts, investigation notes, workaround or known-error status, and cause hypothesis or finding. | Root cause is recorded or the limits of the investigation are explicit; permanent correction, accepted risk, or further investigation is linked and owned. |
 | Change | Proposed change, reason, affected surfaces, risk/impact assessment, implementation plan, validation plan, and rollback or recovery plan. | The change and validation evidence are linked; outcome and any rollback are recorded; follow-up defects or improvements are separately linked. |
@@ -105,7 +106,7 @@ Open work in the repository that owns the affected product, service, code, confi
 
 - Product-specific incidents, requests, problems, changes, risks, controls, and improvements belong in that product repository.
 - Organization-wide contribution defaults, shared community health files, common workflow guidance, repository governance, taxonomy, or cross-repository operating controls belong in `Conxian/.github`.
-- Sensitive internal business, partner, financial, legal, credential, or operational material does not belong in public repositories. Follow the repository taxonomy and security reporting boundaries.
+- Sensitive internal business, partner, strategy, financial, legal, credential, security, or detailed operational material does not belong in public repositories. Follow the [repository taxonomy](../repository-taxonomy.md), [security reporting policy](../SECURITY.md), and authorized Linear/ZSE boundaries.
 
 When one outcome spans repositories:
 
@@ -115,7 +116,7 @@ When one outcome spans repositories:
 4. Record aggregate decisions and final closure evidence on the coordinating issue; keep implementation detail on the repo-local issue.
 5. Escalate unresolved ownership, conflicting controls, material cross-repository risk, or a blocked dependency to `.github` with links to the source records and a specific decision request.
 
-Do not copy checklists or status updates across coordinating, repo-local, and Linear records. Each GitHub issue is canonical for its stated scope; links provide the organization-wide view.
+Do not copy checklists or status updates across coordinating, repo-local, and Linear records. Each public-safe GitHub issue is canonical for its stated execution scope; when restricted context is required, link to the authorized Linear authority without reproducing it. Links provide the organization-wide view.
 
 ## Closure and follow-up boundaries
 
@@ -142,7 +143,7 @@ This baseline does **not**:
 
 - create seven issue forms or require one form per type;
 - mutate repository labels or settings;
-- introduce GitHub Projects, milestones, or another planning layer;
-- make Linear a planning or canonical record;
+- require GitHub Projects, milestones, or another planning layer for this baseline;
+- make Linear canonical for public-safe repository execution or duplicate restricted Linear context in GitHub;
 - automate approvals, risk acceptance, routing, or closure;
 - replace repository-specific incident response, security, release, or regulatory procedures.
