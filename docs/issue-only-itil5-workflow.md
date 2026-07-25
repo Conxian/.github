@@ -1,158 +1,144 @@
-# Issue-only operational workflow baseline
+# Proposed issue-only ITIL5-informed workflow baseline
 
-This document presents the proposed lightweight, reusable operating baseline requested in [issue #45](https://github.com/Conxian/.github/issues/45) for work tracked in Conxian GitHub repositories. The seven-type taxonomy is not a formally ratified BOS decision, and this document does not claim formal ITIL adoption, certification, compliance, or conformance.
+## Operating rule
 
-For public-safe repository and governance work, GitHub issues are the canonical execution records. Restricted strategy, security, legal, financial, and detailed operational material remains canonical in the authorized Linear workspace under Zero Secret Egress (ZSE); GitHub should link to that authority without duplicating restricted context. Do not maintain competing public and private plans, status narratives, or acceptance checklists for the same scope. This issue-only baseline does not require GitHub Projects or milestones; that is a scope choice for this baseline, not a ban on those tools in every Conxian delivery process.
+The seven-type taxonomy below is a proposed lightweight operating baseline, not a formally ratified BOS decision. It is informed by ITIL5, but does not claim formal ITIL adoption, compliance, certification, or conformance.
 
-## Issue types and labels
+For public-safe repository and governance execution, GitHub Issues are the canonical system of record. Restricted strategy, security, legal, financial, and detailed operational context remains canonical and authoritative in the authorized Linear workspace under Zero Secret Egress (ZSE). GitHub records must link to that authority when it is relevant without duplicating restricted detail.
 
-Every issue using this baseline should identify exactly one primary work type. The labels below are recommended follow-up configuration; when they are available, use exactly one type label.
+Public-safe issues, relationships, pull requests, and closure evidence form the repository execution layer of the BOS knowledge graph. That execution role does not make this proposed taxonomy a ratified BOS policy or move restricted authority out of the authorized Linear workspace.
 
-| Work type | Label | Use when |
-| --- | --- | --- |
-| Incident | `type: incident` | An unplanned interruption, degradation, or operational failure needs restoration. Security vulnerabilities, privileged incident details, and response runbooks must use [private security reporting](../SECURITY.md) and authorized Linear/ZSE handling, not a public issue; a sanitized issue may coordinate non-sensitive follow-up. |
-| Service request | `type: service-request` | A user or maintainer requests a standard, bounded service or access outcome. |
-| Problem | `type: problem` | The underlying cause of one or more incidents needs investigation or permanent correction. |
-| Change | `type: change` | A controlled modification to code, infrastructure, configuration, policy, or a shared operating default is proposed. |
-| Risk | `type: risk` | An uncertain event or condition could affect an objective and needs treatment or acceptance. |
-| Control | `type: control` | A preventive, detective, or corrective safeguard needs definition, operation, or evidence. |
-| Improvement | `type: improvement` | A measurable enhancement to a product, service, process, or operating outcome is proposed. |
+Use issue state, labels, one assignee, task lists, links, sub-issues, and pull requests. This baseline does not introduce GitHub Projects, milestones, or a parallel planning layer, but that scope choice is not a portfolio-wide ban where other approved controls require those tools.
 
-Labels are routing metadata, not a second workflow system. Repositories may add domain labels, but should preserve these type names for organization-wide consistency. Until label provisioning is approved and completed, state the type in the issue body.
+## Route work before classifying it
 
-## Minimum issue structure
+Create work in the repository that owns the affected product, service, documentation, or automation. Keep public-safe implementation context, discussion, pull requests, and closure evidence together in that product repository; link restricted evidence or context to authorized Linear rather than copying it into public GitHub.
 
-Use one GitHub issue for one owned outcome. All seven issue types share this minimum structure:
+Use `.github` for organization-wide defaults, shared controls and templates, repository standards, or coordination that genuinely spans repositories. Add `scope:org-wide` only when the outcome applies across the organization or multiple repositories.
 
-- **Summary:** the condition, request, or proposed outcome in plain language.
-- **Type:** one of the seven types above.
-- **Scope and affected surface:** repository, component, service, policy, or user group in scope; include explicit boundaries when useful.
-- **Impact and priority:** who or what is affected, the consequence, urgency, and any time constraint.
-- **Owner:** one directly responsible assignee; list collaborators separately when needed.
-- **Required outcome:** the observable result that permits closure.
-- **Checklist:** the smallest ordered set of actions needed to reach the outcome.
-- **Evidence and references:** relevant issues, pull requests, runs, decisions, logs, or documents. Redact secrets and sensitive operational data.
-- **Dependencies and blockers:** external decisions or work that can prevent progress.
-- **Closure evidence:** links or a concise record proving the outcome and validation.
-- **Follow-ups:** linked work explicitly excluded from this issue, or `None`.
+For cross-repository work, create one coordination or parent issue in `.github` with one accountable DRI and one linked implementation issue in each owning repository. Prefer native sub-issues when available; otherwise use explicit issue links. Local issues remain canonical for public-safe local implementation, while the `.github` issue records public-safe shared decisions, dependencies, exceptions, and roll-up evidence. Link restricted evidence or context to its authorized Linear record; do not copy restricted detail or the same task list into multiple issues.
 
-Issue bodies may use this compact checklist:
+**Never put security vulnerability details, privileged incident details or timelines, or response runbooks in a public issue.** Follow [`SECURITY.md`](../SECURITY.md), use the affected repository's private vulnerability reporting channel, and keep authorized handling in Linear under ZSE. Sanitized public coordination or follow-up may be created only after restricted detail is removed and disclosure is approved.
 
-```markdown
-## Summary
-## Type
-## Scope and affected surface
-## Impact and priority
-## Owner
-## Required outcome
-## Checklist
-- [ ]
-## Evidence and references
-## Dependencies and blockers
+## Classification and labels
+
+Every open operational issue has:
+
+- one operational `type:*` label;
+- one `priority:*` label;
+- exactly one `status:*` label; and
+- one assignee acting as the directly responsible individual (DRI).
+
+The operational label is required even when a native GitHub issue type is set. Use this mapping consistently:
+
+| Work type | Native issue type | Required label | Use when |
+| --- | --- | --- | --- |
+| Incident | `Bug` | `type:incident` | An unplanned interruption, degradation, or operational failure requires restoration. |
+| Service request | `Task` | `type:service-request` | A standard access, information, support, configuration, or fulfillment request must be completed. |
+| Problem | `Bug` | `type:problem` | The underlying cause of incidents or recurring failures requires investigation and prevention. |
+| Change | `Task` | `type:change` | A controlled modification to a product, service, policy, configuration, or environment is proposed. |
+| Risk | `Task` | `type:risk` | An uncertain event or condition requires an explicit treatment decision. |
+| Control | `Task` | `type:control` | A safeguard requires definition, evidence, review, remediation, or an exception. |
+| Improvement | `Feature` | `type:improvement` | A measurable enhancement to quality, reliability, efficiency, or ways of working is proposed. |
+
+Use only this workflow vocabulary:
+
+- Type: `type:incident`, `type:service-request`, `type:problem`, `type:change`, `type:risk`, `type:control`, `type:improvement`
+- Priority: `priority:P0`, `priority:P1`, `priority:P2`, `priority:P3`
+- Status: `status:triage`, `status:in-progress`, `status:blocked`, `status:needs-review`
+- Scope: `scope:org-wide`
+- Escalation: `escalation:required`
+
+Other contextual labels such as `governance`, `Release`, or repository-specific domain labels may be added, but they do not replace the required workflow labels.
+
+### Severity is not priority
+
+**Severity** describes observed impact, such as the extent of an incident or security finding. Record it in the issue body or the private security process; this baseline does not add severity labels. **Priority** determines response and sequencing after considering severity, urgency, risk, dependencies, and available capacity:
+
+| Priority | Meaning |
+| --- | --- |
+| `priority:P0` | Immediate response; critical business or service impact. |
+| `priority:P1` | Urgent; high-impact or time-sensitive work. |
+| `priority:P2` | Normal priority; important planned work. |
+| `priority:P3` | Low priority; defer while higher-priority work exists. |
+
+A severe issue is often high priority, but the terms are not interchangeable. Security severity and response targets remain governed by [`SECURITY.md`](../SECURITY.md).
+
+## Required issue content
+
+Every operational issue must include:
+
+- operational work type and the matching `type:*` label;
+- concise summary and affected scope;
+- current impact or target outcome;
+- `priority:P0` through `priority:P3` with a short rationale when not obvious;
+- one DRI, represented by exactly one assignee;
+- acceptance criteria and expected closure evidence;
+- related parent, sub-issue, dependency, incident, problem, change, pull request, or external evidence links, or `None`; and
+- proportionate type-specific details from the checklist below.
+
+Add only the conditional details that apply:
+
+- **Incident:** detection/start time, symptoms and impact, containment/workaround, restoration evidence, and a linked problem if cause remains unresolved.
+- **Service request:** requester, eligibility or approval, fulfillment steps, delivery evidence, and acceptance.
+- **Problem:** related incidents, observed pattern, hypotheses and evidence, root cause or known error, and linked prevention work.
+- **Change:** affected surfaces, risk, implementation plan, validation plan, rollback or recovery plan, and required review or approval.
+- **Risk:** cause-event-impact statement, likelihood and impact, treatment decision, mitigation owner, residual risk, and review trigger.
+- **Control:** control objective and owner, scope, expected evidence, test method, gap, and remediation or exception path.
+- **Improvement:** current state, measurable target, beneficiaries, proposed approach, dependencies, and before/after validation.
+
+Keep detail proportionate. A routine request can be short; a P0 incident, risky change, or org-wide control needs enough evidence for another person to understand and verify the decision.
+
+### Existing issue form contract
+
+Use [`.github/ISSUE_TEMPLATE/itil_work_item.yml`](../.github/ISSUE_TEMPLATE/itil_work_item.yml) as the existing structured entry point for this baseline. The form:
+
+- starts the issue with `status:triage`;
+- requires one of the seven operational types and records the matching compact `type:*` label and native issue-type mapping for triage;
+- requires summary, affected scope, impact or target outcome, priority, one named DRI, acceptance criteria and closure evidence, relationships, and proportionate type-specific details; and
+- requires confirmation that the public issue contains no vulnerability details or other sensitive data.
+
+During triage, apply the selected `type:*` and `priority:*` labels, set the mapped native issue type, assign exactly one DRI, and retain exactly one lifecycle `status:*` label. Keep the form and this vocabulary aligned; do not introduce spaced or alternate label spellings in documentation.
+
+## Ownership and lifecycle
+
+One assignee is the DRI. Contributors and reviewers may help, but the DRI owns routing, current status, dependencies, evidence, and the closure recommendation. If the DRI changes, update the assignee rather than maintaining a second ownership field.
+
+For each public-safe GitHub execution record, GitHub's open/closed issue state is canonical. While an issue is open, apply exactly one status label and replace it as the work moves:
+
+1. `status:triage` — confirm routing, type, scope, impact, priority, DRI, relationships, and closure criteria.
+2. `status:in-progress` — the DRI is actively coordinating or performing the work.
+3. `status:blocked` — progress cannot continue; record the blocker, who or what can clear it, and the next review point.
+4. `status:needs-review` — implementation, decision, or closure evidence is ready for review.
+
+After review, either return the issue to the appropriate open status or close it. On closure, remove the `status:*` label because the closed state is the status. Close as completed only when the acceptance criteria and closure evidence are recorded. Close as not planned, duplicate, or superseded only with a concise reason and a link to the authoritative route when one exists.
+
+Reopen an issue when its original closure criteria were not met or the same outcome materially regressed. Restore the appropriate single status label, confirm the DRI and priority, and explain the reason. Create a new linked issue when the scope, cause, or desired outcome is materially different.
+
+## Escalation
+
+Add `escalation:required` when progress or risk requires an explicit decision from an accountable owner, crosses repository ownership, threatens a P0/P1 outcome, or cannot be resolved within the owning repository. The issue must identify:
+
+- the decision or intervention required;
+- the accountable person or team being asked;
+- the impact and deadline or next review point; and
+- the linked local and org-wide issues involved.
+
+Escalation does not move public-safe execution authority away from the owning issue or create a duplicate tracker. Restricted decisions and evidence remain authoritative in authorized Linear under ZSE and are linked without duplication. Remove `escalation:required` once the decision or intervention is recorded and normal ownership can continue.
+
 ## Closure evidence
-## Follow-ups
-```
 
-## Type-specific evidence and exit criteria
+Before closing, the DRI must:
 
-The common structure applies first. Add the following minimum evidence before closing each type.
+- update acceptance criteria and task lists;
+- link merged pull requests, delivered artifacts, operational evidence, or the recorded decision;
+- record validation results and, for changes, rollback/recovery outcome where applicable;
+- record residual risk, exceptions, or reasons for declining/cancelling;
+- link and assign any remaining follow-up issues; and
+- confirm that each linked sub-issue is complete, explicitly waived, or independently owned.
 
-| Type | Minimum issue evidence | Exit criteria |
-| --- | --- | --- |
-| Incident | Public-safe start/detection time, observed impact, affected surface, response timeline, mitigation or workaround, and related incident/problem links. Keep vulnerability data, privileged timelines, response runbooks, secrets, and sensitive operational detail in the private channels defined above. | Service is restored or impact is contained; public-safe validation and restoration time are recorded; unresolved cause or prevention work is linked as a problem or improvement. |
-| Service request | Requester or beneficiary, requested outcome, authorization/dependency notes where relevant, and acceptance criteria. | The requested outcome is delivered or a reasoned denial/cancellation is recorded; the requester or owner has evidence of validation. |
-| Problem | Related incidents, symptoms and known facts, investigation notes, workaround or known-error status, and cause hypothesis or finding. | Root cause is recorded or the limits of the investigation are explicit; permanent correction, accepted risk, or further investigation is linked and owned. |
-| Change | Proposed change, reason, affected surfaces, risk/impact assessment, implementation plan, validation plan, and rollback or recovery plan. | The change and validation evidence are linked; outcome and any rollback are recorded; follow-up defects or improvements are separately linked. |
-| Risk | Cause-event-impact statement, likelihood, impact, current safeguards, treatment choice, treatment owner, and target date or review trigger. | Treatment is completed and residual risk recorded, or acceptance/transfer/avoidance is explicitly approved by an accountable owner with a review condition. |
-| Control | Control objective, owner, scope, operation/frequency, expected evidence, test method, and known exceptions. | Operation and test evidence are linked; exceptions have owners and dispositions; the next review trigger is recorded when recurring. |
-| Improvement | Current condition, target condition, expected value, success measure, proposed action, and affected stakeholders. | The change is delivered and the measure is recorded, or the issue documents why it was stopped; remaining opportunities are linked separately. |
+An org-wide parent closes only when its roll-up criterion is met. A local implementation issue may close independently when its local criterion is met and its parent link is current.
 
-## State, status, and priority
+## Legacy-label migration
 
-GitHub's native issue state stays lean: an issue is **open** while action, validation, or an explicit disposition remains, and **closed** once its exit criteria and closure evidence are recorded.
-
-Within an open issue, use this simple progression without requiring status labels, a Project, or a milestone:
-
-1. **Triage** — confirm routing, type, scope, impact, priority, owner, and closure criterion.
-2. **Owned / ready** — assign one accountable person and make the required outcome and minimum exit criteria clear enough to start.
-3. **In progress** — perform the work and update the canonical issue through its checklist, comments, linked pull requests, linked issues, or sub-issues.
-4. **Review** — validate the implementation, evidence, or decision against the exit criteria.
-5. **Blocked** — record the blocker, the person or dependency that can clear it, and the next review point before returning to the appropriate active stage.
-6. **Done** — provide closure evidence and close the issue.
-
-Status labels must not become a parallel workflow. If configuration is approved later, `status: blocked` may be used as an optional visibility aid, but it is not authoritative and must be supported by a current issue comment. Reopen a closed issue when its original closure criterion was not actually met or the same outcome has materially regressed and continuing the existing history is clearest; otherwise create and link a new issue for newly discovered scope.
-
-Priority is a triage decision based on impact and urgency, not issue type. Use the repository's existing priority labels if available, or record one of these terms in the issue body:
-
-- **Critical:** active or imminent severe impact; triage immediately.
-- **High:** material impact or time-sensitive obligation; prioritize ahead of routine work.
-- **Medium:** meaningful impact with a practical workaround or normal scheduling tolerance.
-- **Low:** limited impact, preventive work, or an opportunity that can wait.
-
-For incidents, record both severity of current impact and urgency of restoration. For risks, record likelihood and impact separately before deriving priority. Priority does not replace a clear impact statement.
-
-## Ownership and triage
-
-- The repository maintainers triage new issues and confirm type, routing, priority, and sufficient minimum information.
-- The reporter provides enough context for triage and confirms acceptance when they are the appropriate requester; reporting an issue does not automatically make the reporter its owner.
-- The assignee is the single directly responsible owner for progress, status accuracy, escalation, and closure evidence. Unassigned issues remain in triage.
-- CODEOWNERS identify reviewers for affected files or governance surfaces; they do not replace the issue assignee or automatically approve risk acceptance.
-- Contributors complete checklist items and provide evidence through linked pull requests, comments, or artifacts without copying the work plan elsewhere.
-- The accountable maintainer or governance owner makes approval, denial, exception, or risk-acceptance decisions when those decisions exceed the assignee's authority.
-
-Triage should correct the issue in place rather than duplicate it. If the issue is misrouted, transfer it when GitHub supports the destination; otherwise open the destination issue, link both records, and close the original with the routing reason.
-
-## Repository routing and cross-repository escalation
-
-Open work in the repository that owns the affected product, service, code, configuration, or documentation:
-
-- Product-specific incidents, requests, problems, changes, risks, controls, and improvements belong in that product repository.
-- Organization-wide contribution defaults, shared community health files, common workflow guidance, repository governance, taxonomy, or cross-repository operating controls belong in `Conxian/.github`.
-- Sensitive internal business, partner, strategy, financial, legal, credential, security, or detailed operational material does not belong in public repositories. Follow the [repository taxonomy](../repository-taxonomy.md), [security reporting policy](../SECURITY.md), and authorized Linear/ZSE boundaries.
-
-Use the existing [support and governance routes](../SUPPORT.md) when an issue needs a different support, security, or organization-level entry path.
-
-When one outcome spans repositories:
-
-1. Keep one coordinating issue in the repository accountable for the overall outcome; use `.github` when the outcome is organization-wide governance.
-2. Create repo-local issues only for independently owned implementation or evidence that must be maintained with that repository.
-3. Link every repo-local issue to the coordinating issue and state the exact delegated scope.
-4. Record aggregate decisions and final closure evidence on the coordinating issue; keep implementation detail on the repo-local issue.
-5. Escalate unresolved ownership, conflicting controls, material cross-repository risk, or a blocked dependency to `.github` with links to the source records and a specific decision request.
-
-Do not copy checklists or status updates across coordinating, repo-local, and Linear records. Each public-safe GitHub issue is canonical for its stated execution scope; when restricted context is required, link to the authorized Linear authority without reproducing it. Links provide the organization-wide view.
-
-## Closure and follow-up boundaries
-
-Before closing, the assignee should:
-
-- complete or disposition every required checklist item;
-- add the type-specific exit evidence;
-- link delivered changes, validation, approvals, or decisions;
-- summarize the actual outcome and any variance from the original plan;
-- identify remaining risks, exceptions, or follow-ups with an owner, or state `None`;
-- remove obsolete status labels and close the issue with the correct resolution context.
-
-Do not hold an otherwise complete issue open for unrelated improvements. Create a linked follow-up when work has a different owner, priority, repository, acceptance criterion, or delivery window. A follow-up link is not closure evidence for the current issue's required outcome.
-
-## Follow-ups and non-goals
-
-Follow-up decisions may include:
-
-- provisioning the common type labels and optional `status: blocked` label in repositories that adopt the baseline;
-- deciding whether one shared operational-work issue form with a type selector would reduce missing information while retaining the existing focused bug-report and governance-request forms;
-- handling stale label references in the existing bounty template as separate template-hygiene work;
-- adding proportionate checks for label consistency only if repeated usage proves a need.
-
-This baseline does **not**:
-
-- create seven issue forms or require one form per type;
-- mutate repository labels or settings;
-- require GitHub Projects, milestones, or another planning layer for this baseline;
-- make Linear canonical for public-safe repository execution or duplicate restricted Linear context in GitHub;
-- automate approvals, risk acceptance, routing, or closure;
-- replace repository-specific incident response, security, release, or regulatory procedures.
-
-## Example
-
-A wallet service degradation belongs in the wallet repository as an **incident** with impact, symptoms, restoration actions, an assignee, and a restoration criterion. If investigation finds a recurring shared dependency failure, link a **problem** issue in the owning dependency repository. Create a `.github` **control** issue only if several repositories need a shared policy or control change; link each local implementation issue and use the control issue solely for coordination and final roll-up.
+Migrate legacy labels opportunistically when an issue is opened, triaged, reassigned, reopened, or otherwise materially updated. Replace old type, priority, or status labels only when their meaning maps clearly to this vocabulary, and ensure exactly one label in each required category. Do not run a blind bulk migration, rewrite historical closed issues solely for label cleanup, or remove unrelated contextual labels. If the mapping is ambiguous, leave the context intact and resolve it during normal triage.
