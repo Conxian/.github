@@ -32,3 +32,6 @@ coverage.xml
 .hypothesis/
 .spyderproject
 .spyderworkspace
+
+# Generated CI evidence
+lightning-coverage.json
