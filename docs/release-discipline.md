@@ -6,28 +6,21 @@ It is not a production-readiness or security certification, and it does not requ
 
 ## Release classes and decisions
 
-| Repository | Purpose-based class | Required public signal |
+| Repository class | Live canonical repositories | Required public signal |
 | --- | --- | --- |
-| `lib-conxian-core` | Library / SDK | Publish a tagged GitHub Release for every externally consumable version. |
-| `conxius-enclave-sdk` | Library / SDK | Publish a tagged GitHub Release for every externally consumable version. |
-| `Conxian` | Protocol / runtime / integration | Publish a tagged GitHub Release for public compatibility or milestone changes. Commits between milestones may remain unreleased when clearly labeled as unreleased development. |
-| `conxian-gateway` | Protocol / runtime / integration | Publish a tagged GitHub Release for public compatibility or milestone changes. Commits between milestones may remain unreleased when clearly labeled as unreleased development. |
-| `conxian-nexus` | Protocol / runtime / integration | Publish a tagged GitHub Release for public compatibility or milestone changes. Commits between milestones may remain unreleased when clearly labeled as unreleased development. |
-| `conxius-platform` | Protocol / runtime / integration | Publish a tagged GitHub Release for public compatibility or milestone changes. Commits between milestones may remain unreleased when clearly labeled as unreleased development. |
-| `conxius-wallet` | End-user application / tool | Publish a release signal when a user-facing or distributed version changes. Use a tagged GitHub Release when GitHub is the public distribution or compatibility record. |
-| `conxian_ui` | End-user application / tool | Publish a release signal when a user-facing or distributed version changes; document the tag-driven release or deployment path used as the public record. |
-| `conxius-orbit` | End-user application / tool | Publish a release signal when a user-facing or distributed version changes. Use a tagged GitHub Release when GitHub is the public distribution or compatibility record. |
-| `.github` | Governance / static support | Exempt from routine versioned releases. Maintain deployment traceability where applicable and state the surface's purpose and canonical destination. |
-| `conxian.github.io` | Governance / static support | Exempt from routine versioned releases. Maintain deployment traceability and state the site's purpose and canonical destination. A release is optional for a meaningful site milestone. |
-| `conxian-labs-site` | Governance / static support | Exempt from routine versioned releases. Maintain deployment traceability and state the site's purpose and canonical destination. A release is optional for a meaningful site milestone. |
+| Consumable protocol, wallet, library, SDK, runtime, and integration artifacts | `Conxian`, `conxius-wallet`, `conxian-gateway`, `lib-conxian-core`, `conxian-nexus`, `conxius-enclave-sdk` | Every externally consumable release requires a SemVer tag and a matching GitHub Release. |
+| Public UI and deployment tooling | `conxian_ui`, `conxius-orbit` | When users or operators consume a versioned build, package, or CLI, the externally consumable release requires a SemVer tag and matching GitHub Release. Deployment-only changes may use documented deployment or commit history. |
+| Platform / control plane | `conxius-platform` | Externally consumable configuration or orchestration releases require a SemVer tag and matching GitHub Release because they can affect compatibility and operations. |
+| Static sites | `conxian-labs-site`, `conxian.github.io` | GitHub Releases are optional. A lightweight deployment signal is sufficient when the README or repository metadata identifies the commit-based deployment and content-history model. |
+| Governance / defaults | `.github` | Explicit rolling-change exemption: no GitHub Release is required; merged governance history on `main` is authoritative. |
 
-The governance/static-support exemption is not an exemption from traceability. A deployed site should identify the source revision or deployment record that produced the public state. A repository that changes purpose or begins distributing versioned artifacts must be reclassified.
+The static-site exemption is not an exemption from traceability. A deployed site should identify the source revision or deployment record that produced the public state. A repository that changes purpose or begins distributing versioned artifacts must be reclassified.
 
 ## Published versions and version authority
 
-A raw Git tag is not a GitHub Release. A published version represented on GitHub complies only when the tag has a GitHub Release object with usable notes and required evidence. A tag may still mark internal or unreleased work, but it must not be presented as the latest published release by itself.
+A raw Git tag is not a GitHub Release. A formal externally consumable release complies only when its SemVer tag has a matching GitHub Release object with usable notes and required evidence. A tag may still mark internal or unreleased work, but it must not be presented as the latest published release by itself.
 
-Every versioned repository must name one authoritative version source, such as a package manifest, workspace manifest, or release configuration. At release time, the authoritative source, tag, GitHub Release, distributed package/store/artifact version, changelog, and README status must not silently conflict.
+Every versioned repository must name one authoritative version source, such as a package manifest, workspace manifest, or release configuration. At release time, the authoritative source, SemVer tag, GitHub Release, distributed package/store/artifact version, changelog, and README status must be consistent. A newer source or manifest version is allowed only when it is explicitly marked **Unreleased** and the latest published release remains clear.
 
 A repository may carry a newer working version when both conditions hold:
 
@@ -38,7 +31,7 @@ A repository may carry a newer working version when both conditions hold:
 
 ## Minimum release notes and evidence
 
-Release evidence is proportional to what the repository publishes or distributes. Release notes must include or link to:
+Release evidence is proportional to what the repository publishes or distributes. The matching GitHub Release must include or link to the applicable changelog, release runbook, and evidence, including:
 
 - release scope and the important changes included;
 - compatibility, migration, and upgrade impact, including “none” where appropriate;
@@ -50,9 +43,11 @@ Release evidence is proportional to what the repository publishes or distributes
 
 Libraries and SDKs should make consumer compatibility and dependency impact explicit. Protocol/runtime/integration releases should emphasize public interfaces, state or schema changes, operator impact, and rollback or migration boundaries. End-user application/tool releases should identify the distributed version, supported delivery channel, user-visible changes, upgrade expectations, and known limitations. Governance/static-support surfaces should retain deployment evidence instead of manufacturing routine releases.
 
+Release evidence records what was built, reviewed, and published. It must not be treated as proof of production readiness, security certification, or operational approval.
+
 ## Exceptions, ownership, and review
 
-The owning repository owns its version declaration, release objects, notes, artifacts, deployment evidence, and remediation issues. Follow the [issue-only ITIL5 workflow](./issue-only-itil5-workflow.md): organization-wide policy and exceptions belong in `.github`, while implementation remains in linked issues in each affected repository.
+The owning repository owns its version declaration, release objects, notes, artifacts, deployment evidence, and remediation evidence. Organization-wide policy and exceptions belong in `.github`; each observed repository mismatch must be corrected or explicitly dispositioned in that repository and linked back as follow-up evidence.
 
 An exception must record:
 
@@ -86,13 +81,13 @@ The following observations are evidence from the public audit captured at **2026
 | Priority | Repository | Snapshot gap and owning action |
 | --- | --- | --- |
 | P1 | `conxius-wallet` | README/manifest/changelog signal `v1.9.5`, while the latest release/tag was `v1.9.2`. Reconcile in [Conxian/conxius-wallet#356](https://github.com/Conxian/conxius-wallet/issues/356). |
-| P1 | `lib-conxian-core` | README badge/source signal `v0.3.0`, while the latest release/tag was `v0.2.11`. Declare the authority and publish or label the newer version unreleased. |
-| P1 | `Conxian` | Latest GitHub Release was `v1.0.0-rc1` from 2025, while raw tag `v1.0.0` existed. Publish release notes/evidence for the final tag or remove its implied published status. |
-| P1 | `conxius-orbit` | Only GitHub Release was `v1.0.0` from 2025 while newer source versions were present. Establish one version authority and current release signal. |
-| P2 | `conxian_ui` | No clearly visible tag-driven release path. Document the public release/deployment record used when distributed user-facing versions change. |
-| P2 | `conxian.github.io` | No README, description, homepage, release guidance, or clear canonical-destination statement. Add purpose, ownership, destination, and deployment traceability. |
-| P2 | `conxian-labs-site` | Deployment-versus-release wording was contradictory. State deployment traceability as the routine rule and reserve releases for optional site milestones. |
-| P2 | `conxian-nexus` | README stated `v0.4.19`, while the latest release was `v0.4.22`. Align README status with the published release. |
-| P3 | `conxius-enclave-sdk` | Correctly distinguished working `2.0.12` from latest reviewed release `v2.0.11`, but generated latest-release notes were duplicated. Preserve the distinction and remove duplication. |
+| P1 | `lib-conxian-core` | README badge/source signal `v0.3.0`, while the latest release/tag was `v0.2.11`. Record repository-local follow-up evidence that declares the authority and publishes the release or labels the newer version Unreleased. |
+| P1 | `Conxian` | Latest GitHub Release was `v1.0.0-rc1` from 2025, while raw tag `v1.0.0` existed. Record repository-local follow-up evidence that publishes matching release notes/evidence for the final tag or removes its implied published status. |
+| P1 | `conxius-orbit` | Only GitHub Release was `v1.0.0` from 2025 while newer source versions were present. Record repository-local follow-up evidence that establishes one version authority and current release signal. |
+| P2 | `conxian_ui` | No clearly visible tag-driven release path. Record repository-local follow-up evidence documenting the public release or deployment record used when distributed user-facing versions change. |
+| P2 | `conxian.github.io` | No README, description, homepage, release guidance, or clear canonical-destination statement. Record repository-local follow-up evidence for purpose, ownership, destination, and lightweight deployment traceability. |
+| P2 | `conxian-labs-site` | Deployment-versus-release wording was contradictory. Record repository-local follow-up evidence that states lightweight deployment traceability as the routine rule and GitHub Releases as optional. |
+| P2 | `conxian-nexus` | README stated `v0.4.19`, while the latest release was `v0.4.22`. Record repository-local follow-up evidence aligning README status with the published release. |
+| P3 | `conxius-enclave-sdk` | Correctly distinguished working `2.0.12` from latest reviewed release `v2.0.11`, but generated latest-release notes were duplicated. Record repository-local follow-up evidence that preserves the distinction and removes duplication. |
 
-Release and version cleanup remains under [#48](https://github.com/Conxian/.github/issues/48), while cross-repository presentation and basic metadata cleanup remains under [#53](https://github.com/Conxian/.github/issues/53). Create repository-local remediation issues for implementation when work is scheduled and link them from the owning organization-level issue.
+The authoritative decision is recorded in [#48](https://github.com/Conxian/.github/issues/48#issuecomment-5078201839), while cross-repository presentation and basic metadata cleanup remains under [#53](https://github.com/Conxian/.github/issues/53). Repository-local corrections or explicit dispositions are the follow-up evidence for each mismatch.
