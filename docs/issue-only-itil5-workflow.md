@@ -1,6 +1,6 @@
 # Issue-only operational workflow baseline
 
-This document defines the lightweight, reusable operating baseline requested in [issue #45](https://github.com/Conxian/.github/issues/45) for work tracked in Conxian GitHub repositories. It uses ITIL-aligned concepts without claiming formal ITIL adoption, certification, compliance, or conformance.
+This document presents the proposed lightweight, reusable operating baseline requested in [issue #45](https://github.com/Conxian/.github/issues/45) for work tracked in Conxian GitHub repositories. The seven-type taxonomy is not a formally ratified BOS decision, and this document does not claim formal ITIL adoption, certification, compliance, or conformance.
 
 For public-safe repository and governance work, GitHub issues are the canonical execution records. Restricted strategy, security, legal, financial, and detailed operational material remains canonical in the authorized Linear workspace under Zero Secret Egress (ZSE); GitHub should link to that authority without duplicating restricted context. Do not maintain competing public and private plans, status narratives, or acceptance checklists for the same scope. This issue-only baseline does not require GitHub Projects or milestones; that is a scope choice for this baseline, not a ban on those tools in every Conxian delivery process.
 
