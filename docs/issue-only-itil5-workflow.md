@@ -1,12 +1,12 @@
-# Issue-only ITIL-aligned workflow baseline
+# Issue-only operational workflow baseline
 
-This document proposes the lightweight, reusable operating baseline requested in [issue #45](https://github.com/Conxian/.github/issues/45) for work tracked in Conxian GitHub repositories. It uses ITIL-aligned concepts without claiming formal ratification, ITIL certification, or conformance.
+This document defines the lightweight, reusable operating baseline requested in [issue #45](https://github.com/Conxian/.github/issues/45) for work tracked in Conxian GitHub repositories. It uses ITIL-aligned concepts without claiming formal ITIL adoption, certification, compliance, or conformance.
 
 For public-safe repository and governance work, GitHub issues are the canonical execution records. Restricted strategy, security, legal, financial, and detailed operational material remains canonical in the authorized Linear workspace under Zero Secret Egress (ZSE); GitHub should link to that authority without duplicating restricted context. Do not maintain competing public and private plans, status narratives, or acceptance checklists for the same scope. This issue-only baseline does not require GitHub Projects or milestones; that is a scope choice for this baseline, not a ban on those tools in every Conxian delivery process.
 
 ## Issue types and labels
 
-Every issue using this baseline should have exactly one type label when the labels are available.
+Every issue using this baseline should identify exactly one primary work type. The labels below are recommended follow-up configuration; when they are available, use exactly one type label.
 
 | Work type | Label | Use when |
 | --- | --- | --- |
@@ -18,7 +18,7 @@ Every issue using this baseline should have exactly one type label when the labe
 | Control | `type: control` | A preventive, detective, or corrective safeguard needs definition, operation, or evidence. |
 | Improvement | `type: improvement` | A measurable enhancement to a product, service, process, or operating outcome is proposed. |
 
-Labels are routing metadata, not a second workflow system. Repositories may add domain labels, but should preserve these type names for organization-wide consistency. Repositories that do not yet have the labels may state the type in the issue body until label provisioning is completed.
+Labels are routing metadata, not a second workflow system. Repositories may add domain labels, but should preserve these type names for organization-wide consistency. Until label provisioning is approved and completed, state the type in the issue body.
 
 ## Minimum issue structure
 
@@ -71,15 +71,16 @@ The common structure applies first. Add the following minimum evidence before cl
 
 GitHub's native issue state stays lean: an issue is **open** while action, validation, or an explicit disposition remains, and **closed** once its exit criteria and closure evidence are recorded.
 
-Use at most one status label at a time when the common labels are provisioned:
+Within an open issue, use this simple progression without requiring status labels, a Project, or a milestone:
 
-1. `status: triage` — type, scope, owner, priority, and routing are being confirmed.
-2. `status: ready` — outcome and minimum acceptance or exit criteria are clear enough to start.
-3. `status: in-progress` — the assignee is actively driving the work.
-4. `status: review` — implementation, evidence, or a decision is awaiting validation.
-5. `status: blocked` — progress cannot continue; the blocking dependency and next review point must be in the issue.
+1. **Triage** — confirm routing, type, scope, impact, priority, owner, and closure criterion.
+2. **Owned / ready** — assign one accountable person and make the required outcome and minimum exit criteria clear enough to start.
+3. **In progress** — perform the work and update the canonical issue through its checklist, comments, linked pull requests, linked issues, or sub-issues.
+4. **Review** — validate the implementation, evidence, or decision against the exit criteria.
+5. **Blocked** — record the blocker, the person or dependency that can clear it, and the next review point before returning to the appropriate active stage.
+6. **Done** — provide closure evidence and close the issue.
 
-The normal progression is `triage` → `ready` → `in-progress` → `review` → closed. `blocked` temporarily replaces the active status and returns to the appropriate status when cleared. Reopen a closed issue only when its recorded outcome is no longer valid; otherwise create and link a new issue for newly discovered scope.
+Status labels must not become a parallel workflow. If configuration is approved later, `status: blocked` may be used as an optional visibility aid, but it is not authoritative and must be supported by a current issue comment. Reopen a closed issue when its original closure criterion was not actually met or the same outcome has materially regressed and continuing the existing history is clearest; otherwise create and link a new issue for newly discovered scope.
 
 Priority is a triage decision based on impact and urgency, not issue type. Use the repository's existing priority labels if available, or record one of these terms in the issue body:
 
@@ -93,6 +94,7 @@ For incidents, record both severity of current impact and urgency of restoration
 ## Ownership and triage
 
 - The repository maintainers triage new issues and confirm type, routing, priority, and sufficient minimum information.
+- The reporter provides enough context for triage and confirms acceptance when they are the appropriate requester; reporting an issue does not automatically make the reporter its owner.
 - The assignee is the single directly responsible owner for progress, status accuracy, escalation, and closure evidence. Unassigned issues remain in triage.
 - CODEOWNERS identify reviewers for affected files or governance surfaces; they do not replace the issue assignee or automatically approve risk acceptance.
 - Contributors complete checklist items and provide evidence through linked pull requests, comments, or artifacts without copying the work plan elsewhere.
@@ -107,6 +109,8 @@ Open work in the repository that owns the affected product, service, code, confi
 - Product-specific incidents, requests, problems, changes, risks, controls, and improvements belong in that product repository.
 - Organization-wide contribution defaults, shared community health files, common workflow guidance, repository governance, taxonomy, or cross-repository operating controls belong in `Conxian/.github`.
 - Sensitive internal business, partner, strategy, financial, legal, credential, security, or detailed operational material does not belong in public repositories. Follow the [repository taxonomy](../repository-taxonomy.md), [security reporting policy](../SECURITY.md), and authorized Linear/ZSE boundaries.
+
+Use the existing [support and governance routes](../SUPPORT.md) when an issue needs a different support, security, or organization-level entry path.
 
 When one outcome spans repositories:
 
@@ -135,8 +139,9 @@ Do not hold an otherwise complete issue open for unrelated improvements. Create 
 
 Follow-up decisions may include:
 
-- provisioning the common type and status labels in repositories that adopt the baseline;
-- deciding whether a small number of shared issue forms would reduce missing information;
+- provisioning the common type labels and optional `status: blocked` label in repositories that adopt the baseline;
+- deciding whether one shared operational-work issue form with a type selector would reduce missing information while retaining the existing focused bug-report and governance-request forms;
+- handling stale label references in the existing bounty template as separate template-hygiene work;
 - adding proportionate checks for label consistency only if repeated usage proves a need.
 
 This baseline does **not**:
@@ -147,3 +152,7 @@ This baseline does **not**:
 - make Linear canonical for public-safe repository execution or duplicate restricted Linear context in GitHub;
 - automate approvals, risk acceptance, routing, or closure;
 - replace repository-specific incident response, security, release, or regulatory procedures.
+
+## Example
+
+A wallet service degradation belongs in the wallet repository as an **incident** with impact, symptoms, restoration actions, an assignee, and a restoration criterion. If investigation finds a recurring shared dependency failure, link a **problem** issue in the owning dependency repository. Create a `.github` **control** issue only if several repositories need a shared policy or control change; link each local implementation issue and use the control issue solely for coordination and final roll-up.

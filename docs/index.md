@@ -29,7 +29,7 @@ Conxian is a sovereign autonomous business (SAB) building zero-custody, zero-raw
 
 - **[Organization Profile](https://github.com/Conxian/.github/blob/main/profile/README.md)**: Identity, mission, and canonical naming standards.
 - **[Repository Taxonomy](./repository-taxonomy.md)**: Comprehensive map of repository roles and categories.
-- **[Proposed Issue-only ITIL-aligned Workflow](./issue-only-itil5-workflow-baseline.md)**: Lightweight issue types, lifecycle, authority boundaries, routing, ownership, and closure evidence for public-safe GitHub work.
+- **[Issue-only Operational Workflow](./issue-only-itil5-workflow.md)**: Lightweight issue types, lifecycle, authority boundaries, routing, ownership, and closure evidence for public-safe GitHub work.
 - **[Sovereign Documentation Strategy](./SOVEREIGN_PAGES.md)**: Our decentralized documentation management model.
 - **[Organization Review](./REVIEWS.md)**: Benchmark against industry standards.
 
