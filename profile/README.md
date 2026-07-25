@@ -35,16 +35,18 @@ Company operations, legal work, financial administration, and other sensitive in
 
 ## Pinned repositories (recommended order)
 
-When org pins are updated, list protocol / DAO-facing surfaces first, support and access surfaces next, and Labs narrative surfaces last.
+The retained target follows the canonical [#48 decision](https://github.com/Conxian/.github/issues/48#issuecomment-5078201839). Applying it is a manual organization-administrator action.
 
 | Order | Repository | Rationale |
 | --- | --- | --- |
 | 1 | [Conxian](https://github.com/Conxian/Conxian) | Canonical protocol and DAO-facing reference point. |
-| 2 | [lib-conxian-core](https://github.com/Conxian/lib-conxian-core) | Shared protocol primitives reused across ecosystem repositories. |
-| 3 | [conxius-wallet](https://github.com/Conxian/conxius-wallet) | Sovereign wallet reference client for ecosystem participants. |
-| 4 | [conxian_ui](https://github.com/Conxian/conxian_ui) | Primary public interaction surface for users. |
-| 5 | [conxian-gateway](https://github.com/Conxian/conxian-gateway) | Integration surface for external systems and service connectivity. |
-| 6 | [conxian-labs-site](https://github.com/Conxian/conxian-labs-site) | Conxian-Labs portfolio and company-facing information surface. |
+| 2 | [conxius-wallet](https://github.com/Conxian/conxius-wallet) | End-user wallet and sovereign reference client. |
+| 3 | [conxian-gateway](https://github.com/Conxian/conxian-gateway) | Integration path for external systems and service connectivity. |
+| 4 | [conxius-enclave-sdk](https://github.com/Conxian/conxius-enclave-sdk) | Security SDK for hardware-secured execution environments. |
+| 5 | [conxian-labs-site](https://github.com/Conxian/conxian-labs-site) | Portfolio entry point and public information surface. |
+| 6 | [conxian.github.io](https://github.com/Conxian/conxian.github.io) | Documentation hub, after its basic metadata cleanup under [#53](https://github.com/Conxian/.github/issues/53). |
+
+At the 2026-07-25 snapshot, the live organization pins were only `Conxian`, then `.github`. This recommendation does not claim that the target six have been applied.
 
 ## Public repo standards
 

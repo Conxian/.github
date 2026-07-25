@@ -66,16 +66,16 @@ Review the repository's class and any exemption when its purpose, audience, dist
 
 ## Portfolio pins
 
-The recommended organization pins retain the canonical portfolio narrative in this order:
+The retained organization-pin target from the canonical [#48 decision](https://github.com/Conxian/.github/issues/48#issuecomment-5078201839) is, in order:
 
 1. `Conxian`
-2. `lib-conxian-core`
-3. `conxius-wallet`
-4. `conxian_ui`
-5. `conxian-gateway`
-6. `conxian-labs-site`
+2. `conxius-wallet`
+3. `conxian-gateway`
+4. `conxius-enclave-sdk`
+5. `conxian-labs-site`
+6. `conxian.github.io`, after its basic metadata cleanup under [#53](https://github.com/Conxian/.github/issues/53)
 
-Pins communicate narrative breadth across protocol, shared primitives, sovereign access, interaction, integration, and the Labs public surface. They are not a readiness certification or a substitute for the release rules above.
+Pins prioritize the protocol, end-user wallet, integration path, security SDK, portfolio entry point, and documentation hub rather than control-plane or supporting repositories. They are not a readiness certification or a substitute for the release rules above.
 
 At the 2026-07-25 snapshot, the organization pins verified through GitHub were only `Conxian`, then `.github`. Applying the target six remains a manual organization-administrator action; this policy does not claim that the pins were changed.
 
@@ -95,4 +95,4 @@ The following observations are evidence from the public audit captured at **2026
 | P2 | `conxian-nexus` | README stated `v0.4.19`, while the latest release was `v0.4.22`. Align README status with the published release. |
 | P3 | `conxius-enclave-sdk` | Correctly distinguished working `2.0.12` from latest reviewed release `v2.0.11`, but generated latest-release notes were duplicated. Preserve the distinction and remove duplication. |
 
-Create additional remediation issues in the repository that owns each remaining gap and link them from the organization-level coordination issue when work is scheduled.
+Release and version cleanup remains under [#48](https://github.com/Conxian/.github/issues/48), while cross-repository presentation and basic metadata cleanup remains under [#53](https://github.com/Conxian/.github/issues/53). Create repository-local remediation issues for implementation when work is scheduled and link them from the owning organization-level issue.
