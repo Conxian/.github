@@ -6,6 +6,8 @@ The seven-type taxonomy below is a proposed lightweight operating baseline, not 
 
 For public-safe repository and governance execution, GitHub Issues are the canonical system of record. Restricted strategy, security, legal, financial, and detailed operational context remains canonical and authoritative in the authorized Linear workspace under Zero Secret Egress (ZSE). GitHub records must link to that authority when it is relevant without duplicating restricted detail.
 
+Public-safe issues, relationships, pull requests, and closure evidence form the repository execution layer of the BOS knowledge graph. That execution role does not make this proposed taxonomy a ratified BOS policy or move restricted authority out of the authorized Linear workspace.
+
 Use issue state, labels, one assignee, task lists, links, sub-issues, and pull requests. This baseline does not introduce GitHub Projects, milestones, or a parallel planning layer, but that scope choice is not a portfolio-wide ban where other approved controls require those tools.
 
 ## Route work before classifying it
@@ -86,6 +88,17 @@ Add only the conditional details that apply:
 - **Improvement:** current state, measurable target, beneficiaries, proposed approach, dependencies, and before/after validation.
 
 Keep detail proportionate. A routine request can be short; a P0 incident, risky change, or org-wide control needs enough evidence for another person to understand and verify the decision.
+
+### Existing issue form contract
+
+Use [`.github/ISSUE_TEMPLATE/itil_work_item.yml`](../.github/ISSUE_TEMPLATE/itil_work_item.yml) as the existing structured entry point for this baseline. The form:
+
+- starts the issue with `status:triage`;
+- requires one of the seven operational types and records the matching compact `type:*` label and native issue-type mapping for triage;
+- requires summary, affected scope, impact or target outcome, priority, one named DRI, acceptance criteria and closure evidence, relationships, and proportionate type-specific details; and
+- requires confirmation that the public issue contains no vulnerability details or other sensitive data.
+
+During triage, apply the selected `type:*` and `priority:*` labels, set the mapped native issue type, assign exactly one DRI, and retain exactly one lifecycle `status:*` label. Keep the form and this vocabulary aligned; do not introduce spaced or alternate label spellings in documentation.
 
 ## Ownership and lifecycle
 
