@@ -21,9 +21,9 @@ def check_env_templates():
     compose_files = [f for f in tracked_files if re.match(r'^.*docker-compose.*\.ya?ml$', f, re.IGNORECASE)]
     env_templates = [f for f in tracked_files if re.match(r'^.*\.env.*\.(example|template|sample|dist)$', f, re.IGNORECASE)]
 
-    violations = []
+    findings = []
 
-    # Verify compose files for risky mounts or hardcoded secrets
+    # Verify compose files for risky mounts or hardcoded keys
     dangerous_mounts = [
         "/var/run/docker.sock",
         "/etc/shadow",
@@ -39,15 +39,15 @@ def check_env_templates():
 
             for mount in dangerous_mounts:
                 if mount in content:
-                    violations.append(f"Dangerous host mount '{mount}' found in compose file: {cfile}")
+                    findings.append(f"Dangerous host mount '{mount}' found in compose file: {cfile}")
 
             # Check for hardcoded credentials (e.g. PASSWORD=secret_123)
-            secret_key_matches = re.findall(r'(?i)(PASSWORD|SECRET|API_KEY|PRIVATE_KEY)\s*=\s*([^\s"${}]+)', content)
-            for key, val in secret_key_matches:
-                if val.lower() not in ['changeme', 'placeholder', 'dummy', 'your_key_here', 'your_password_here', 'null', 'none']:
-                    violations.append(f"Hardcoded potential secret '{key}' in compose file: {cfile}")
+            matches = re.findall(r'(?i)(PASSWORD|SECRET|API_KEY|PRIVATE_KEY)\s*=\s*([^\s"${}]+)', content)
+            for param_name, param_val in matches:
+                if param_val.lower() not in ['changeme', 'placeholder', 'dummy', 'your_key_here', 'your_password_here', 'null', 'none']:
+                    findings.append(f"Hardcoded configuration value for '{param_name}' in compose file: {cfile}")
 
-    # Verify template files do not leak real secrets
+    # Verify template files do not leak raw values
     for tfile in env_templates:
         if os.path.exists(tfile):
             with open(tfile, 'r', encoding='utf-8', errors='ignore') as f:
@@ -59,20 +59,20 @@ def check_env_templates():
                     continue
 
                 if '=' in line:
-                    key, val = line.split('=', 1)
-                    key = key.strip()
-                    val = val.strip()
+                    param_name, param_val = line.split('=', 1)
+                    param_name = param_name.strip()
+                    param_val = param_val.strip()
 
                     # High risk keywords
-                    if re.search(r'(?i)(PRIVATE_KEY|TOKEN|SECRET|PASSWORD|JWT_SECRET)', key):
+                    if re.search(r'(?i)(PRIVATE_KEY|TOKEN|SECRET|PASSWORD|JWT_SECRET)', param_name):
                         # If value looks like a real long key/hash without template indicators
-                        if len(val) > 20 and not re.search(r'(?i)(your|placeholder|change|example|dummy|<.*>|\${.*})', val):
-                            violations.append(f"Potential unmasked credential in template {tfile}:{line_no} ({key})")
+                        if len(param_val) > 20 and not re.search(r'(?i)(your|placeholder|change|example|dummy|<.*>|\${.*})', param_val):
+                            findings.append(f"Unmasked template variable '{param_name}' in {tfile}:{line_no}")
 
-    if violations:
+    if findings:
         print("❌ Environment template / Docker Compose security check failed:")
-        for v in violations:
-            print(f"  - {v}")
+        for item in findings:
+            print(f"  - {item}")
         return False
 
     print(f"Verified {len(compose_files)} Docker Compose file(s) and {len(env_templates)} Environment Template file(s).")

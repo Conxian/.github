@@ -4,9 +4,9 @@ import subprocess
 import sys
 
 def check_secrets():
-    print("Verifying no secret filenames in submodules and repository index...")
+    print("Verifying no sensitive filenames in submodules and repository index...")
 
-    secret_patterns = [
+    restricted_patterns = [
         ".env",
         ".env.local",
         ".env.production",
@@ -45,7 +45,7 @@ def check_secrets():
         print(f"❌ Failed to obtain tracked files: {e}")
         return False
 
-    violations = []
+    findings = []
     for filepath in tracked_files:
         filename = os.path.basename(filepath)
 
@@ -53,9 +53,9 @@ def check_secrets():
         if any(filename.endswith(suffix) for suffix in allowed_suffixes):
             continue
 
-        for pattern in secret_patterns:
+        for pattern in restricted_patterns:
             if fnmatch.fnmatch(filename, pattern):
-                violations.append(f"Potentially sensitive file tracked: {filepath} (matched pattern '{pattern}')")
+                findings.append(f"Restricted filename match: {filepath} (pattern: {pattern})")
 
     # Check for git submodules if .gitmodules exists
     if os.path.exists(".gitmodules"):
@@ -71,17 +71,17 @@ def check_secrets():
         except Exception as e:
             print(f"⚠️ Warning: Could not inspect git submodules: {e}")
 
-    if violations:
-        print("❌ Sensitive secret file patterns detected in source control:")
-        for v in violations:
-            print(f"  - {v}")
+    if findings:
+        print("❌ Restricted filename patterns detected in source control:")
+        for item in findings:
+            print(f"  - {item}")
         return False
 
     return True
 
 if __name__ == "__main__":
     if check_secrets():
-        print("✅ Submodule secrets check passed.")
+        print("✅ Submodule sensitive file check passed.")
         sys.exit(0)
     else:
         sys.exit(1)
