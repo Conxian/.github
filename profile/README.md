@@ -1,6 +1,6 @@
 # Conxian
 
-Public repositories for the Conxian protocol / DAO layer and the Conxian-Labs builder / operator layer.
+Public repositories for the Conxian-Labs builder / operator layer.
 
 > **Status:** Operational · **Model:** Zero-custody, zero-raw-data infrastructure · 
 
