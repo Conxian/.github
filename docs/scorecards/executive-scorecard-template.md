@@ -7,7 +7,7 @@
 ## 1. Launch Blockers (P0)
 | Blocker | Surface | Impact | Current Owner | Next Action |
 | :--- | :--- | :--- | :--- | :--- |
-| [e.g., SIM parity] | Conxian/Conxian | Mainnet Delay | @dev-lead | Complete Clarity 4 sweep |
+| [e.g., SIM parity] | lib-conxian-core | Mainnet Delay | @dev-lead | Complete Clarity 4 sweep |
 
 ## 2. Repo & Governance Posture
 | Repo | Trust Tier | Posture Change | Blocker | Evidence Link |
