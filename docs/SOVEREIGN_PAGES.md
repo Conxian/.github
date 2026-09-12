@@ -6,7 +6,7 @@ Conxian Labs utilizes a decentralized yet unified documentation strategy. We lev
 
 ## 1. The Central Hub: `conxian.github.io`
 
-The root repository `Conxian/Conxian.github.io` (or the `.github` repository documentation hub) serves as the canonical landing page for all Conxian ecosystem documentation. It provides a directory of all project-specific documentation sites.
+The root repository `Conxian/conxian.github.io` (or the `.github` repository documentation hub) serves as the canonical landing page for all Conxian ecosystem documentation. It provides a directory of all project-specific documentation sites.
 
 ## 2. Project-Specific Documentation
 
