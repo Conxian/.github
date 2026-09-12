@@ -6,12 +6,6 @@ Identity boundary used in this taxonomy: **Conxian** = protocol/public ecosystem
 
 ## Categories
 
-### Protocol core
-
-Canonical smart-contract or protocol logic.
-
-- `lib-conxian-core`: Canonical smart-contract primitives and core protocol logic.
-
 ### Protocol tooling
 
 Deployment, coordination, or ecosystem tooling used around protocol development.

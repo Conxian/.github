@@ -25,7 +25,6 @@ The category column applies the terms defined by the normative [repository taxon
 
 | Repository | Control classification | Audience and exposure | Ownership evidence | Presentation posture | README / metadata clarification | Release posture | Release action | Organization pin |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| [`lib-conxian-core`](https://github.com/Conxian/lib-conxian-core) | Canonical smart-contract primitives and core protocol logic.<br>**Primary role:** protocol<br>**Taxonomy:** Protocol core<br>**Portfolio:** Core Protocols & Products | Protocol contributors, integrators, governance participants.<br>**Public / main** | [`CODEOWNERS`](https://github.com/Conxian/lib-conxian-core/blob/main/CODEOWNERS). | **Acceptable with clarification.** Primary modular protocol core library. | Maintain release alignment and verify core primitives. | Latest GitHub Release: [`v1.0.0`](https://github.com/Conxian/lib-conxian-core/releases/tag/v1.0.0). | **Medium:** maintain core primitive readiness. | **Currently applied #1 and target #1.** Canonical protocol core primitives. |
 | [`conxian_ui`](https://github.com/Conxian/conxian_ui) | Public web interaction surface.<br>**Primary role:** website<br>**Taxonomy:** Product and interface surfaces<br>**Portfolio:** Core Protocols & Products | Users, demos, integrators.<br>**Public / main** | [`CODEOWNERS`](https://github.com/Conxian/conxian_ui/blob/main/CODEOWNERS) and [`REPO_OWNERSHIP.md`](https://github.com/Conxian/conxian_ui/blob/main/REPO_OWNERSHIP.md). | **Acceptable with clarification.** Public role is credible, but metadata and deployment framing are uneven. | Add a GitHub description; reconcile the official `conxian.org` README URL with the Render homepage metadata; remove deployment placeholders; choose consistent wording between definitive public interaction surface and supporting/reference implementation. | Latest GitHub Release: [`v0.1.0`](https://github.com/Conxian/conxian_ui/releases/tag/v0.1.0). | **Medium:** align deployment, role, homepage, and release expectations. | **No.** Remains a core public surface, but is not in the retained six-pin target. |
 | [`.github`](https://github.com/Conxian/.github) | Organization governance, defaults, profile, and documentation guidance.<br>**Primary role:** governance/defaults<br>**Taxonomy:** Labs and organization surfaces<br>**Portfolio:** Governance/defaults | Maintainers and contributors.<br>**Public / main** | [`CODEOWNERS`](https://github.com/Conxian/.github/blob/main/CODEOWNERS). | **Acceptable.** Appropriate rolling governance and documentation control surface. | Optionally explain or remove opaque `Node: ZA-GP-MID` README text; add useful repository topics. | No tags or releases, under the explicit rolling-change exemption in the [public release discipline](./release-discipline.md). Merged governance history on `main` is authoritative. | **None:** versioned releases are not needed for organization defaults. | **Currently applied #2, but not in the recommended target.** The live pins at the snapshot were `Conxian`, then `.github`; changing them remains a manual administrator action. |
 | [`lib-conxian-core`](https://github.com/Conxian/lib-conxian-core) | Reusable protocol primitives and shared ecosystem logic.<br>**Primary role:** protocol<br>**Taxonomy:** Shared core libraries<br>**Portfolio:** Supporting Infrastructure & Tooling | Rust consumers and integrators.<br>**Public / main** | [`.github/CODEOWNERS`](https://github.com/Conxian/lib-conxian-core/blob/main/.github/CODEOWNERS). | **Acceptable with clarification.** Purpose is clear; version and license presentation are not. | Align [`Cargo.toml`](https://github.com/Conxian/lib-conxian-core/blob/main/Cargo.toml), [README](https://github.com/Conxian/lib-conxian-core/blob/main/README.md), and [changelog](https://github.com/Conxian/lib-conxian-core/blob/main/CHANGELOG.md) `0.3.0` signals with the published release line; make dual MIT/Apache licensing machine-readable because GitHub reports “Other.” | Latest GitHub Release: [`v0.2.11`](https://github.com/Conxian/lib-conxian-core/releases/tag/v0.2.11), behind source/documentation `0.3.0`. | **High:** restore release/source/version and license-metadata parity. | **No.** Important supporting library, but not in the retained six-pin target. |
@@ -44,7 +43,7 @@ At the snapshot, GitHub topics were absent across all 12 repositories. [#46](htt
 
 The normative details remain in the [public release discipline](./release-discipline.md). The matrix records these explicit decisions:
 
-- **Formal release-bearing artifacts:** externally consumable releases from `lib-conxian-core`, `conxius-wallet`, `conxian-gateway`, `conxian-nexus`, `conxius-enclave-sdk`, and `conxius-platform` require a SemVer tag plus a matching GitHub Release.
+- **Formal release-bearing artifacts:** externally consumable releases from `conxius-wallet`, `conxian-gateway`, `lib-conxian-core`, `conxian-nexus`, `conxius-enclave-sdk`, and `conxius-platform` require a SemVer tag plus a matching GitHub Release.
 - **Versioned UI and deployment tooling:** externally consumable builds, packages, or CLIs from `conxian_ui` and `conxius-orbit` require the same SemVer tag and matching GitHub Release; deployment-only changes may use documented deployment or commit history.
 - **Governance:** `.github` has an explicit rolling-change exemption; merged governance history on `main` is authoritative.
 - **Static sites:** `conxian-labs-site` and `conxian.github.io` have explicit lightweight deployment-signal exemptions; GitHub Releases are optional when commit-based deployment and content history are documented.
@@ -55,12 +54,11 @@ A raw Git tag does not satisfy a required published GitHub Release. Version, man
 
 Retain the six-pin target and order from the canonical [#48 decision](https://github.com/Conxian/.github/issues/48#issuecomment-5078201839):
 
-1. [`lib-conxian-core`](https://github.com/Conxian/lib-conxian-core) — protocol core primitives.
-2. [`conxius-wallet`](https://github.com/Conxian/conxius-wallet) — end-user wallet and sovereign reference client.
-3. [`conxian-gateway`](https://github.com/Conxian/conxian-gateway) — integration path.
-4. [`conxius-enclave-sdk`](https://github.com/Conxian/conxius-enclave-sdk) — security SDK.
-5. [`conxian-labs-site`](https://github.com/Conxian/conxian-labs-site) — portfolio entry point.
-6. [`conxian.github.io`](https://github.com/Conxian/conxian.github.io) — documentation hub, after its basic metadata cleanup under [#53](https://github.com/Conxian/.github/issues/53).
+1. [`conxius-wallet`](https://github.com/Conxian/conxius-wallet) — end-user wallet and sovereign reference client.
+2. [`conxian-gateway`](https://github.com/Conxian/conxian-gateway) — integration path.
+3. [`conxius-enclave-sdk`](https://github.com/Conxian/conxius-enclave-sdk) — security SDK.
+4. [`conxian-labs-site`](https://github.com/Conxian/conxian-labs-site) — portfolio entry point.
+5. [`conxian.github.io`](https://github.com/Conxian/conxian.github.io) — documentation hub, after its basic metadata cleanup under [#53](https://github.com/Conxian/.github/issues/53).
 
 This prioritizes the protocol, end-user wallet, integration path, security SDK, portfolio entry point, and documentation hub rather than control-plane or supporting repositories. These pins express narrative breadth, not readiness certification.
 
@@ -73,7 +71,7 @@ At the snapshot, the verified organization pins were only `Conxian`, then `.gith
 - **Static/deployment clarity:** `conxian.github.io` lacks basic purpose, destination, and release/deployment guidance; `conxian-labs-site` needs its deployment-versus-release wording reconciled.
 - **Canonical front-door ambiguity:** `conxian.github.io` is designated as the docs landing page but lacks local ownership and repository metadata, and its custom domain did not resolve during the snapshot.
 - **Role/promotion ambiguity:** `conxian_ui` alternates between definitive interaction surface and supporting/reference wording; `conxius-platform` needs an explicit operator-only posture; `conxius-orbit` should not be promoted until its version and legacy references are normalized.
-- **License metadata mismatch:** `lib-conxian-core` and `conxian-nexus` need repository metadata to reflect the license files and intended licensing model accurately.
+- **License metadata mismatch:** `lib-conxian-core`, and `conxian-nexus` need repository metadata to reflect the license files and intended licensing model accurately.
 - **Ownership ambiguity:** `Conxian` has both GitHub-precedence and root ownership files; `conxian.github.io` has only organization-default ownership.
 
 ## Follow-up ownership
