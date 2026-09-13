@@ -45,5 +45,18 @@ This document consolidates research and best practices for the active hardening 
 - **Requirement:** Explicitly exclude debug paths that bypass remote attestation.
 - **Action:** Remove any `debug_attestation` mocks from the production release branch.
 
+## 3. CI Supply-Chain Hardening & Explicit Verification Steps
+
+### Version Pinning & Safe Script Execution
+- **Requirement:** Prevent unpinned tool execution and ensure discrete step isolation in CI workflows.
+- **Pattern:** Pin tool versions explicitly (e.g., `download-actionlint.bash 1.7.7`).
+- **Explicit Step Pattern:** Run each security and governance verification script in its own distinct workflow step:
+  - `scripts/verify_knowledge_retention.py`
+  - `scripts/verify_tracked_artifacts.py`
+  - `scripts/verify_bos_production_boundary.py`
+  - `scripts/verify_compose_env_templates.py`
+  - `scripts/verify_submodule_secret_filenames.py`
+- **Benefit:** Prevents accidental script omission or double-execution while providing clear step-level logs and failure isolation in GitHub Actions UI.
+
 ---
-*Status: Initial Research Complete (2026-06-26)*
+*Status: Updated (2026-09)*
