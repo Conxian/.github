@@ -19,10 +19,14 @@ jobs:
         uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
           node-version: 24
-      - name: Install ShellCheck
-        run: sudo apt-get update && sudo apt-get install -y shellcheck
+      - name: Install Linting Tools
+        run: |
+          sudo apt-get update && sudo apt-get install -y shellcheck
+          # Download and install version-pinned actionlint binary
+          bash <(curl -sSL https://raw.githubusercontent.com/rhysd/actionlint/main/scripts/download-actionlint.bash) 1.7.7
+          sudo mv actionlint /usr/local/bin/
       - name: Lint Workflows
-        uses: rhysd/actionlint-action@4f31b6dd01542f741ae05934140be0439f0dd7ff # v1.7.7
+        run: actionlint
       - name: Lint Shell Scripts
         run: |
           if [ -d "scripts" ]; then

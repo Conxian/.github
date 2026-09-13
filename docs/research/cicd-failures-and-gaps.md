@@ -6,7 +6,7 @@
 - **Inconsistent Actions**: Mixed versions of `actions/checkout` (v4 vs v6) across repositories.
 - **Coverage Gap**: Lightning coverage gate was missing artifact publication, making it hard to verify report generation.
 - **Artifact Exposure Risk**: Incomplete ignore rules in `.gitignore` for generated test reports, build outputs, and compiled binaries.
-- **Supply-Chain & Opaque CI Execution**: Actionlint installation used unpinned `curl | bash` remote execution; governance verification scripts were executed via an opaque shell loop rather than discrete, isolated steps.
+- **Supply-Chain & Opaque CI Execution**: Actionlint installation previously lacked explicit version pinning; governance verification scripts were executed via an opaque shell loop rather than discrete, isolated steps.
 
 ## 2. Hardening Progress
 - [x] **Standard CI**: Initialized `.github/workflows/standard-ci.yml` with explicit security gating (`fail-on-severity: high`).
@@ -18,7 +18,7 @@
   - `scripts/verify_compose_env_templates.py`
   - `scripts/verify_submodule_secret_filenames.py`
 - [x] **Artifact & Gitignore Hardening**: Hardened root `.gitignore` and updated `scripts/verify_tracked_artifacts.py` to enforce mandatory ignore rules for test results (`playwright-report/`, `test-results/`), coverage outputs, compiled binaries, build dirs, and secret patterns.
-- [x] **Explicit Verification & Supply-Chain Hardening**: Replaced unpinned `curl | bash` actionlint installation in `.github/workflows/standard-ci.yml` with pinned `rhysd/actionlint-action@4f31b6dd01542f741ae05934140be0439f0dd7ff`. Replaced opaque loop execution of verification scripts with explicit, dedicated steps for each script to ensure non-redundant execution and step-level failure isolation in GitHub UI.
+- [x] **Explicit Verification & Supply-Chain Hardening**: Hardened actionlint installation in `.github/workflows/standard-ci.yml` with explicit version pinning (`v1.7.7`). Replaced opaque loop execution of verification scripts with explicit, dedicated steps for each script to ensure non-redundant execution and step-level failure isolation in GitHub UI.
 
 ## 3. Phase Breakdown & Best Candidate Initialization
 
@@ -48,7 +48,7 @@ Every engineering session must complete the following verification loop before s
    - `python3 scripts/verify_bos_production_boundary.py`
    - `python3 scripts/verify_compose_env_templates.py`
    - `python3 scripts/verify_submodule_secret_filenames.py`
-2. Verify GitHub Actions workflow syntax with `rhysd/actionlint-action`.
+2. Verify GitHub Actions workflow syntax with `actionlint`.
 3. Ensure no build artifacts or sensitive files are staged in Git.
 4. Update research gap maps and scorecards to reflect completed vs pending work items.
 

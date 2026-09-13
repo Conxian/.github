@@ -47,9 +47,9 @@ This document consolidates research and best practices for the active hardening 
 
 ## 3. CI Supply-Chain Hardening & Explicit Verification Steps
 
-### Action Pinning & Safe Script Execution
-- **Requirement:** Prevent unpinned remote execution (`curl | bash`) and ensure discrete step isolation in CI workflows.
-- **Pattern:** Pin third-party GitHub Actions to commit SHAs (e.g., `rhysd/actionlint-action@4f31b6dd...`).
+### Version Pinning & Safe Script Execution
+- **Requirement:** Prevent unpinned tool execution and ensure discrete step isolation in CI workflows.
+- **Pattern:** Pin tool versions explicitly (e.g., `download-actionlint.bash 1.7.7`).
 - **Explicit Step Pattern:** Run each security and governance verification script in its own distinct workflow step:
   - `scripts/verify_knowledge_retention.py`
   - `scripts/verify_tracked_artifacts.py`
