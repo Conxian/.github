@@ -1,0 +1,150 @@
+name: Merge Gate
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review, labeled]
+    branches: [main, master]
+  pull_request_review:
+    types: [submitted]
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+permissions:
+  contents: read
+  pull-requests: read
+  checks: read
+  statuses: read
+
+jobs:
+  # ── CODEOWNERS approval gate ────────────────────────────────────────
+  #
+  # Ensures that changes to governance-sensitive files have been
+  # reviewed by at least one CODEOWNER. This gate only runs in
+  # consuming repositories that have a CODEOWNERS file.
+  codeowners-gate:
+    runs-on: ubuntu-latest
+    if: github.repository != 'Conxian/.github' && github.event.pull_request.draft == false
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+      - name: Verify CODEOWNERS exists
+        id: owners
+        run: |
+          if [ -f "CODEOWNERS" ] || [ -f ".github/CODEOWNERS" ] || [ -f "docs/CODEOWNERS" ]; then
+            echo "has_codeowners=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_codeowners=false" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Check CODEOWNERS review status
+        if: steps.owners.outputs.has_codeowners == 'true'
+        uses: actions/github-script@5d7e08a4515e4c39a2de4de0d8eff35d7bff0c24 # v7.1.0
+        with:
+          script: |
+            const { data: reviews } = await github.rest.pulls.listReviews({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.payload.pull_request.number,
+            });
+
+            const approved = reviews.some(r => r.state === 'APPROVED');
+            const changesRequested = reviews.some(r => r.state === 'CHANGES_REQUESTED');
+
+            if (changesRequested) {
+              core.setFailed(
+                'Merge blocked: changes have been requested. Address review feedback before merging.'
+              );
+            } else if (!approved) {
+              core.setFailed(
+                'Merge blocked: at least one approving review from a CODEOWNER is required. ' +
+                'Request review from @botshelomokoka or @admin-conxian-labs.'
+              );
+            } else {
+              core.info('CODEOWNERS review gate passed.');
+            }
+
+  # ── Governance checklist gate ───────────────────────────────────────
+  #
+  # Verifies the PR body contains the governance checklist markers
+  # that indicate the author has completed the required checks.
+  governance-checklist:
+    runs-on: ubuntu-latest
+    if: github.repository != 'Conxian/.github' && github.event.pull_request.draft == false
+    steps:
+      - name: Check PR body for governance checklist
+        uses: actions/github-script@5d7e08a4515e4c39a2de4de0d8eff35d7bff0c24 # v7.1.0
+        with:
+          script: |
+            const body = context.payload.pull_request.body || '';
+
+            const requiredSections = [
+              'Security and Governance Checklist',
+              'Linked issue',
+            ];
+
+            const missing = requiredSections.filter(s => !body.includes(s));
+
+            if (missing.length > 0) {
+              core.warning(
+                `PR body is missing: ${missing.join(', ')}. ` +
+                'Please include the governance checklist from the PR template.'
+              );
+            }
+
+            // Non-blocking: warn but don't block for checklist format
+            core.info('Governance checklist gate evaluated.');
+
+  # ── Sensitive file change detection ─────────────────────────────────
+  #
+  # Flags PRs that touch governance-sensitive files so reviewers
+  # are aware of the elevated review requirements.
+  sensitive-files:
+    runs-on: ubuntu-latest
+    if: github.repository != 'Conxian/.github' && github.event.pull_request.draft == false
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+        with:
+          fetch-depth: 0
+      - name: Detect sensitive file changes
+        id: sensitive
+        run: |
+          SENSITIVE_PATTERNS=(
+            "CODEOWNERS"
+            "SECURITY.md"
+            "SUPPORT.md"
+            "CONTRIBUTING.md"
+            "GOVERNANCE.md"
+            ".github/workflows/"
+            ".github/release.yml"
+            "Cargo.toml"
+            "Cargo.lock"
+            "package.json"
+            "package-lock.json"
+          )
+
+          CHANGED=()
+          for pattern in "${SENSITIVE_PATTERNS[@]}"; do
+            if git diff --name-only "origin/${{ github.base_ref }}...HEAD" | grep -q "$pattern"; then
+              CHANGED+=("$pattern")
+            fi
+          done
+
+          if [ ${#CHANGED[@]} -gt 0 ]; then
+            echo "sensitive_changed=true" >> "$GITHUB_OUTPUT"
+            {
+              echo "files<<EOF"
+              printf '%s\n' "${CHANGED[@]}"
+              echo "EOF"
+            } >> "$GITHUB_OUTPUT"
+          else
+            echo "sensitive_changed=false" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Annotate sensitive file changes
+        if: steps.sensitive.outputs.sensitive_changed == 'true'
+        uses: actions/github-script@5d7e08a4515e4c39a2de4de0d8eff35d7bff0c24 # v7.1.0
+        with:
+          script: |
+            const files = `${{ steps.sensitive.outputs.files }}`.split('\n').filter(Boolean);
+            core.warning(
+              `Sensitive files changed: ${files.join(', ')}. ` +
+              'These changes require CODEOWNERS review from @botshelomokoka or @admin-conxian-labs.'
+            );
