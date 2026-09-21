@@ -31,10 +31,10 @@ Conxian Labs builds infrastructure for the public Conxian ecosystem. Our strateg
 - **Focus:** Android-first, hardware-secured (**StrongBox/TEE**) Bitcoin and Lightning node services.
 - **Status:** 🟢 Active.
 
-### 2. The Engine: [Conxian Protocol Core](https://github.com/Conxian/Conxian)
-- **Role:** Protocol Core.
-- **Focus:** Canonical public smart-contract and protocol settlement logic.
-- **Status:** 🟢 Production Ready.
+### 2. The Primitives: [Conxian Core Primitives](https://github.com/Conxian/lib-conxian-core)
+- **Role:** Shared Primitives.
+- **Focus:** Reusable Rust primitives and shared ecosystem protocol logic.
+- **Status:** 🟢 Active.
 
 ### 3. The Pipe: [Conxian Gateway](https://github.com/Conxian/conxian-gateway)
 - **Role:** Unified Backend.
