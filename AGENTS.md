@@ -19,6 +19,9 @@ Org-wide defaults for AI agents working across the Conxian ecosystem. This is th
   human review.
 - Rust repos: MSRV **1.98.1**; run
   `cargo clippy --all-targets --all-features -- -D warnings` before push.
+- JS/Node repos: **Node 24+** is the locked toolchain standard. Do not downgrade
+  `node-version`, `engines.node`, `.nvmrc`, or toolchain-check scripts below 24 —
+  downgrades are autorejected by CI (`toolchain-guard`).
 - Security-first (OD-01): production deploys require multisig/TEE storage.
 
 ## Tier-1 chain focus
