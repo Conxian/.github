@@ -96,3 +96,18 @@ jobs:
         run: |
           if [ -f "Cargo.toml" ]; then cargo test; fi
           if [ -f "package.json" ]; then npm test; fi
+
+  toolchain-guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+      - name: Reject Node version below 24 (org standard)
+        run: |
+          # Autoreject any toolchain downgrade below Node 24 in CI workflows.
+          BAD=$(grep -rEn 'node-version:[[:space:]]*(1[0-9]|2[0-3])([^0-9]|$)' .github/workflows/ 2>/dev/null || true)
+          if [ -n "$BAD" ]; then
+            echo "$BAD"
+            echo "::error::Node version below 24 detected in CI workflows. Org standard is Node 24+; downgrades are autorejected."
+            exit 1
+          fi
+          echo "Toolchain guard passed: Node 24+ standard enforced."
