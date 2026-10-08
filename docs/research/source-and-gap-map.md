@@ -1,6 +1,14 @@
-# Research Source & Gap Map (2026-09 Update)
+# Research Source & Gap Map (2026-10 Refresh & CXIP Update)
 
-This document maps research evidence and organizational standards to the actual implementation status across the Conxian codebase. For BitVM3 and Groth16, the shared status is **Research / Evaluation Only**. See the [BitVM3 & Groth16 readiness document](./bitvm3-and-groth16-readiness.md) and the [canonical Gateway evidence report](https://github.com/Conxian/conxian-gateway/blob/main/docs/research/BITVM3_BITVMX_EVIDENCE_AND_TRIAGE_2026-07-22.md) for the detailed evidence gate.
+This document maps research evidence, organizational upgrade proposals (CXIP / conxian-business#1317), and organizational standards to the actual implementation status across the Conxian codebase. For BitVM3 and Groth16, the shared status is **Research / Evaluation Only**. See the [BitVM3 & Groth16 readiness document](./bitvm3-and-groth16-readiness.md) and the [canonical Gateway evidence report](https://github.com/Conxian/conxian-gateway/blob/main/docs/research/BITVM3_BITVMX_EVIDENCE_AND_TRIAGE_2026-07-22.md) for the detailed evidence gate.
+
+## 🏛️ CXIP Org-Wide Upgrade & Refinement Context (Issue #1317)
+
+Issue `#1317` (*CXIP: Conxian org wide upgrade and refinement proposal*) and associated Pull Requests (`#1318`, `#1320`) establish the enterprise strategic analysis and gateway model for organizational alignment across all Conxian repositories. Key governance and technical standards enforced across the ecosystem include:
+
+- **Node 24+ Toolchain Lock:** Mandatory Node 24 standard (`actions/setup-node@v4` with `node-version: 24` and `FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true`). Node 20 or earlier is strictly prohibited.
+- **Verification Script Suite Enforcement:** Full activation of core verification scripts (`verify_knowledge_retention.py`, `verify_bos_production_boundary.py`, `verify_tracked_artifacts.py`, `verify_compose_env_templates.py`, `verify_submodule_secret_filenames.py`).
+- **Cryptographic Gate & Non-Claim Safeguards:** Strict separation between upstream paper/prototype evidence and Conxian production implementation state (BitVM3/Groth16 remains **Research / Evaluation Only**).
 
 ## 📊 Cross-Lane Readiness Scoring Index
 
@@ -20,12 +28,13 @@ This document maps research evidence and organizational standards to the actual 
 | **Governance** | [repository-taxonomy.md](../../repository-taxonomy.md) | 🟢 Taxonomy defined and synced to docs. |
 | **Security Standards** | [SECURITY.md](../../SECURITY.md) | 🟢 Vulnerability reporting path standardized. |
 | **Documentation Strategy** | [SOVEREIGN_PAGES.md](../SOVEREIGN_PAGES.md) | 🟢 Hub enhanced; decentralized strategy implemented. |
+| **Enterprise Upgrade (CXIP)** | [conxian-business#1317](https://github.com/Conxian/conxian-business/issues/1317) | 🟢 Strategic analysis and ecosystem alignment merged (#1318, #1320). |
 
 ## 🛠️ Technical Implementation Gaps
 
 | Area | Requirement | Current Status |
 | --- | --- | --- |
-| **CI/CD Hardening** | Fail-high gating on dependency reviews. | 🟢 Implemented in `standard-ci.yml`. |
+| **CI/CD Hardening** | Fail-high gating on dependency reviews & Node 24 lock. | 🟢 Implemented in `standard-ci.yml`. |
 | **Artifact Safety** | Prevent tracking of build artifacts. | 🟢 `verify_tracked_artifacts.py` active. |
 | **Knowledge Retention** | Verify core memories and context. | 🟢 `verify_knowledge_retention.py` active. |
 | **Script Provisioning** | Implementation of `verify_*` toolset. | 🟢 CON-1322: 5 core verification scripts fully active. |
@@ -64,7 +73,7 @@ The [canonical Gateway report](https://github.com/Conxian/conxian-gateway/blob/m
 | **Core** | Structural verifier boundaries and fail-closed policy exist; dependencies alone do not establish a current BitVM2/Groth16 verification call. | [Core #188](https://github.com/Conxian/lib-conxian-core/issues/188) |
 | **Enclave** | The BitVM2 boundary is typed, fail-closed, and unsupported for proof verification; MuSig2 signing is not SNARK verification. | [Enclave #202](https://github.com/Conxian/conxius-enclave-sdk/issues/202) |
 
-## 🔬 Protocol Research Alignment (2026-09 Update)
+## 🔬 Protocol Research Alignment (2026-10 Update)
 
 | Research Feature | Implementation Status | Target Action & Candidate |
 | --- | --- | --- |
@@ -76,11 +85,11 @@ The [canonical Gateway report](https://github.com/Conxian/conxian-gateway/blob/m
 
 ## 📈 Roadmap for Remediation & Phase Cycle
 
-1. **Phase 1: Standardization & Governance (Complete):** Unified README, taxonomy, and docs standards deployed across repositories.
-2. **Phase 2: Automation & Hardening (Complete):** Hardened standard CI, artifact validation, and 5 core Python verification scripts active.
+1. **Phase 1: Standardization & Governance (Complete):** Unified README, taxonomy, CXIP upgrade proposal (#1317), and docs standards deployed across repositories.
+2. **Phase 2: Automation & Hardening (Complete):** Hardened standard CI, artifact validation, Node 24 toolchain lock, and 5 core Python verification scripts active.
 3. **Phase 3: Critical Bug & Vulnerability Remediation (Active):** Address CON-1422, CON-1423, CON-1424 smart contract bugs and eliminate contract stubs (CON-1434).
 4. **Phase 4: Protocol Upgrade & Integration (Upcoming):** Execute RGB v0.11.1 pivot, wire LDK Node v0.4+ backend, and integrate ISO 20022 treasury parsing.
 
 ---
 
-*Updated for the 2026-09 End-to-End Cycle Refresh. Upstream evidence remains classified separately from Conxian implementation status.*
+*Updated for 2026-10 CXIP Org-Wide Upgrade & Refinement Cycle Refresh. Upstream evidence remains classified separately from Conxian implementation status.*
