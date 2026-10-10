@@ -46,7 +46,8 @@ jobs:
               pull_number: context.payload.pull_request.number,
             });
 
-            const approved = reviews.some(r => r.state === 'APPROVED');
+            const author = context.payload.pull_request.user.login;
+            const approved = reviews.some(r => r.state === 'APPROVED' && r.user.login !== author);
             const changesRequested = reviews.some(r => r.state === 'CHANGES_REQUESTED');
 
             if (changesRequested) {
@@ -55,11 +56,12 @@ jobs:
               );
             } else if (!approved) {
               core.setFailed(
-                'Merge blocked: at least one approving review from a CODEOWNER is required. ' +
+                'Merge blocked: at least one approving review from a CODEOWNER (other than the PR author) is required. ' +
+                'Self-approval of governance-sensitive changes is not permitted. ' +
                 'Request review from @botshelomokoka or @admin-conxian-labs.'
               );
             } else {
-              core.info('CODEOWNERS review gate passed.');
+              core.info('CODEOWNERS review gate passed (non-author approval present).');
             }
 
   # ── Governance checklist gate ───────────────────────────────────────
@@ -119,6 +121,10 @@ jobs:
             "Cargo.lock"
             "package.json"
             "package-lock.json"
+            "pnpm-workspace.yaml"
+            ".nvmrc"
+            ".node-version"
+            "scripts/ci/"
           )
 
           CHANGED=()
