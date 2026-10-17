@@ -10,7 +10,7 @@ This GitHub organization is the public code and documentation surface for the br
 
 - **Conxian-Labs** = builder / operator / company responsible for shipping, supporting, and explaining public products and infrastructure around the ecosystem.
 
-Company operations, legal work, financial administration, and other sensitive internal workflows are managed separately from this public codebase.
+Company operations, legal work, financial administration, and other sensitive internal workflows are managed separately from this public codebase. Public work is tracked in GitHub Issues and linked pull requests.
 
 ## Canonical identity
 
@@ -20,18 +20,22 @@ Company operations, legal work, financial administration, and other sensitive in
 
 | Surface | Repository | Role |
 | --- | --- | --- |
-| Shared protocol libraries | [lib-conxian-core](https://github.com/Conxian/lib-conxian-core) | Reusable primitives and shared ecosystem logic |
-| Enclave SDK | [conxius-enclave-sdk](https://github.com/Conxian/conxius-enclave-sdk) | SDK for hardware-secured execution environments |
+| Shared protocol libraries | [lib-conxian-core](https://github.com/Conxian/lib-conxian-core) | Reusable deterministic primitives and shared ecosystem logic |
+| Enclave SDK | [conxius-enclave-sdk](https://github.com/Conxian/conxius-enclave-sdk) | SDK for hardware-secured execution environments (beta/conditional) |
 | Wallet | [conxius-wallet](https://github.com/Conxian/conxius-wallet) | Sovereign wallet and reference client |
-| Interface | [conxian_ui](https://github.com/Conxian/conxian_ui) | Public interaction and application-facing interface |
 | Gateway | [conxian-gateway](https://github.com/Conxian/conxian-gateway) | Middleware and integration surface |
-| Nexus | [conxian-nexus](https://github.com/Conxian/conxian-nexus) | Cross-chain verification and state support |
-| Platform scaffolding | [conxius-platform](https://github.com/Conxian/conxius-platform) | Environment and orchestration scaffolding |
+| Nexus | [conxian-nexus](https://github.com/Conxian/conxian-nexus) | Universal-chain observation, verification, and proof layer |
+| Platform | [conxius-platform](https://github.com/Conxian/conxius-platform) | Control plane, orchestration, and environment scaffolding |
+| Marketplace | [conxian_market](https://github.com/Conxian/conxian_market) | Discovery, settlement, and escrow for autonomous AI labor |
+| Governance | [conxian-business](https://github.com/Conxian/conxian-business) | Public-safe BOS governance and CI/CD orchestration |
 | Labs site | [conxian-labs-site](https://github.com/Conxian/conxian-labs-site) | Conxian-Labs portfolio and public information site |
+| Organization site | [conxian-org-site](https://github.com/Conxian/conxian-org-site) | Organization website |
+
+Retired repositories `Conxian`, `conxian_ui`, and `conxius-orbit` are no longer public surfaces.
 
 ## Pinned repositories (recommended order)
 
-The retained target follows the canonical [#48 decision](https://github.com/Conxian/.github/issues/48#issuecomment-5078201839). Applying it is a manual organization-administrator action.
+The retained target follows the canonical [#48 decision](https://github.com/Conxian/.github/issues/48#issuecomment-5078201839). Applying it is a manual organization-administrator action. The `Conxian` repository from that decision has since been retired, so it is no longer a pin target.
 
 | Order | Repository | Rationale |
 | --- | --- | --- |
@@ -41,7 +45,7 @@ The retained target follows the canonical [#48 decision](https://github.com/Conx
 | 4 | [conxian-labs-site](https://github.com/Conxian/conxian-labs-site) | Portfolio entry point and public information surface. |
 | 5 | [conxian.github.io](https://github.com/Conxian/conxian.github.io) | Documentation hub, after its basic metadata cleanup under [#53](https://github.com/Conxian/.github/issues/53). |
 
-At the 2026-07-25 snapshot, the live organization pins were only `Conxian`, then `.github`. This recommendation does not claim that the target six have been applied.
+At the 2026-07-25 snapshot, the live organization pins were only `Conxian`, then `.github`. This recommendation does not claim that the target pins have been applied.
 
 ## Public repo standards
 

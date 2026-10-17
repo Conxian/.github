@@ -8,11 +8,12 @@ It is not a production-readiness or security certification, and it does not requ
 
 | Repository class | Live canonical repositories | Required public signal |
 | --- | --- | --- |
-| Consumable protocol, wallet, library, SDK, runtime, and integration artifacts | `Conxian`, `conxius-wallet`, `conxian-gateway`, `lib-conxian-core`, `conxian-nexus`, `conxius-enclave-sdk` | Every externally consumable release requires a SemVer tag and a matching GitHub Release. |
-| Public UI and deployment tooling | `conxian_ui`, `conxius-orbit` | When users or operators consume a versioned build, package, or CLI, the externally consumable release requires a SemVer tag and matching GitHub Release. Deployment-only changes may use documented deployment or commit history. |
+| Consumable wallet, library, SDK, runtime, and integration artifacts | `conxius-wallet`, `conxian-gateway`, `lib-conxian-core`, `conxian-nexus`, `conxius-enclave-sdk`, `conxian_market` | Every externally consumable release requires a SemVer tag and a matching GitHub Release. |
 | Platform / control plane | `conxius-platform` | Externally consumable configuration or orchestration releases require a SemVer tag and matching GitHub Release because they can affect compatibility and operations. |
-| Static sites | `conxian-labs-site`, `conxian.github.io` | GitHub Releases are optional. A lightweight deployment signal is sufficient when the README or repository metadata identifies the commit-based deployment and content-history model. |
+| Static sites | `conxian-labs-site`, `conxian-org-site`, `conxian.github.io` | GitHub Releases are optional. A lightweight deployment signal is sufficient when the README or repository metadata identifies the commit-based deployment and content-history model. |
 | Governance / defaults | `.github` | Explicit rolling-change exemption: no GitHub Release is required; merged governance history on `main` is authoritative. |
+
+Retired repositories (`Conxian`, `conxian_ui`, `conxius-orbit`) are no longer live canonical repositories and carry no release obligation.
 
 The static-site exemption is not an exemption from traceability. A deployed site should identify the source revision or deployment record that produced the public state. A repository that changes purpose or begins distributing versioned artifacts must be reclassified.
 
@@ -27,7 +28,7 @@ A repository may carry a newer working version when both conditions hold:
 1. the newer value is clearly labeled as unreleased development; and
 2. the latest published or reviewed release is named explicitly.
 
-`conxius-enclave-sdk` provides the useful presentation model: it distinguishes working `2.0.12` from latest reviewed release `v2.0.11`. Its duplicate generated latest-release notes still require cleanup, but the distinction itself should be preserved.
+`conxius-enclave-sdk` provides the useful presentation model: at the 2026-07-25 snapshot it distinguished working `2.0.12` from latest reviewed release `v2.0.11`. Its duplicate generated latest-release notes still required cleanup, but the distinction itself should be preserved.
 
 ## Minimum release notes and evidence
 
@@ -61,30 +62,29 @@ Review the repository's class and any exemption when its purpose, audience, dist
 
 ## Portfolio pins
 
-The retained organization-pin target from the canonical [#48 decision](https://github.com/Conxian/.github/issues/48#issuecomment-5078201839) is, in order:
+The retained organization-pin target from the canonical [#48 decision](https://github.com/Conxian/.github/issues/48#issuecomment-5078201839), with the since-retired `Conxian` repository removed, is, in order:
 
-1. `Conxian`
-2. `conxius-wallet`
-3. `conxian-gateway`
-4. `conxius-enclave-sdk`
-5. `conxian-labs-site`
-6. `conxian.github.io`, after its basic metadata cleanup under [#53](https://github.com/Conxian/.github/issues/53)
+1. `conxius-wallet`
+2. `conxian-gateway`
+3. `conxius-enclave-sdk`
+4. `conxian-labs-site`
+5. `conxian.github.io`, after its basic metadata cleanup under [#53](https://github.com/Conxian/.github/issues/53)
 
-Pins prioritize the protocol, end-user wallet, integration path, security SDK, portfolio entry point, and documentation hub rather than control-plane or supporting repositories. They are not a readiness certification or a substitute for the release rules above.
+Pins prioritize the end-user wallet, integration path, security SDK, portfolio entry point, and documentation hub rather than control-plane or supporting repositories. They are not a readiness certification or a substitute for the release rules above.
 
-At the 2026-07-25 snapshot, the organization pins verified through GitHub were only `Conxian`, then `.github`. Applying the target six remains a manual organization-administrator action; this policy does not claim that the pins were changed.
+At the 2026-07-25 snapshot, the organization pins verified through GitHub were only `Conxian`, then `.github`. Applying the target pins remains a manual organization-administrator action; this policy does not claim that the pins were changed.
 
 ## Snapshot evidence and cleanup ledger
 
-The following observations are evidence from the public audit captured at **2026-07-25T10:46:46Z**. Values may change after that timestamp and do not redefine the policy.
+The following observations are evidence from the public audit captured at **2026-07-25T10:46:46Z**. Values may change after that timestamp and do not redefine the policy. Rows for repositories retired after the snapshot are kept for history and need no further action.
 
 | Priority | Repository | Snapshot gap and owning action |
 | --- | --- | --- |
 | P1 | `conxius-wallet` | README/manifest/changelog signal `v1.9.5`, while the latest release/tag was `v1.9.2`. Reconcile in [Conxian/conxius-wallet#356](https://github.com/Conxian/conxius-wallet/issues/356). |
 | P1 | `lib-conxian-core` | README badge/source signal `v0.3.0`, while the latest release/tag was `v0.2.11`. Record repository-local follow-up evidence that declares the authority and publishes the release or labels the newer version Unreleased. |
-| P1 | `Conxian` | Latest GitHub Release was `v1.0.0-rc1` from 2025, while raw tag `v1.0.0` existed. Record repository-local follow-up evidence that publishes matching release notes/evidence for the final tag or removes its implied published status. |
-| P1 | `conxius-orbit` | Only GitHub Release was `v1.0.0` from 2025 while newer source versions were present. Record repository-local follow-up evidence that establishes one version authority and current release signal. |
-| P2 | `conxian_ui` | No clearly visible tag-driven release path. Record repository-local follow-up evidence documenting the public release or deployment record used when distributed user-facing versions change. |
+| — | `Conxian` | Retired (repository deleted). Snapshot gap: latest GitHub Release was `v1.0.0-rc1` from 2025 while raw tag `v1.0.0` existed. No further action. |
+| — | `conxius-orbit` | Retired (repository deleted; superseded by `conxius-platform`). Snapshot gap: only GitHub Release was `v1.0.0` from 2025. No further action. |
+| — | `conxian_ui` | Retired (repository deleted). Snapshot gap: no clearly visible tag-driven release path. No further action. |
 | P2 | `conxian.github.io` | No README, description, homepage, release guidance, or clear canonical-destination statement. Record repository-local follow-up evidence for purpose, ownership, destination, and lightweight deployment traceability. |
 | P2 | `conxian-labs-site` | Deployment-versus-release wording was contradictory. Record repository-local follow-up evidence that states lightweight deployment traceability as the routine rule and GitHub Releases as optional. |
 | P2 | `conxian-nexus` | README stated `v0.4.19`, while the latest release was `v0.4.22`. Record repository-local follow-up evidence aligning README status with the published release. |
