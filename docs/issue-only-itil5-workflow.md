@@ -4,21 +4,23 @@
 
 The seven-type taxonomy below is a proposed lightweight operating baseline, not a formally ratified BOS decision. It is informed by ITIL5, but does not claim formal ITIL adoption, compliance, certification, or conformance.
 
-For public-safe repository and governance execution, GitHub Issues are the canonical system of record. Restricted strategy, security, legal, financial, and detailed operational context remains canonical and authoritative in the authorized Linear workspace under Zero Secret Egress (ZSE). GitHub records must link to that authority when it is relevant without duplicating restricted detail.
+GitHub is the sole work-management system for Conxian (owner decision, 16 October 2026, continuing the issue-only model in org control [#43](https://github.com/Conxian/.github/issues/43)). GitHub Issues and their linked pull requests are the canonical system of record for public-safe repository and governance execution. Restricted strategy, security, legal, financial, and detailed operational context keeps its existing restricted handling boundary under Zero Secret Egress (ZSE); new restricted records belong in private GitHub surfaces (the private organization knowledge base, private repositories, and private vulnerability reporting), never in public issues. Public GitHub records link to that restricted authority when it is relevant without duplicating restricted detail.
 
-Public-safe issues, relationships, pull requests, and closure evidence form the repository execution layer of the BOS knowledge graph. That execution role does not make this proposed taxonomy a ratified BOS policy or move restricted authority out of the authorized Linear workspace.
+Legacy `CON-*` identifiers and Linear links remain searchable provenance only. Do not require a Linear connection, synchronization, subscription, or status update to advance GitHub work, and do not treat a legacy record as the current authority.
+
+Public-safe issues, relationships, pull requests, and closure evidence form the repository execution layer of the BOS knowledge graph. That execution role does not make this proposed taxonomy a ratified BOS policy or move restricted detail into public repositories.
 
 Use issue state, labels, one assignee, task lists, links, sub-issues, and pull requests. This baseline does not introduce GitHub Projects, milestones, or a parallel planning layer, but that scope choice is not a portfolio-wide ban where other approved controls require those tools.
 
 ## Route work before classifying it
 
-Create work in the repository that owns the affected product, service, documentation, or automation. Keep public-safe implementation context, discussion, pull requests, and closure evidence together in that product repository; link restricted evidence or context to authorized Linear rather than copying it into public GitHub.
+Create work in the repository that owns the affected product, service, documentation, or automation. Keep public-safe implementation context, discussion, pull requests, and closure evidence together in that product repository; link restricted evidence or context to its private GitHub record rather than copying it into public GitHub.
 
 Use `.github` for organization-wide defaults, shared controls and templates, repository standards, or coordination that genuinely spans repositories. Add `scope:org-wide` only when the outcome applies across the organization or multiple repositories.
 
-For cross-repository work, create one coordination or parent issue in `.github` with one accountable DRI and one linked implementation issue in each owning repository. Prefer native sub-issues when available; otherwise use explicit issue links. Local issues remain canonical for public-safe local implementation, while the `.github` issue records public-safe shared decisions, dependencies, exceptions, and roll-up evidence. Link restricted evidence or context to its authorized Linear record; do not copy restricted detail or the same task list into multiple issues.
+For cross-repository work, create one coordination or parent issue in `.github` with one accountable DRI and one linked implementation issue in each owning repository. Prefer native sub-issues when available; otherwise use explicit issue links. Local issues remain canonical for public-safe local implementation, while the `.github` issue records public-safe shared decisions, dependencies, exceptions, and roll-up evidence. Link restricted evidence or context to its private GitHub record; do not copy restricted detail or the same task list into multiple issues.
 
-**Never put security vulnerability details, privileged incident details or timelines, or response runbooks in a public issue.** Follow [`SECURITY.md`](../SECURITY.md), use the affected repository's private vulnerability reporting channel, and keep authorized handling in Linear under ZSE. Sanitized public coordination or follow-up may be created only after restricted detail is removed and disclosure is approved.
+**Never put security vulnerability details, privileged incident details or timelines, or response runbooks in a public issue.** Follow [`SECURITY.md`](../SECURITY.md), use the affected repository's private vulnerability reporting channel, and keep authorized handling in that private report or a private repository under ZSE. Sanitized public coordination or follow-up may be created only after restricted detail is removed and disclosure is approved.
 
 ## Classification and labels
 
@@ -124,7 +126,7 @@ Add `escalation:required` when progress or risk requires an explicit decision fr
 - the impact and deadline or next review point; and
 - the linked local and org-wide issues involved.
 
-Escalation does not move public-safe execution authority away from the owning issue or create a duplicate tracker. Restricted decisions and evidence remain authoritative in authorized Linear under ZSE and are linked without duplication. Remove `escalation:required` once the decision or intervention is recorded and normal ownership can continue.
+Escalation does not move public-safe execution authority away from the owning issue or create a duplicate tracker. Restricted decisions and evidence remain authoritative in their private GitHub records under ZSE and are linked without duplication. Remove `escalation:required` once the decision or intervention is recorded and normal ownership can continue.
 
 ## Closure evidence
 
