@@ -10,7 +10,8 @@ on:
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
-permissions: contents: read
+permissions:
+  contents: read
 
 jobs:
   lint-and-format:
