@@ -12,7 +12,6 @@ Conxian is a sovereign autonomous business (SAB) building zero-custody, zero-raw
 | --- | --- | --- |
 | **Protocol Core** | [Docs](https://conxian.github.io/Conxian/) | Canonical smart-contract and protocol settlement logic. |
 | **Conxius Wallet** | [Docs](https://conxian.github.io/conxius-wallet/) | Sovereign access; Android-first, hardware-secured Bitcoin & Lightning services. |
-| **Conxian Interface** | [Docs](https://conxian.github.io/conxian_ui/) | Unified web interface for ecosystem interaction. |
 | **Conxian Gateway** | [Docs](https://conxian.github.io/conxian-gateway/) | High-performance middleware and institutional integration surface. |
 | **Conxian Nexus** | [Docs](https://conxian.github.io/conxian-nexus/) | Cross-chain maneuver orchestration and state verification. |
 
@@ -20,7 +19,6 @@ Conxian is a sovereign autonomous business (SAB) building zero-custody, zero-raw
 
 | Component | Documentation | Role |
 | --- | --- | --- |
-| **Conxius Orbit** | [Docs](https://conxian.github.io/conxius-orbit/) | Ecosystem coordination, deployment, and operator tooling. |
 | **Shared Core** | [Docs](https://conxian.github.io/lib-conxian-core/) | Reusable primitives and shared protocol logic. |
 | **Enclave SDK** | [Docs](https://conxian.github.io/conxius-enclave-sdk/) | SDK for hardware-secured execution environments (TEE). |
 | **Platform Scaffolding** | [Docs](https://conxian.github.io/conxius-platform/) | Declarative NixOS control plane and environment scaffolding. |
