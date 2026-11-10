@@ -59,6 +59,29 @@ Public repositories in this organization should clearly state:
 - contact path
 - license
 
+## Proof Guild — earn credit by proving, not claiming
+
+We built the protocol; the part we can't do alone is **independently verify** it.
+The **Proof Guild** is our open lane for that: outside contributors earn credit by
+**reproducing or disproving** a claim — never by asserting it.
+
+**The rule:** we reward *verified outcomes*, never *claims*. No self-attestation.
+A contribution may move an item to `attested`; it never moves it to `accepted` —
+acceptance stays machine-gated. A proof that survives an adversarial challenge
+window is recorded under your name; a refuted one earns nothing.
+
+Three ways to take part:
+
+1. **Join the ceremony** — hold share 3 of our 2-of-3 FROST release key. Run the
+   DKG on your own hardware; never share a secret. → [open call](https://github.com/Conxian/conxius-enclave-sdk/issues/720)
+2. **Break it** — reproduce an attestation, recompute our release countdown, or
+   find residue our guards miss. → challenges: [business #1844](https://github.com/Conxian/conxian-business/issues/1844) · [gateway #828](https://github.com/Conxian/conxian-gateway/issues/828) · [enclave-sdk #721](https://github.com/Conxian/conxius-enclave-sdk/issues/721)
+3. **Claim a gate** — move a gated capability to enabled, with evidence.
+
+Program hub: [Conxian/conxian-business#1843](https://github.com/Conxian/conxian-business/issues/1843).
+Everything is checkable — pull the evidence, recompute the count, verify the
+signature yourself. Nothing is "trust us".
+
 ## Contact
 
 - General: [info@conxian-labs.com](mailto:info@conxian-labs.com)
