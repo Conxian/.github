@@ -36,7 +36,6 @@ Public organization defaults, governance, and corporate/public information surfa
 - `conxian-business`: Public-safe BOS governance, CI/CD orchestration, and specification surface.
 - `conxian-labs-site`: Corporate and public information site.
 - `conxian-org-site`: Organization website.
-- `conxian.github.io`: Public documentation hub.
 
 ### Platform and environment scaffolding
 
@@ -51,6 +50,7 @@ No longer live surfaces; retained here only so historical references resolve.
 - `Conxian`: Former Stacks-native protocol repository (deleted).
 - `conxian_ui`: Former public application interface (deleted).
 - `conxius-orbit`: Former ecosystem coordination and deployment tooling (deleted; superseded by `conxius-platform`).
+- `conxian.github.io`: Former public documentation hub (**archived** 2026-11-01; the org Pages surface is retired — production authority is `conxian-labs-site` on Render).
 
 ## Public/private rule
 
@@ -81,3 +81,20 @@ Each public repository should state:
 - security reporting path
 - contact path
 - license
+
+## Repository metadata standard
+
+Every public repository should set, via the GitHub API or the settings page:
+
+- **Description** — one factual sentence (not a bare name or null).
+- **Homepage** — a live `https://` URL on a canonical Conxian domain
+  (`www.conxian-labs.com` for corporate/product surfaces, `conxian.org` for the
+  protocol surface). Do **not** point at retired hosts (e.g. `*.vercel.app`,
+  `conxian-labs-site-*.onrender.com`).
+- **Topics** — at least three searchable topics drawn from the repository's role
+  (e.g. `bitcoin`, `rust`, `settlement`, `iso20022`, `wallet`, `sdk`).
+- **License** — an OSI-approved SPDX license (a funding and reuse gate).
+
+Metadata is part of the public surface; keep it accurate and non-secret. A null
+or stale homepage, an empty topic list, or a placeholder description is a
+documentation defect.
