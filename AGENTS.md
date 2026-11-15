@@ -22,10 +22,11 @@ Org-wide defaults for AI agents working across the Conxian ecosystem. This is th
 - Never commit secrets, tokens, or keys; use org/repo secrets.
 - Do not modify branch-protection rulesets or org governance files without
   human review.
-- Rust repos: MSRV **1.98.1**; run
+- Toolchain pins are canonical in `conxian-business/.github/LTS_VERSIONS.json`
+  (LTS track). Rust repos: MSRV **1.99.1**; run
   `cargo clippy --all-targets --all-features -- -D warnings` before push.
-- JS/Node repos: **Node 24+** is the locked toolchain standard. Do not downgrade
-  `node-version`, `engines.node`, `.nvmrc`, or toolchain-check scripts below 24 —
+- JS/Node repos: **Node 26** is the locked toolchain standard. Do not downgrade
+  `node-version`, `engines.node`, `.nvmrc`, or toolchain-check scripts below 26 —
   downgrades are autorejected by CI (`toolchain-guard`).
 - Security-first (OD-01): production deploys require multisig/TEE storage.
   A provider label, feature flag or successful build does not establish that
