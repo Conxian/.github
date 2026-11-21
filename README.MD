@@ -18,7 +18,8 @@ Active. This repository serves as the source of truth for organization-wide gove
 
 ## Ecosystem Hub
 
-The unified documentation hub is available at **[conxian.github.io](https://conxian.github.io/)**.
+The public information hub is **[conxian-labs.com](https://www.conxian-labs.com/)**. The former
+`conxian.github.io` documentation hub is archived; its Pages surface is retired.
 
 ---
 
@@ -53,6 +54,7 @@ Conxian Labs builds infrastructure for the public Conxian ecosystem. Our strateg
 - **Governance:** [conxian-business](https://github.com/Conxian/conxian-business): public-safe BOS governance and CI/CD orchestration.
 
 Retired repositories (`Conxian`, `conxian_ui`, `conxius-orbit`) are no longer live surfaces.
+`conxian.github.io` is archived and is not a current documentation hub.
 
 ---
 
