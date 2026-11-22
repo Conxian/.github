@@ -23,7 +23,7 @@ Org-wide defaults for AI agents working across the Conxian ecosystem. This is th
 - Do not modify branch-protection rulesets or org governance files without
   human review.
 - Toolchain pins are canonical in `conxian-business/.github/LTS_VERSIONS.json`
-  (LTS track). Rust repos: MSRV **1.99.1**; run
+  (LTS track). Rust repos: MSRV **1.100.0**; run
   `cargo clippy --all-targets --all-features -- -D warnings` before push.
 - JS/Node repos: **Node 26** is the locked toolchain standard. Do not downgrade
   `node-version`, `engines.node`, `.nvmrc`, or toolchain-check scripts below 26 —
