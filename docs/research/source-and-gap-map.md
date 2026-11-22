@@ -6,7 +6,7 @@ This document maps research evidence, organizational upgrade proposals (CXIP / c
 
 Issue `#1317` (*CXIP: Conxian org wide upgrade and refinement proposal*) and associated Pull Requests (`#1318`, `#1320`) establish the enterprise strategic analysis and gateway model for organizational alignment across all Conxian repositories. Key governance and technical standards enforced across the ecosystem include:
 
-- **Node 24+ Toolchain Lock:** Mandatory Node 24 standard (`actions/setup-node@v4` with `node-version: 24` and `FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true`). Node 20 or earlier is strictly prohibited.
+- **Node 26 Toolchain Lock:** Mandatory Node 26 standard (`actions/setup-node@v4` with `node-version: 26`). Node 25 or earlier is strictly prohibited.
 - **Verification Script Suite Enforcement:** Full activation of core verification scripts (`verify_knowledge_retention.py`, `verify_bos_production_boundary.py`, `verify_tracked_artifacts.py`, `verify_compose_env_templates.py`, `verify_submodule_secret_filenames.py`).
 - **Cryptographic Gate & Non-Claim Safeguards:** Strict separation between upstream paper/prototype evidence and Conxian production implementation state (BitVM3/Groth16 remains **Research / Evaluation Only**).
 
@@ -34,7 +34,7 @@ Issue `#1317` (*CXIP: Conxian org wide upgrade and refinement proposal*) and ass
 
 | Area | Requirement | Current Status |
 | --- | --- | --- |
-| **CI/CD Hardening** | Fail-high gating on dependency reviews & Node 24 lock. | 🟢 Implemented in `standard-ci.yml`. |
+| **CI/CD Hardening** | Fail-high gating on dependency reviews & Node 26 lock. | 🟢 Implemented in `standard-ci.yml`. |
 | **Artifact Safety** | Prevent tracking of build artifacts. | 🟢 `verify_tracked_artifacts.py` active. |
 | **Knowledge Retention** | Verify core memories and context. | 🟢 `verify_knowledge_retention.py` active. |
 | **Script Provisioning** | Implementation of `verify_*` toolset. | 🟢 CON-1322: 5 core verification scripts fully active. |
@@ -86,7 +86,7 @@ The [canonical Gateway report](https://github.com/Conxian/conxian-gateway/blob/m
 ## 📈 Roadmap for Remediation & Phase Cycle
 
 1. **Phase 1: Standardization & Governance (Complete):** Unified README, taxonomy, CXIP upgrade proposal (#1317), and docs standards deployed across repositories.
-2. **Phase 2: Automation & Hardening (Complete):** Hardened standard CI, artifact validation, Node 24 toolchain lock, and 5 core Python verification scripts active.
+2. **Phase 2: Automation & Hardening (Complete):** Hardened standard CI, artifact validation, Node 26 toolchain lock, and 5 core Python verification scripts active.
 3. **Phase 3: Critical Bug & Vulnerability Remediation (Active):** Address CON-1422, CON-1423, CON-1424 smart contract bugs and eliminate contract stubs (CON-1434).
 4. **Phase 4: Protocol Upgrade & Integration (Upcoming):** Execute RGB v0.11.1 pivot, wire LDK Node v0.4+ backend, and integrate ISO 20022 treasury parsing.
 
